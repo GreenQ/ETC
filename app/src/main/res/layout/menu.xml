@@ -17,7 +17,8 @@
             android:layout_height="50dp"
             android:background="@drawable/btn"
             android:id="@+id/play"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:onClick="PressPlayButton">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
