@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffe6806f">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn"
+            android:id="@+id/play"
+            android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="ИГРАТЬ"
+                    android:textSize="35sp"
+                    android:textColor="#ff12ac32"/>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/play"
+            android:id="@+id/highscorestable"
+            android:background="@drawable/btn"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="РЕКОРДЫ"
+                android:textSize="35sp"
+                android:textColor="#ff12ac32"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:id="@+id/about"
+            android:layout_below="@+id/highscorestable"
+            android:background="@drawable/btn">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="О НАС"
+                android:textSize="35sp"
+                android:textColor="#ff12ac32"/>
+        </RelativeLayout>
+
+
+        </RelativeLayout>
 
 </RelativeLayout>
