@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        
+
         setContentView(R.layout.menu);
 //        ImageView vw = (ImageView) findViewById(R.id.imageView);
 //        vw.setBackgroundColor(14717843);
@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
                 startActivityForResult(i, 1);
                 //finish();
             }
-        }, 3000);
+        }, 0);
     }
 
 

@@ -99,7 +99,8 @@
             android:layout_marginRight="3dp"
             android:layout_marginBottom="3dp"
             android:layout_width="155dp"
-            android:layout_height="155dp" />
+            android:layout_height="155dp"
+            android:onClick="ClickCube"/>
 
         <ImageView
             android:background="@drawable/ramka1"
@@ -107,7 +108,8 @@
             android:id="@+id/iw2x2_12"
             android:layout_width="155dp"
             android:layout_height="155dp"
-            android:layout_marginBottom="3dp"/>
+            android:layout_marginBottom="3dp"
+            android:onClick="ClickCube"/>
 
         <ImageView
             android:background="@drawable/ramka1"
@@ -115,7 +117,8 @@
             android:layout_below="@+id/iw2x2_11"
             android:layout_marginRight="3dp"
             android:layout_width="155dp"
-            android:layout_height="155dp" />
+            android:layout_height="155dp"
+            android:onClick="ClickCube" />
 
         <ImageView
             android:background="@drawable/ramka1"
@@ -123,7 +126,8 @@
             android:layout_toRightOf="@+id/iw2x2_21"
             android:layout_below="@+id/iw2x2_12"
             android:layout_width="155dp"
-            android:layout_height="155dp" />
+            android:layout_height="155dp"
+            android:onClick="ClickCube" />
 
 
 
