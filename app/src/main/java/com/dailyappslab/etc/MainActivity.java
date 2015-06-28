@@ -40,6 +40,32 @@ public class MainActivity extends Activity {
 //        //vw1.setBackgroundColor(((ColorDrawable)vw.getBackground()).getColor() + 50);
     }
 
+    public void PressAboutUsButton(View v)
+    {
+        Intent i = new Intent (MainActivity.this, AboutUsActivity.class);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i = new Intent(MainActivity.this, AboutUsActivity.class);
+                startActivityForResult(i, 1);
+                //finish();
+            }
+        }, 0);
+    }
+
+    public void PressHighscoresButton(View v)
+    {
+        Intent i = new Intent (MainActivity.this, HighscoresActivity.class);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i = new Intent(MainActivity.this, HighscoresActivity.class);
+                startActivityForResult(i, 1);
+                //finish();
+            }
+        }, 0);
+    }
+
     public void PressPlayButton(View v)
     {
         Intent i = new Intent (MainActivity.this, GameActivity.class);

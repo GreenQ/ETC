@@ -34,7 +34,8 @@
             android:layout_below="@+id/play"
             android:id="@+id/highscorestable"
             android:background="@drawable/btn"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:onClick="PressHighscoresButton">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,7 +51,8 @@
             android:layout_height="50dp"
             android:id="@+id/about"
             android:layout_below="@+id/highscorestable"
-            android:background="@drawable/btn">
+            android:background="@drawable/btn"
+            android:onClick="PressAboutUsButton">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
