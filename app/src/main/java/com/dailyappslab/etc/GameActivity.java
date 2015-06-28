@@ -38,6 +38,7 @@ public class GameActivity extends Activity {
     Animation anim2;
     Animation anim3;
     Animation anim4;
+    Animation anim5;
 
     //region #Definition of views
     RelativeLayout rl2x2;
@@ -280,6 +281,7 @@ public class GameActivity extends Activity {
         anim2 = AnimationUtils.loadAnimation(this, R.anim.scale);
         anim3 = AnimationUtils.loadAnimation(this, R.anim.translate);
         anim4 = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        anim5 = AnimationUtils.loadAnimation(this, R.anim.translate2);
 
 
         final ImageView i1 = (ImageView) findViewById(R.id.iw2x2_11);
@@ -353,11 +355,11 @@ public class GameActivity extends Activity {
                 i33.startAnimation(anim3);
                 i34.startAnimation(anim4);
 
-                i35.startAnimation(anim);
-                i36.startAnimation(anim2);
-                i37.startAnimation(anim3);
-                i38.startAnimation(anim4);
-                i39.startAnimation(anim);
+                i35.startAnimation(anim5);
+                i36.startAnimation(anim);
+                i37.startAnimation(anim2);
+                i38.startAnimation(anim3);
+                i39.startAnimation(anim4);
 
 
                 anim.setFillAfter(true);
@@ -371,6 +373,9 @@ public class GameActivity extends Activity {
 
                 anim4.setFillAfter(true);
                 anim4.setDuration(350);
+
+                anim5.setFillAfter(true);
+                anim5.setDuration(350);
 
 
                 Handler handler = new Handler();

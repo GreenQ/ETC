@@ -5,4 +5,17 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+
+    <string name="a1">Вы различаете цвета как крот.</string>
+    <string name="a2">Вы различаете цвета как муха.</string>
+    <string name="a3">Вы различаете цвета как одноглазый пират.</string>
+    <string name="a4">Вы различаете цвета как волк.</string>
+    <string name="a5">Вы различаете цвета как пантера.</string>
+    <string name="a6">Вы различаете цвета как орел.</string>
+    <string name="a7">Вы различаете цвета как хищник.</string>
+    <string name="a8">Вы различаете цвета как женщина.</string>
+
+
+    <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
+
 </resources>

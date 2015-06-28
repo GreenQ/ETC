@@ -1,6 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffe6806f"
+    android:gravity="center|top">
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/osnova"
+        android:layout_marginTop="5dp"
+        android:layout_width="300dp"
+        android:layout_height="380dp"
+        android:background="@drawable/btn">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ИГРА ОКОНЧЕНА"
+            android:id="@+id/game_over"
+            android:textColor="#ff12ac32"
+            android:textSize="28sp"/>
+
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/your_score"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/game_over"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:text="Ваш результат: "
+            android:textColor="#ff0d6b1f"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optional"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/your_score">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+
+                android:id="@+id/new_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffac324a"
+                android:textSize="20sp"
+                android:text="Новый рекорд!"/>
+
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/new_score"
+                android:id="@+id/your_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/vashe_ima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Ваше имя: "
+                    android:textColor="#ff404a6f"/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/input_name"
+                    android:layout_toRightOf="@+id/vashe_ima"
+                    android:layout_centerHorizontal="true" />
+
+
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/input_name"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/ok"
+                    android:background="@drawable/btn">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textSize="16sp"
+                        android:textColor="#ff12ac32"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        <TextView
+            android:layout_toRightOf="@+id/your_score"
+            android:layout_below="@+id/game_over"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/o4ki"
+            android:textColor="#ffc6313b"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/animal"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/optional"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#ff12ac32"
+            android:text="Вы различаете цвета как крот."/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/fact"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_animal"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#ff12ac32"
+            android:text="Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи."/>
+
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/animal"
+            android:id="@+id/img_animal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/krot"/>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/osnova"
+        android:id="@+id/new_game"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:background="@drawable/btn">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff12ac32"
+            android:textSize="18sp"
+            android:text="НОВАЯ ИГРА"/>
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/osnova"
+        android:id="@+id/exit"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:background="@drawable/btn">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff12ac32"
+            android:textSize="18sp"
+            android:text="ВЫХОД"/>
+    </RelativeLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
