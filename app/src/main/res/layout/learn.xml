@@ -31,7 +31,7 @@
         android:layout_marginTop="5dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
-        android:id="@+id/new_game"
+        android:id="@+id/close"
         android:layout_marginLeft="10dp"
         android:layout_width="130dp"
         android:layout_height="60dp"
@@ -53,7 +53,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="10dp"
-        android:id="@+id/exit"
+        android:id="@+id/never"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:background="@drawable/active_rec">

@@ -6,12 +6,22 @@
     android:background="#ff43aa67">
 
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/load_kube"
+        android:layout_centerInParent="true"
+        android:background="@drawable/i500"/>
+
     <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ЗАГРУЗКА..."
+
         android:textSize="40sp"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:textColor="#ff3bffa2"/>
 
 </RelativeLayout>

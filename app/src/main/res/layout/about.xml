@@ -5,7 +5,7 @@
     android:background="#ff43aa67">
 
     <TextView
-
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Обращение к пользователям"
@@ -20,8 +20,11 @@
     <TextView
 
         android:layout_below="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/text_about"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
@@ -31,5 +34,24 @@
         android:textColorLink="#ff0010b6"
         android:text="      Команда разработчиков DailyAppsLab благодарит вас за установку игры. С любыми пожеланиями или предложениями вы можете обратиться к нам по электронному адресу dailyappslab@gmail.com \n     Если вам понравилась игра - пожалуйста, поддержите нас отзывами и оценками! \n    Желаем удачи и приятного времяпровождения!"
         android:textStyle="italic"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text_about"
+        android:id="@+id/exit"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:background="@drawable/active_rec">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff12ac32"
+            android:textSize="20sp"
+            android:text="НАЗАД"/>
+    </RelativeLayout>
 
 </RelativeLayout>
