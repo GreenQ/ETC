@@ -28,6 +28,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by GreenQ on 27.06.2015.
@@ -398,12 +399,19 @@ public class GameActivity extends Activity {
     }
 
     public void ClickCube(View view) {
-//        Drawable bgColor = view.getBackground();
-//        view.getBackground().col
-//        if(((StateListDrawable) bgColor).getColor() == differColor) {
-//            rl2x2.setVisibility(View.INVISIBLE);
-//            rl3x3.setVisibility(View.VISIBLE);
-//        }
+        GradientDrawable bgColor = (GradientDrawable) view.getBackground();
+        if(view.getTag().equals(true))
+        {
+            rl2x2.setVisibility(View.INVISIBLE);
+            rl3x3.setVisibility(View.VISIBLE);
+        }
+//        bgColor.getAlpha();
+        //Toast.makeText(this, String.valueOf(bgColor.getAlpha()), Toast.LENGTH_LONG).show();
+        //view.getBackground().col
+        //if(((StateListDrawable) bgColor).getColor() == differColor) {
+          //  rl2x2.setVisibility(View.INVISIBLE);
+            //rl3x3.setVisibility(View.VISIBLE);
+        //}
 
     }
 
@@ -416,10 +424,15 @@ public class GameActivity extends Activity {
 
         mainColor = ColorsHandler.GetRandomColor();
         ApplyColorToImgView(iw2x2_11, mainColor, 1);
+        ApplyColorToImgView(iw2x2_12, mainColor, 1);
         ApplyColorToImgView(iw2x2_21, mainColor, 1);
         ApplyColorToImgView(iw2x2_22, mainColor, 1);
         differColor = ColorsHandler.ReduceColorOpacity(mainColor, 50);
-        ApplyColorToImgView(iw2x2_12, differColor, 1);
+       // ApplyColorToImgView(iw2x2_12, differColor, 1);
+
+        ImageView tmp = (ImageView) findViewById(getResources().getIdentifier(RandomGenerator.GetRandSquareName(2), "id", this.getPackageName()));
+        ApplyColorToImgView(tmp, differColor, 1);
+
         //vw.setBackgroundColor(ColorsHandler.GetRandomColor());
        // vw1.setBackgroundColor(((ColorDrawable) vw.getBackground()).getColor());
         //vw1.setBackgroundColor(ColorsHandler.ReduceColorOpacity(((ColorDrawable) vw.getBackground()).getColor(), 20));
@@ -465,6 +478,12 @@ public class GameActivity extends Activity {
         }
         gdDefault.setStroke(0, 0xffb6c9e2);
 
+        if(differColor == color)
+        {
+            view.setTag(true);
+        }
+        else
+            view.setTag(false);
 
         view.setBackgroundDrawable(gdDefault);
     }
