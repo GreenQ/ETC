@@ -164,7 +164,7 @@
         android:id="@+id/new_game"
         android:layout_width="140dp"
         android:layout_height="40dp"
-        android:background="@drawable/rec">
+        android:background="@drawable/active_rec">
 
         <TextView
             android:layout_centerInParent="true"
@@ -183,7 +183,7 @@
         android:id="@+id/exit"
         android:layout_width="140dp"
         android:layout_height="40dp"
-        android:background="@drawable/rec">
+        android:background="@drawable/active_rec">
 
         <TextView
             android:layout_centerInParent="true"

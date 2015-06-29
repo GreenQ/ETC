@@ -15,7 +15,7 @@
         <RelativeLayout
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:background="@drawable/btn"
+            android:background="@drawable/active_btn"
             android:id="@+id/play"
             android:layout_marginBottom="10dp"
             android:onClick="PressPlayButton">
@@ -33,7 +33,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/play"
             android:id="@+id/highscorestable"
-            android:background="@drawable/btn"
+            android:background="@drawable/active_btn"
             android:layout_marginBottom="10dp"
             android:onClick="PressHighscoresButton">
             <TextView
@@ -51,7 +51,7 @@
             android:layout_height="50dp"
             android:id="@+id/about"
             android:layout_below="@+id/highscorestable"
-            android:background="@drawable/btn"
+            android:background="@drawable/active_btn"
             android:onClick="PressAboutUsButton">
             <TextView
                 android:layout_width="wrap_content"
