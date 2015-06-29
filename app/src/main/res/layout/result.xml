@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffe6806f"
+    android:background="#ff43aa67"
     android:gravity="center|top">
 
 
@@ -13,7 +13,7 @@
         android:id="@+id/osnova"
         android:layout_marginTop="5dp"
         android:layout_width="300dp"
-        android:layout_height="380dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn">
 
         <TextView
@@ -39,7 +39,7 @@
             android:textSize="18sp"/>
 
         <RelativeLayout
-
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/optional"
@@ -140,6 +140,7 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textColor="#ff12ac32"
+            android:layout_marginBottom="10dp"
             android:text="Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи."/>
 
 
@@ -161,16 +162,16 @@
         android:layout_marginTop="5dp"
         android:layout_below="@+id/osnova"
         android:id="@+id/new_game"
-        android:layout_width="130dp"
-        android:layout_height="30dp"
-        android:background="@drawable/btn">
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rec">
 
         <TextView
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:text="НОВАЯ ИГРА"/>
         </RelativeLayout>
 
@@ -180,16 +181,16 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/osnova"
         android:id="@+id/exit"
-        android:layout_width="130dp"
-        android:layout_height="30dp"
-        android:background="@drawable/btn">
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rec">
 
         <TextView
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:text="ВЫХОД"/>
     </RelativeLayout>
 
