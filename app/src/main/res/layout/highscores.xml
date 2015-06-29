@@ -30,7 +30,7 @@
         <RelativeLayout
             android:id="@+id/p_1"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -85,7 +85,7 @@
             android:layout_below="@+id/p_1"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -140,7 +140,7 @@
             android:layout_below="@+id/p_2"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -196,7 +196,7 @@
             android:layout_below="@+id/p_3"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -250,7 +250,7 @@
             android:layout_below="@+id/p_4"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -315,7 +315,7 @@
                 android:gravity="center"
                 android:layout_centerVertical="true"
                 android:layout_width="30dp"
-                android:layout_height="22dp"
+                android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:background="@drawable/high"
                 android:text="6"/>
@@ -362,7 +362,7 @@
             android:layout_below="@+id/p_6"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -419,7 +419,7 @@
             android:layout_below="@+id/p_7"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -475,7 +475,7 @@
             android:layout_below="@+id/p_8"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
@@ -531,7 +531,7 @@
             android:layout_below="@+id/p_9"
             android:layout_marginTop="2dp"
             android:layout_width="240dp"
-            android:layout_height="22dp"
+            android:layout_height="30dp"
             android:background="@drawable/btn">
 
             <TextView
