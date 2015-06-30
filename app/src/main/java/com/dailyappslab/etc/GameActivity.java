@@ -1,34 +1,19 @@
 package com.dailyappslab.etc;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.LinearGradient;
-import android.graphics.PorterDuff;
-import android.graphics.Shader;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.StateListDrawable;
-import android.graphics.drawable.shapes.RectShape;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by GreenQ on 27.06.2015.
@@ -43,6 +28,13 @@ public class GameActivity extends Activity {
     Animation anim3;
     Animation anim4;
     Animation anim5;
+
+
+    Animation anim_r;
+    Animation anim2_r;
+    Animation anim3_r;
+    Animation anim4_r;
+    Animation anim5_r;
 
     //region #Definition of views
     RelativeLayout rl2x2;
@@ -286,6 +278,12 @@ public class GameActivity extends Activity {
         anim3 = AnimationUtils.loadAnimation(this, R.anim.translate);
         anim4 = AnimationUtils.loadAnimation(this, R.anim.alpha);
         anim5 = AnimationUtils.loadAnimation(this, R.anim.translate2);
+
+        anim_r = AnimationUtils.loadAnimation(this, R.anim.rote_reverse);
+        anim2_r = AnimationUtils.loadAnimation(this, R.anim.scale_reverse);
+        anim3_r = AnimationUtils.loadAnimation(this, R.anim.translate_reverse);
+        anim4_r = AnimationUtils.loadAnimation(this, R.anim.alpha_reverse);
+        anim5_r = AnimationUtils.loadAnimation(this, R.anim.translate2_reverse);
 
 
         final ImageView i1 = (ImageView) findViewById(R.id.iw2x2_11);
@@ -557,6 +555,713 @@ public class GameActivity extends Activity {
 
 
     }
+
+
+    public void Animate2x2_reverse()
+    {
+        iw2x2_11.startAnimation(anim_r);
+        iw2x2_12.startAnimation(anim2_r);
+        iw2x2_21.startAnimation(anim3_r);
+        iw2x2_22.startAnimation(anim4_r);
+
+
+        //anim.setFillAfter(true);
+        anim_r.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2_r.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3_r.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4_r.setDuration(350);
+
+    }
+
+
+    public void Animate3x3()
+    {
+
+
+        iw3x3_11.startAnimation(anim);
+        iw3x3_12.startAnimation(anim2);
+        iw3x3_13.startAnimation(anim3);
+        iw3x3_21.startAnimation(anim4);
+        iw3x3_22.startAnimation(anim5);
+        iw3x3_23.startAnimation(anim);
+        iw3x3_31.startAnimation(anim2);
+        iw3x3_32.startAnimation(anim3);
+        iw3x3_33.startAnimation(anim4);
+
+
+        //anim.setFillAfter(true);
+        anim.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5.setDuration(350);
+
+
+    }
+
+
+    public void Animate3x3_reverse()
+    {
+
+        iw3x3_11.startAnimation(anim_r);
+        iw3x3_12.startAnimation(anim2_r);
+        iw3x3_13.startAnimation(anim3_r);
+        iw3x3_21.startAnimation(anim4_r);
+        iw3x3_22.startAnimation(anim5_r);
+        iw3x3_23.startAnimation(anim_r);
+        iw3x3_31.startAnimation(anim2_r);
+        iw3x3_32.startAnimation(anim3_r);
+        iw3x3_33.startAnimation(anim4_r);
+
+
+        //anim.setFillAfter(true);
+        anim_r.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2_r.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3_r.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4_r.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5_r.setDuration(350);
+
+    }
+
+
+
+    public void Animate4x4()
+    {
+
+        iw4x4_11.startAnimation(anim);
+        iw4x4_12.startAnimation(anim2);
+        iw4x4_13.startAnimation(anim3);
+        iw4x4_14.startAnimation(anim4);
+        iw4x4_21.startAnimation(anim5);
+        iw4x4_22.startAnimation(anim);
+        iw4x4_23.startAnimation(anim2);
+        iw4x4_24.startAnimation(anim3);
+        iw4x4_31.startAnimation(anim4);
+        iw4x4_32.startAnimation(anim5);
+        iw4x4_33.startAnimation(anim);
+        iw4x4_34.startAnimation(anim2);
+        iw4x4_41.startAnimation(anim3);
+        iw4x4_42.startAnimation(anim4);
+        iw4x4_43.startAnimation(anim5);
+        iw4x4_44.startAnimation(anim);
+
+
+        //anim.setFillAfter(true);
+        anim.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5.setDuration(350);
+
+
+    }
+
+
+    public void Animate4x4_reverse()
+    {
+
+        iw4x4_11.startAnimation(anim_r);
+        iw4x4_12.startAnimation(anim2_r);
+        iw4x4_13.startAnimation(anim3_r);
+        iw4x4_14.startAnimation(anim4_r);
+        iw4x4_21.startAnimation(anim5_r);
+        iw4x4_22.startAnimation(anim_r);
+        iw4x4_23.startAnimation(anim2_r);
+        iw4x4_24.startAnimation(anim3_r);
+        iw4x4_31.startAnimation(anim4_r);
+        iw4x4_32.startAnimation(anim5_r);
+        iw4x4_33.startAnimation(anim_r);
+        iw4x4_34.startAnimation(anim2_r);
+        iw4x4_41.startAnimation(anim3_r);
+        iw4x4_42.startAnimation(anim4_r);
+        iw4x4_43.startAnimation(anim5_r);
+        iw4x4_44.startAnimation(anim_r);
+
+
+        //anim.setFillAfter(true);
+        anim_r.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2_r.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3_r.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4_r.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5_r.setDuration(350);
+
+    }
+
+
+    public void Animate5x5()
+    {
+
+
+        iw5x5_11.startAnimation(anim);
+        iw5x5_12.startAnimation(anim2);
+        iw5x5_13.startAnimation(anim3);
+        iw5x5_14.startAnimation(anim4);
+        iw5x5_15.startAnimation(anim5);
+        iw5x5_21.startAnimation(anim);
+        iw5x5_22.startAnimation(anim2);
+        iw5x5_23.startAnimation(anim3);
+        iw5x5_24.startAnimation(anim4);
+        iw5x5_25.startAnimation(anim5);
+        iw5x5_31.startAnimation(anim);
+        iw5x5_32.startAnimation(anim2);
+        iw5x5_33.startAnimation(anim3);
+        iw5x5_34.startAnimation(anim4);
+        iw5x5_35.startAnimation(anim5);
+        iw5x5_41.startAnimation(anim);
+        iw5x5_42.startAnimation(anim2);
+        iw5x5_43.startAnimation(anim3);
+        iw5x5_44.startAnimation(anim4);
+        iw5x5_45.startAnimation(anim5);
+        iw5x5_51.startAnimation(anim);
+        iw5x5_52.startAnimation(anim2);
+        iw5x5_53.startAnimation(anim3);
+        iw5x5_54.startAnimation(anim4);
+        iw5x5_55.startAnimation(anim5);
+
+
+        //anim.setFillAfter(true);
+        anim.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5.setDuration(350);
+
+
+    }
+
+
+    public void Animate5x5_reverse()
+    {
+
+        iw5x5_11.startAnimation(anim_r);
+        iw5x5_12.startAnimation(anim2_r);
+        iw5x5_13.startAnimation(anim3_r);
+        iw5x5_14.startAnimation(anim4_r);
+        iw5x5_15.startAnimation(anim5_r);
+        iw5x5_21.startAnimation(anim_r);
+        iw5x5_22.startAnimation(anim2_r);
+        iw5x5_23.startAnimation(anim3_r);
+        iw5x5_24.startAnimation(anim4_r);
+        iw5x5_25.startAnimation(anim5_r);
+        iw5x5_31.startAnimation(anim_r);
+        iw5x5_32.startAnimation(anim2_r);
+        iw5x5_33.startAnimation(anim3_r);
+        iw5x5_34.startAnimation(anim4_r);
+        iw5x5_35.startAnimation(anim5_r);
+        iw5x5_41.startAnimation(anim_r);
+        iw5x5_42.startAnimation(anim2_r);
+        iw5x5_43.startAnimation(anim3_r);
+        iw5x5_44.startAnimation(anim4_r);
+        iw5x5_45.startAnimation(anim5_r);
+        iw5x5_51.startAnimation(anim_r);
+        iw5x5_52.startAnimation(anim2_r);
+        iw5x5_53.startAnimation(anim3_r);
+        iw5x5_54.startAnimation(anim4_r);
+        iw5x5_55.startAnimation(anim5_r);
+
+
+        //anim.setFillAfter(true);
+        anim_r.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2_r.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3_r.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4_r.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5_r.setDuration(350);
+
+    }
+
+
+    public void Animate6x6()
+    {
+
+        iw6x6_11.startAnimation(anim);
+        iw6x6_12.startAnimation(anim2);
+        iw6x6_13.startAnimation(anim3);
+        iw6x6_14.startAnimation(anim4);
+        iw6x6_15.startAnimation(anim5);
+        iw6x6_16.startAnimation(anim);
+        iw6x6_21.startAnimation(anim2);
+        iw6x6_22.startAnimation(anim3);
+        iw6x6_23.startAnimation(anim4);
+        iw6x6_24.startAnimation(anim5);
+        iw6x6_25.startAnimation(anim);
+        iw6x6_26.startAnimation(anim2);
+        iw6x6_31.startAnimation(anim3);
+        iw6x6_32.startAnimation(anim4);
+        iw6x6_33.startAnimation(anim5);
+        iw6x6_34.startAnimation(anim);
+        iw6x6_35.startAnimation(anim2);
+        iw6x6_36.startAnimation(anim3);
+        iw6x6_41.startAnimation(anim4);
+        iw6x6_42.startAnimation(anim5);
+        iw6x6_43.startAnimation(anim);
+        iw6x6_44.startAnimation(anim2);
+        iw6x6_45.startAnimation(anim3);
+        iw6x6_46.startAnimation(anim4);
+        iw6x6_51.startAnimation(anim5);
+        iw6x6_52.startAnimation(anim);
+        iw6x6_53.startAnimation(anim2);
+        iw6x6_54.startAnimation(anim3);
+        iw6x6_55.startAnimation(anim4);
+        iw6x6_56.startAnimation(anim5);
+        iw6x6_61.startAnimation(anim);
+        iw6x6_62.startAnimation(anim2);
+        iw6x6_63.startAnimation(anim3);
+        iw6x6_64.startAnimation(anim4);
+        iw6x6_65.startAnimation(anim5);
+        iw6x6_66.startAnimation(anim);
+
+        //anim.setFillAfter(true);
+        anim.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5.setDuration(350);
+
+
+    }
+
+
+    public void Animate6x6_reverse()
+    {
+
+        iw6x6_11.startAnimation(anim_r);
+        iw6x6_12.startAnimation(anim2_r);
+        iw6x6_13.startAnimation(anim3_r);
+        iw6x6_14.startAnimation(anim4_r);
+        iw6x6_15.startAnimation(anim5_r);
+        iw6x6_16.startAnimation(anim_r);
+        iw6x6_21.startAnimation(anim2_r);
+        iw6x6_22.startAnimation(anim3_r);
+        iw6x6_23.startAnimation(anim4_r);
+        iw6x6_24.startAnimation(anim5_r);
+        iw6x6_25.startAnimation(anim_r);
+        iw6x6_26.startAnimation(anim2_r);
+        iw6x6_31.startAnimation(anim3_r);
+        iw6x6_32.startAnimation(anim4_r);
+        iw6x6_33.startAnimation(anim5_r);
+        iw6x6_34.startAnimation(anim_r);
+        iw6x6_35.startAnimation(anim2_r);
+        iw6x6_36.startAnimation(anim3_r);
+        iw6x6_41.startAnimation(anim4_r);
+        iw6x6_42.startAnimation(anim5_r);
+        iw6x6_43.startAnimation(anim_r);
+        iw6x6_44.startAnimation(anim2_r);
+        iw6x6_45.startAnimation(anim3_r);
+        iw6x6_46.startAnimation(anim4_r);
+        iw6x6_51.startAnimation(anim5_r);
+        iw6x6_52.startAnimation(anim_r);
+        iw6x6_53.startAnimation(anim2_r);
+        iw6x6_54.startAnimation(anim3_r);
+        iw6x6_55.startAnimation(anim4_r);
+        iw6x6_56.startAnimation(anim5_r);
+        iw6x6_61.startAnimation(anim_r);
+        iw6x6_62.startAnimation(anim2_r);
+        iw6x6_63.startAnimation(anim3_r);
+        iw6x6_64.startAnimation(anim4_r);
+        iw6x6_65.startAnimation(anim5_r);
+        iw6x6_66.startAnimation(anim_r);
+
+
+        //anim.setFillAfter(true);
+        anim_r.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2_r.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3_r.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4_r.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5_r.setDuration(350);
+
+    }
+
+
+    public void Animate7x7()
+    {
+
+        iw7x7_11.startAnimation(anim);
+        iw7x7_12.startAnimation(anim2);
+        iw7x7_13.startAnimation(anim3);
+        iw7x7_14.startAnimation(anim4);
+        iw7x7_15.startAnimation(anim5);
+        iw7x7_16.startAnimation(anim);
+        iw7x7_17.startAnimation(anim2);
+        iw7x7_21.startAnimation(anim3);
+        iw7x7_22.startAnimation(anim4);
+        iw7x7_23.startAnimation(anim5);
+        iw7x7_24.startAnimation(anim);
+        iw7x7_25.startAnimation(anim2);
+        iw7x7_26.startAnimation(anim3);
+        iw7x7_27.startAnimation(anim4);
+        iw7x7_31.startAnimation(anim5);
+        iw7x7_32.startAnimation(anim);
+        iw7x7_33.startAnimation(anim2);
+        iw7x7_34.startAnimation(anim3);
+        iw7x7_35.startAnimation(anim4);
+        iw7x7_36.startAnimation(anim5);
+        iw7x7_37.startAnimation(anim);
+        iw7x7_41.startAnimation(anim2);
+        iw7x7_42.startAnimation(anim3);
+        iw7x7_43.startAnimation(anim4);
+        iw7x7_44.startAnimation(anim5);
+        iw7x7_45.startAnimation(anim);
+        iw7x7_46.startAnimation(anim2);
+        iw7x7_47.startAnimation(anim3);
+        iw7x7_51.startAnimation(anim4);
+        iw7x7_52.startAnimation(anim5);
+        iw7x7_53.startAnimation(anim);
+        iw7x7_54.startAnimation(anim2);
+        iw7x7_55.startAnimation(anim3);
+        iw7x7_56.startAnimation(anim4);
+        iw7x7_57.startAnimation(anim5);
+        iw7x7_61.startAnimation(anim);
+        iw7x7_62.startAnimation(anim2);
+        iw7x7_63.startAnimation(anim3);
+        iw7x7_64.startAnimation(anim4);
+        iw7x7_65.startAnimation(anim5);
+        iw7x7_66.startAnimation(anim);
+        iw7x7_67.startAnimation(anim2);
+        iw7x7_71.startAnimation(anim3);
+        iw7x7_72.startAnimation(anim4);
+        iw7x7_73.startAnimation(anim5);
+        iw7x7_74.startAnimation(anim);
+        iw7x7_75.startAnimation(anim2);
+        iw7x7_76.startAnimation(anim3);
+        iw7x7_77.startAnimation(anim4);
+
+        //anim.setFillAfter(true);
+        anim.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5.setDuration(350);
+
+
+    }
+
+
+    public void Animate7x7_reverse()
+    {
+
+        iw7x7_11.startAnimation(anim_r);
+        iw7x7_12.startAnimation(anim2_r);
+        iw7x7_13.startAnimation(anim3_r);
+        iw7x7_14.startAnimation(anim4_r);
+        iw7x7_15.startAnimation(anim5_r);
+        iw7x7_16.startAnimation(anim_r);
+        iw7x7_17.startAnimation(anim2_r);
+        iw7x7_21.startAnimation(anim3_r);
+        iw7x7_22.startAnimation(anim4_r);
+        iw7x7_23.startAnimation(anim5_r);
+        iw7x7_24.startAnimation(anim_r);
+        iw7x7_25.startAnimation(anim2_r);
+        iw7x7_26.startAnimation(anim3_r);
+        iw7x7_27.startAnimation(anim4_r);
+        iw7x7_31.startAnimation(anim5_r);
+        iw7x7_32.startAnimation(anim_r);
+        iw7x7_33.startAnimation(anim2_r);
+        iw7x7_34.startAnimation(anim3_r);
+        iw7x7_35.startAnimation(anim4_r);
+        iw7x7_36.startAnimation(anim5_r);
+        iw7x7_37.startAnimation(anim_r);
+        iw7x7_41.startAnimation(anim2_r);
+        iw7x7_42.startAnimation(anim3_r);
+        iw7x7_43.startAnimation(anim4_r);
+        iw7x7_44.startAnimation(anim5_r);
+        iw7x7_45.startAnimation(anim_r);
+        iw7x7_46.startAnimation(anim2_r);
+        iw7x7_47.startAnimation(anim3_r);
+        iw7x7_51.startAnimation(anim4_r);
+        iw7x7_52.startAnimation(anim5_r);
+        iw7x7_53.startAnimation(anim_r);
+        iw7x7_54.startAnimation(anim2_r);
+        iw7x7_55.startAnimation(anim3_r);
+        iw7x7_56.startAnimation(anim4_r);
+        iw7x7_57.startAnimation(anim5_r);
+        iw7x7_61.startAnimation(anim_r);
+        iw7x7_62.startAnimation(anim2_r);
+        iw7x7_63.startAnimation(anim3_r);
+        iw7x7_64.startAnimation(anim4_r);
+        iw7x7_65.startAnimation(anim5_r);
+        iw7x7_66.startAnimation(anim_r);
+        iw7x7_67.startAnimation(anim2_r);
+        iw7x7_71.startAnimation(anim3_r);
+        iw7x7_72.startAnimation(anim4_r);
+        iw7x7_73.startAnimation(anim5_r);
+        iw7x7_74.startAnimation(anim_r);
+        iw7x7_75.startAnimation(anim2_r);
+        iw7x7_76.startAnimation(anim3_r);
+        iw7x7_77.startAnimation(anim4_r);
+
+
+        //anim.setFillAfter(true);
+        anim_r.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2_r.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3_r.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4_r.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5_r.setDuration(350);
+
+    }
+
+    public void Animate8x8()
+    {
+
+        iw8x8_11.startAnimation(anim);
+        iw8x8_12.startAnimation(anim2);
+        iw8x8_13.startAnimation(anim3);
+        iw8x8_14.startAnimation(anim4);
+        iw8x8_15.startAnimation(anim5);
+        iw8x8_16.startAnimation(anim);
+        iw8x8_17.startAnimation(anim2);
+        iw8x8_18.startAnimation(anim3);
+        iw8x8_21.startAnimation(anim4);
+        iw8x8_22.startAnimation(anim5);
+        iw8x8_23.startAnimation(anim);
+        iw8x8_24.startAnimation(anim2);
+        iw8x8_25.startAnimation(anim3);
+        iw8x8_26.startAnimation(anim4);
+        iw8x8_27.startAnimation(anim5);
+        iw8x8_28.startAnimation(anim);
+        iw8x8_31.startAnimation(anim2);
+        iw8x8_32.startAnimation(anim3);
+        iw8x8_33.startAnimation(anim4);
+        iw8x8_34.startAnimation(anim5);
+        iw8x8_35.startAnimation(anim);
+        iw8x8_36.startAnimation(anim2);
+        iw8x8_37.startAnimation(anim3);
+        iw8x8_38.startAnimation(anim4);
+        iw8x8_41.startAnimation(anim5);
+        iw8x8_42.startAnimation(anim);
+        iw8x8_43.startAnimation(anim2);
+        iw8x8_44.startAnimation(anim3);
+        iw8x8_45.startAnimation(anim4);
+        iw8x8_46.startAnimation(anim5);
+        iw8x8_47.startAnimation(anim);
+        iw8x8_48.startAnimation(anim2);
+        iw8x8_51.startAnimation(anim3);
+        iw8x8_52.startAnimation(anim4);
+        iw8x8_53.startAnimation(anim5);
+        iw8x8_54.startAnimation(anim);
+        iw8x8_55.startAnimation(anim2);
+        iw8x8_56.startAnimation(anim3);
+        iw8x8_57.startAnimation(anim4);
+        iw8x8_58.startAnimation(anim5);
+        iw8x8_61.startAnimation(anim);
+        iw8x8_62.startAnimation(anim2);
+        iw8x8_63.startAnimation(anim3);
+        iw8x8_64.startAnimation(anim4);
+        iw8x8_65.startAnimation(anim5);
+        iw8x8_66.startAnimation(anim);
+        iw8x8_67.startAnimation(anim2);
+        iw8x8_68.startAnimation(anim3);
+        iw8x8_71.startAnimation(anim4);
+        iw8x8_72.startAnimation(anim5);
+        iw8x8_73.startAnimation(anim);
+        iw8x8_74.startAnimation(anim2);
+        iw8x8_75.startAnimation(anim3);
+        iw8x8_76.startAnimation(anim4);
+        iw8x8_77.startAnimation(anim5);
+        iw8x8_78.startAnimation(anim);
+        iw8x8_81.startAnimation(anim2);
+        iw8x8_82.startAnimation(anim3);
+        iw8x8_83.startAnimation(anim4);
+        iw8x8_84.startAnimation(anim5);
+        iw8x8_85.startAnimation(anim);
+        iw8x8_86.startAnimation(anim2);
+        iw8x8_87.startAnimation(anim3);
+        iw8x8_88.startAnimation(anim4);
+
+
+        //anim.setFillAfter(true);
+        anim.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5.setDuration(350);
+
+
+    }
+
+
+    public void Animate8x8_reverse()
+    {
+
+        iw8x8_11.startAnimation(anim_r);
+        iw8x8_12.startAnimation(anim2_r);
+        iw8x8_13.startAnimation(anim3_r);
+        iw8x8_14.startAnimation(anim4_r);
+        iw8x8_15.startAnimation(anim5_r);
+        iw8x8_16.startAnimation(anim_r);
+        iw8x8_17.startAnimation(anim2_r);
+        iw8x8_18.startAnimation(anim3_r);
+        iw8x8_21.startAnimation(anim4_r);
+        iw8x8_22.startAnimation(anim5_r);
+        iw8x8_23.startAnimation(anim_r);
+        iw8x8_24.startAnimation(anim2_r);
+        iw8x8_25.startAnimation(anim3_r);
+        iw8x8_26.startAnimation(anim4_r);
+        iw8x8_27.startAnimation(anim5_r);
+        iw8x8_28.startAnimation(anim_r);
+        iw8x8_31.startAnimation(anim2_r);
+        iw8x8_32.startAnimation(anim3_r);
+        iw8x8_33.startAnimation(anim4_r);
+        iw8x8_34.startAnimation(anim5_r);
+        iw8x8_35.startAnimation(anim_r);
+        iw8x8_36.startAnimation(anim2_r);
+        iw8x8_37.startAnimation(anim3_r);
+        iw8x8_38.startAnimation(anim4_r);
+        iw8x8_41.startAnimation(anim5_r);
+        iw8x8_42.startAnimation(anim_r);
+        iw8x8_43.startAnimation(anim2_r);
+        iw8x8_44.startAnimation(anim3_r);
+        iw8x8_45.startAnimation(anim4_r);
+        iw8x8_46.startAnimation(anim5_r);
+        iw8x8_47.startAnimation(anim_r);
+        iw8x8_48.startAnimation(anim2_r);
+        iw8x8_51.startAnimation(anim3_r);
+        iw8x8_52.startAnimation(anim4_r);
+        iw8x8_53.startAnimation(anim5_r);
+        iw8x8_54.startAnimation(anim_r);
+        iw8x8_55.startAnimation(anim2_r);
+        iw8x8_56.startAnimation(anim3_r);
+        iw8x8_57.startAnimation(anim4_r);
+        iw8x8_58.startAnimation(anim5_r);
+        iw8x8_61.startAnimation(anim_r);
+        iw8x8_62.startAnimation(anim2_r);
+        iw8x8_63.startAnimation(anim3_r);
+        iw8x8_64.startAnimation(anim4_r);
+        iw8x8_65.startAnimation(anim5_r);
+        iw8x8_66.startAnimation(anim_r);
+        iw8x8_67.startAnimation(anim2_r);
+        iw8x8_68.startAnimation(anim3_r);
+        iw8x8_71.startAnimation(anim4_r);
+        iw8x8_72.startAnimation(anim5_r);
+        iw8x8_73.startAnimation(anim_r);
+        iw8x8_74.startAnimation(anim2_r);
+        iw8x8_75.startAnimation(anim3_r);
+        iw8x8_76.startAnimation(anim4_r);
+        iw8x8_77.startAnimation(anim5_r);
+        iw8x8_78.startAnimation(anim_r);
+        iw8x8_81.startAnimation(anim2_r);
+        iw8x8_82.startAnimation(anim3_r);
+        iw8x8_83.startAnimation(anim4_r);
+        iw8x8_84.startAnimation(anim5_r);
+        iw8x8_85.startAnimation(anim_r);
+        iw8x8_86.startAnimation(anim2_r);
+        iw8x8_87.startAnimation(anim3_r);
+        iw8x8_88.startAnimation(anim4_r);
+
+
+        //anim.setFillAfter(true);
+        anim_r.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2_r.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3_r.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4_r.setDuration(350);
+
+        //anim5.setFillAfter(true);
+        anim5_r.setDuration(350);
+
+    }
+
+
+
+
     public void InstantiateViews()
     {
         txtScore = (TextView) findViewById(R.id.score);
