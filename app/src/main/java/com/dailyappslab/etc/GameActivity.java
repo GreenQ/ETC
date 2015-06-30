@@ -526,6 +526,8 @@ public class GameActivity extends Activity {
         view.setBackgroundDrawable(gdDefault);
     }
 
+
+    // правильний метод
     public void Animate2x2()
     {
         iw2x2_11.startAnimation(anim);
