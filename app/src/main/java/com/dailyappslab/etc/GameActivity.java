@@ -35,6 +35,9 @@ import android.widget.Toast;
  */
 public class GameActivity extends Activity {
 
+    int score;
+    TextView txtScore;
+
     Animation anim;
     Animation anim2;
     Animation anim3;
@@ -306,94 +309,94 @@ public class GameActivity extends Activity {
 
 
 
-        i1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i1.startAnimation(anim);
-                i2.startAnimation(anim2);
-                i3.startAnimation(anim3);
-                i4.startAnimation(anim4);
-
-
-                anim.setFillAfter(true);
-                anim.setDuration(350);
-
-                anim2.setFillAfter(true);
-                anim2.setDuration(350);
-
-                anim3.setFillAfter(true);
-                anim3.setDuration(350);
-
-                anim4.setFillAfter(true);
-                anim4.setDuration(350);
-
-
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        RelativeLayout rl3 = (RelativeLayout) findViewById(R.id.rl_3x3);
-
-                        rl3.setVisibility(View.VISIBLE);
-                    }
-                }, 300);
-
-
-
-
-
-            }
-        }
-
-
-
-        );
-
-        i31.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i31.startAnimation(anim);
-                i32.startAnimation(anim2);
-                i33.startAnimation(anim3);
-                i34.startAnimation(anim4);
-
-                i35.startAnimation(anim5);
-                i36.startAnimation(anim);
-                i37.startAnimation(anim2);
-                i38.startAnimation(anim3);
-                i39.startAnimation(anim4);
-
-
-                anim.setFillAfter(true);
-                anim.setDuration(350);
-
-                anim2.setFillAfter(true);
-                anim2.setDuration(350);
-
-                anim3.setFillAfter(true);
-                anim3.setDuration(350);
-
-                anim4.setFillAfter(true);
-                anim4.setDuration(350);
-
-                anim5.setFillAfter(true);
-                anim5.setDuration(350);
-
-
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        RelativeLayout rl4 = (RelativeLayout) findViewById(R.id.rl_4x4);
-
-                        rl4.setVisibility(View.VISIBLE);
-                    }
-                }, 300);
-
-
-
-
-
-            }
-        });
+//        i1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                i1.startAnimation(anim);
+//                i2.startAnimation(anim2);
+//                i3.startAnimation(anim3);
+//                i4.startAnimation(anim4);
+//
+//
+//                anim.setFillAfter(true);
+//                anim.setDuration(350);
+//
+//                anim2.setFillAfter(true);
+//                anim2.setDuration(350);
+//
+//                anim3.setFillAfter(true);
+//                anim3.setDuration(350);
+//
+//                anim4.setFillAfter(true);
+//                anim4.setDuration(350);
+//
+//
+//                Handler handler = new Handler();
+//                handler.postDelayed(new Runnable() {
+//                    public void run() {
+//                        RelativeLayout rl3 = (RelativeLayout) findViewById(R.id.rl_3x3);
+//
+//                        rl3.setVisibility(View.VISIBLE);
+//                    }
+//                }, 300);
+//
+//
+//
+//
+//
+//            }
+//        }
+//
+//
+//
+//        );
+//
+//        i31.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                i31.startAnimation(anim);
+//                i32.startAnimation(anim2);
+//                i33.startAnimation(anim3);
+//                i34.startAnimation(anim4);
+//
+//                i35.startAnimation(anim5);
+//                i36.startAnimation(anim);
+//                i37.startAnimation(anim2);
+//                i38.startAnimation(anim3);
+//                i39.startAnimation(anim4);
+//
+//
+//                anim.setFillAfter(true);
+//                anim.setDuration(350);
+//
+//                anim2.setFillAfter(true);
+//                anim2.setDuration(350);
+//
+//                anim3.setFillAfter(true);
+//                anim3.setDuration(350);
+//
+//                anim4.setFillAfter(true);
+//                anim4.setDuration(350);
+//
+//                anim5.setFillAfter(true);
+//                anim5.setDuration(350);
+//
+//
+//                Handler handler = new Handler();
+//                handler.postDelayed(new Runnable() {
+//                    public void run() {
+//                        RelativeLayout rl4 = (RelativeLayout) findViewById(R.id.rl_4x4);
+//
+//                        rl4.setVisibility(View.VISIBLE);
+//                    }
+//                }, 300);
+//
+//
+//
+//
+//
+//            }
+//        });
 
         DrawLevel();
     }
@@ -402,8 +405,11 @@ public class GameActivity extends Activity {
         GradientDrawable bgColor = (GradientDrawable) view.getBackground();
         if(view.getTag().equals(true))
         {
-            rl2x2.setVisibility(View.INVISIBLE);
-            rl3x3.setVisibility(View.VISIBLE);
+            Animate2x2();
+            score++;
+            txtScore.setText(String.valueOf(score));
+            SwitchLayouts(score);
+            DrawLevel();
         }
 //        bgColor.getAlpha();
         //Toast.makeText(this, String.valueOf(bgColor.getAlpha()), Toast.LENGTH_LONG).show();
@@ -415,6 +421,38 @@ public class GameActivity extends Activity {
 
     }
 
+    public void SwitchLayouts(int score)
+    {
+        switch (score)
+        {
+            case 5:
+                rl2x2.setVisibility(View.INVISIBLE);
+                rl3x3.setVisibility(View.VISIBLE);
+                break;
+            case 12:
+                rl3x3.setVisibility(View.INVISIBLE);
+                rl4x4.setVisibility(View.VISIBLE);
+                break;
+            case 22:
+                rl4x4.setVisibility(View.INVISIBLE);
+                rl5x5.setVisibility(View.VISIBLE);
+                break;
+            case 37:
+                rl5x5.setVisibility(View.INVISIBLE);
+                rl6x6.setVisibility(View.VISIBLE);
+                break;
+            case 55:
+                rl6x6.setVisibility(View.INVISIBLE);
+                rl7x7.setVisibility(View.VISIBLE);
+                break;
+            case 75:
+                rl7x7.setVisibility(View.INVISIBLE);
+                rl8x8.setVisibility(View.VISIBLE);
+                break;
+            case 95:
+                break;
+        }
+    }
     public void DrawLevel()
     {
 //        ImageView vw = (ImageView) findViewById(R.id.iw2x2_11);
@@ -488,8 +526,31 @@ public class GameActivity extends Activity {
         view.setBackgroundDrawable(gdDefault);
     }
 
+    public void Animate2x2()
+    {
+        iw2x2_11.startAnimation(anim);
+        iw2x2_12.startAnimation(anim2);
+        iw2x2_21.startAnimation(anim3);
+        iw2x2_22.startAnimation(anim4);
+
+
+        //anim.setFillAfter(true);
+        anim.setDuration(350);
+
+        //anim2.setFillAfter(true);
+        anim2.setDuration(350);
+
+        //anim3.setFillAfter(true);
+        anim3.setDuration(350);
+
+        //anim4.setFillAfter(true);
+        anim4.setDuration(350);
+
+
+    }
     public void InstantiateViews()
     {
+        txtScore = (TextView) findViewById(R.id.score);
         rl2x2 = (RelativeLayout) findViewById(R.id.rl_2x2);
         rl3x3 = (RelativeLayout) findViewById(R.id.rl_3x3);
         rl4x4 = (RelativeLayout) findViewById(R.id.rl_4x4);
