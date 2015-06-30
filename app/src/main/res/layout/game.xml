@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff43aa67">
+    android:background="#ffc74f4f">
 
     <RelativeLayout
         android:id="@+id/head"
@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="СЧЕТ:"
                 android:layout_marginRight="5dp"
-                android:textColor="#ff32694c"
+                android:textColor="#ffa33137"
                 android:textSize="20sp"/>
 
             <TextView
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:textColor="#ff32694c"
+                android:textColor="#ffa33137"
                 android:textSize="20sp"/>
             </RelativeLayout>
 
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15"
-                android:textColor="#ff32694c"
+                android:textColor="#ffa33137"
                 android:textSize="20sp"/>
 
 
@@ -72,7 +72,7 @@
         </RelativeLayout>
 
 <RelativeLayout
-    android:background="#ff43aa67"
+    android:background="#ffc74f4f"
     android:layout_below="@+id/head"
     android:layout_marginTop="20dp"
     android:id="@+id/base"
