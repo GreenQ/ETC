@@ -405,11 +405,18 @@ public class GameActivity extends Activity {
         GradientDrawable bgColor = (GradientDrawable) view.getBackground();
         if(view.getTag().equals(true))
         {
+            Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        DrawLevel();
+
+                    }
+                }, 300);
+
             Animate2x2();
             score++;
             txtScore.setText(String.valueOf(score));
             SwitchLayouts(score);
-            DrawLevel();
         }
 //        bgColor.getAlpha();
         //Toast.makeText(this, String.valueOf(bgColor.getAlpha()), Toast.LENGTH_LONG).show();
