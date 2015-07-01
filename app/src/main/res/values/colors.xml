@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="dialogbg">#00F8F8F8</color>
+    <color name="wrongCube">#DA4531</color>
 </resources>

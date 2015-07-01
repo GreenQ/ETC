@@ -27,6 +27,7 @@ import java.util.Date;
 public class GameActivity extends Activity {
 
     int score;
+    int size;
     TextView txtScore;
     TextView txtTime;
     long timeLeft;
@@ -483,7 +484,7 @@ public class GameActivity extends Activity {
         }
     }
 
-    public void ClickCube(View view) {
+    public void ClickCube(final View view) {
         GradientDrawable bgColor = (GradientDrawable) view.getBackground();
         if(view.getTag().equals(true))
         {
@@ -504,6 +505,18 @@ public class GameActivity extends Activity {
         }
         else
         {
+            if(size >= 6)
+                ApplyColorToImgView(view, getResources().getColor(R.color.wrongCube), 2);
+            else
+                ApplyColorToImgView(view, getResources().getColor(R.color.wrongCube), 1);
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    ApplyColorToImgView(view, mainColor , 1);
+                }
+            }, 350);
+
             view.startAnimation(animWrong);
             anim.setDuration(350);
             timeLeft = timeLeft-4000;
@@ -555,30 +568,37 @@ public class GameActivity extends Activity {
     {
         mainColor = ColorsHandler.GetRandomColor();
         if(rl2x2.getVisibility() == View.VISIBLE) {
+            size = 2;
             SetColors(2);
         }
         else if(rl3x3.getVisibility() == View.VISIBLE)
         {
+            size = 3;
             SetColors(3);
         }
         else if(rl4x4.getVisibility() == View.VISIBLE)
         {
+            size = 4;
             SetColors(4);
         }
         else if (rl5x5.getVisibility() == View.VISIBLE)
         {
+            size = 5;
             SetColors(5);
         }
         else if (rl6x6.getVisibility() == View.VISIBLE)
         {
+            size = 6;
             SetColors(6);
         }
         else if (rl7x7.getVisibility() == View.VISIBLE)
         {
+            size = 7;
             SetColors(7);
         }
         else if (rl8x8.getVisibility() == View.VISIBLE)
         {
+            size = 8;
             SetColors(8);
         }
 
