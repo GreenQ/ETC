@@ -415,33 +415,71 @@ public class GameActivity extends Activity {
 
     public void AnimateCubes()
     {
+        Handler handler = new Handler();
+
         if(rl2x2.getVisibility() == View.VISIBLE) {
             Animate2x2();
+            handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        Animate2x2_reverse();
+                    }
+                }, 350);
+
             //Animate2x2_reverse();
         }
         else if(rl3x3.getVisibility() == View.VISIBLE)
         {
             Animate3x3();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    Animate3x3_reverse();
+                }
+            }, 350);
         }
         else if(rl4x4.getVisibility() == View.VISIBLE)
         {
             Animate4x4();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    Animate4x4_reverse();
+                }
+            }, 350);
         }
         else if(rl5x5.getVisibility() == View.VISIBLE)
         {
-            Animate5x5();
+            Animate5x5(); handler.postDelayed(new Runnable() {
+            public void run() {
+                Animate5x5_reverse();
+            }
+        }, 350);
         }
         else if(rl6x6.getVisibility() == View.VISIBLE)
         {
             Animate6x6();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    Animate6x6_reverse();
+                }
+            }, 350);
         }
         else if(rl7x7.getVisibility() == View.VISIBLE)
         {
             Animate7x7();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    Animate7x7_reverse();
+                }
+            }, 350);
         }
         else if(rl8x8.getVisibility() == View.VISIBLE)
         {
             Animate8x8();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    Animate8x8_reverse();
+                }
+            }, 350);
         }
     }
 
