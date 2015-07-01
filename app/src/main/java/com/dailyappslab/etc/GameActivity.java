@@ -1,8 +1,11 @@
 package com.dailyappslab.etc;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by GreenQ on 27.06.2015.
  */
@@ -22,7 +28,11 @@ public class GameActivity extends Activity {
 
     int score;
     TextView txtScore;
+    TextView txtTime;
+    long timeLeft;
+    public static CountDownTimer globalTimer;
 
+    Animation animWrong;
     Animation anim;
     Animation anim2;
     Animation anim3;
@@ -273,6 +283,10 @@ public class GameActivity extends Activity {
 
         InstantiateViews();
 
+        Globals.GameAct = this;
+        CountTime("new");
+
+        animWrong = AnimationUtils.loadAnimation(this, R.anim.wrong_cube);
         anim = AnimationUtils.loadAnimation(this, R.anim.rote);
         anim2 = AnimationUtils.loadAnimation(this, R.anim.scale);
         anim3 = AnimationUtils.loadAnimation(this, R.anim.translate);
@@ -399,6 +413,38 @@ public class GameActivity extends Activity {
         DrawLevel();
     }
 
+    public void AnimateCubes()
+    {
+        if(rl2x2.getVisibility() == View.VISIBLE) {
+            Animate2x2();
+            //Animate2x2_reverse();
+        }
+        else if(rl3x3.getVisibility() == View.VISIBLE)
+        {
+            Animate3x3();
+        }
+        else if(rl4x4.getVisibility() == View.VISIBLE)
+        {
+            Animate4x4();
+        }
+        else if(rl5x5.getVisibility() == View.VISIBLE)
+        {
+            Animate5x5();
+        }
+        else if(rl6x6.getVisibility() == View.VISIBLE)
+        {
+            Animate6x6();
+        }
+        else if(rl7x7.getVisibility() == View.VISIBLE)
+        {
+            Animate7x7();
+        }
+        else if(rl8x8.getVisibility() == View.VISIBLE)
+        {
+            Animate8x8();
+        }
+    }
+
     public void ClickCube(View view) {
         GradientDrawable bgColor = (GradientDrawable) view.getBackground();
         if(view.getTag().equals(true))
@@ -411,10 +457,19 @@ public class GameActivity extends Activity {
                     }
                 }, 300);
 
-            Animate2x2();
+            AnimateCubes();
             score++;
             txtScore.setText(String.valueOf(score));
             SwitchLayouts(score);
+            timeLeft = 15000;
+            CountTime("continue");
+        }
+        else
+        {
+            view.startAnimation(animWrong);
+            anim.setDuration(350);
+            timeLeft = timeLeft-4000;
+            CountTime("continue");
         }
 //        bgColor.getAlpha();
         //Toast.makeText(this, String.valueOf(bgColor.getAlpha()), Toast.LENGTH_LONG).show();
@@ -460,51 +515,55 @@ public class GameActivity extends Activity {
     }
     public void DrawLevel()
     {
-//        ImageView vw = (ImageView) findViewById(R.id.iw2x2_11);
-//        //vw.setBackgroundColor(14717843);
-//        ImageView vw1 = (ImageView) findViewById(R.id.iw2x2_12);
-        // ColorsHandler.ReduceColorOpacity(vw1.get)
-
         mainColor = ColorsHandler.GetRandomColor();
-        ApplyColorToImgView(iw2x2_11, mainColor, 1);
-        ApplyColorToImgView(iw2x2_12, mainColor, 1);
-        ApplyColorToImgView(iw2x2_21, mainColor, 1);
-        ApplyColorToImgView(iw2x2_22, mainColor, 1);
+        if(rl2x2.getVisibility() == View.VISIBLE) {
+            SetColors(2);
+        }
+        else if(rl3x3.getVisibility() == View.VISIBLE)
+        {
+            SetColors(3);
+        }
+        else if(rl4x4.getVisibility() == View.VISIBLE)
+        {
+            SetColors(4);
+        }
+        else if (rl5x5.getVisibility() == View.VISIBLE)
+        {
+            SetColors(5);
+        }
+        else if (rl6x6.getVisibility() == View.VISIBLE)
+        {
+            SetColors(6);
+        }
+        else if (rl7x7.getVisibility() == View.VISIBLE)
+        {
+            SetColors(7);
+        }
+        else if (rl8x8.getVisibility() == View.VISIBLE)
+        {
+            SetColors(8);
+        }
+
+    }
+
+    public void SetColors(int size)
+    {
+        ImageView tempIV;
+        for(int i = 1; i <=size; i++)
+        {
+            for (int j = 1; j <= size; j++)
+            {
+                tempIV = (ImageView) findViewById(getResources().getIdentifier("iw" + size + "x" + size + "_" + i + j, "id", this.getPackageName()));
+                if(size >= 6)
+                    ApplyColorToImgView(tempIV, mainColor, 2);
+                else
+                    ApplyColorToImgView(tempIV, mainColor, 1);
+                        }
+        }
+
         differColor = ColorsHandler.ReduceColorOpacity(mainColor, 50);
-       // ApplyColorToImgView(iw2x2_12, differColor, 1);
-
-        ImageView tmp = (ImageView) findViewById(getResources().getIdentifier(RandomGenerator.GetRandSquareName(2), "id", this.getPackageName()));
+        ImageView tmp = (ImageView) findViewById(getResources().getIdentifier(RandomGenerator.GetRandSquareName(size), "id", this.getPackageName()));
         ApplyColorToImgView(tmp, differColor, 1);
-
-        //vw.setBackgroundColor(ColorsHandler.GetRandomColor());
-       // vw1.setBackgroundColor(((ColorDrawable) vw.getBackground()).getColor());
-        //vw1.setBackgroundColor(ColorsHandler.ReduceColorOpacity(((ColorDrawable) vw.getBackground()).getColor(), 20));
-
-//        int h = vw1.getHeight();
-//        ShapeDrawable mDrawable = new ShapeDrawable(new RectShape());
-//        mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, h, ColorsHandler.GetRandomColor(), Color.parseColor("#110000FF"), Shader.TileMode.REPEAT));
-//        vw1.setBackgroundDrawable(mDrawable);
-
-//        int colors[] = { ColorsHandler.GetRandomColor(), 0xffb6c9e2 };
-//
-//        GradientDrawable gradientDrawable = new GradientDrawable(
-//                GradientDrawable.Orientation.TOP_BOTTOM, colors);
-
-
-//        vw1.setBackgroundDrawable(gradientDrawable);
-
-//        StateListDrawable dr = (StateListDrawable) getResources().getDrawable(R.drawable.ramka1);
-//        dr.setColorFilter(ColorsHandler.GetRandomColor(), PorterDuff.Mode.DST_OVER);
-
-
-
-
-        //vw.setBackgroundColor((StateListDrawable) vw);
-       // vw.getBackground().setAlpha(vw1.getBackground().getAlpha());
-        //vw1.setBackgroundColor(((StateListDrawable) vw.getBackground()).getAlpha());
-        //vw1.setBackgroundColor(ColorsHandler.ReduceColorOpacity(((StateListDrawable) vw.getBackground()).setAlpha(vw.getBackground().getAlpha()));
-        // ColorsHandler.ReduceColorOpacity(((ColorDrawable) vw.getBackground()).getColor())
-        //vw1.setBackgroundColor(((ColorDrawable)vw.getBackground()).getColor() + 50);
     }
 
     public void ApplyColorToImgView(View view, int color, int size)
@@ -1265,6 +1324,7 @@ public class GameActivity extends Activity {
     public void InstantiateViews()
     {
         txtScore = (TextView) findViewById(R.id.score);
+        txtTime = (TextView) findViewById(R.id.timer);
         rl2x2 = (RelativeLayout) findViewById(R.id.rl_2x2);
         rl3x3 = (RelativeLayout) findViewById(R.id.rl_3x3);
         rl4x4 = (RelativeLayout) findViewById(R.id.rl_4x4);
@@ -1278,11 +1338,266 @@ public class GameActivity extends Activity {
         iw2x2_21 = (ImageView) findViewById(R.id.iw2x2_21);
         iw2x2_22 = (ImageView) findViewById(R.id.iw2x2_22);
 
+        iw3x3_11 = (ImageView) findViewById(R.id.iw3x3_11);
+        iw3x3_12 = (ImageView) findViewById(R.id.iw3x3_12);
+        iw3x3_13 = (ImageView) findViewById(R.id.iw3x3_13);
+        iw3x3_21 = (ImageView) findViewById(R.id.iw3x3_21);
+        iw3x3_22 = (ImageView) findViewById(R.id.iw3x3_22);
+        iw3x3_23 = (ImageView) findViewById(R.id.iw3x3_23);
+        iw3x3_31 = (ImageView) findViewById(R.id.iw3x3_31);
+        iw3x3_32 = (ImageView) findViewById(R.id.iw3x3_32);
+        iw3x3_33 = (ImageView) findViewById(R.id.iw3x3_33);
 
+        iw4x4_11 = (ImageView) findViewById(R.id.iw4x4_11);
+        iw4x4_12 = (ImageView) findViewById(R.id.iw4x4_12);
+        iw4x4_13 = (ImageView) findViewById(R.id.iw4x4_13);
+        iw4x4_14 = (ImageView) findViewById(R.id.iw4x4_14);
+        iw4x4_21 = (ImageView) findViewById(R.id.iw4x4_21);
+        iw4x4_22 = (ImageView) findViewById(R.id.iw4x4_22);
+        iw4x4_23 = (ImageView) findViewById(R.id.iw4x4_23);
+        iw4x4_24 = (ImageView) findViewById(R.id.iw4x4_24);
+        iw4x4_31 = (ImageView) findViewById(R.id.iw4x4_31);
+        iw4x4_32 = (ImageView) findViewById(R.id.iw4x4_32);
+        iw4x4_33 = (ImageView) findViewById(R.id.iw4x4_33);
+        iw4x4_34 = (ImageView) findViewById(R.id.iw4x4_34);
+        iw4x4_41 = (ImageView) findViewById(R.id.iw4x4_41);
+        iw4x4_42 = (ImageView) findViewById(R.id.iw4x4_42);
+        iw4x4_43 = (ImageView) findViewById(R.id.iw4x4_43);
+        iw4x4_44 = (ImageView) findViewById(R.id.iw4x4_44);
 
+        iw5x5_11 = (ImageView) findViewById(R.id.iw5x5_11);
+        iw5x5_12 = (ImageView) findViewById(R.id.iw5x5_12);
+        iw5x5_13 = (ImageView) findViewById(R.id.iw5x5_13);
+        iw5x5_14 = (ImageView) findViewById(R.id.iw5x5_14);
+        iw5x5_15 = (ImageView) findViewById(R.id.iw5x5_15);
+        iw5x5_21 = (ImageView) findViewById(R.id.iw5x5_21);
+        iw5x5_22 = (ImageView) findViewById(R.id.iw5x5_22);
+        iw5x5_23 = (ImageView) findViewById(R.id.iw5x5_23);
+        iw5x5_24 = (ImageView) findViewById(R.id.iw5x5_24);
+        iw5x5_25 = (ImageView) findViewById(R.id.iw5x5_25);
+        iw5x5_31 = (ImageView) findViewById(R.id.iw5x5_31);
+        iw5x5_32 = (ImageView) findViewById(R.id.iw5x5_32);
+        iw5x5_33 = (ImageView) findViewById(R.id.iw5x5_33);
+        iw5x5_34 = (ImageView) findViewById(R.id.iw5x5_34);
+        iw5x5_35 = (ImageView) findViewById(R.id.iw5x5_35);
+        iw5x5_41 = (ImageView) findViewById(R.id.iw5x5_41);
+        iw5x5_42 = (ImageView) findViewById(R.id.iw5x5_42);
+        iw5x5_43 = (ImageView) findViewById(R.id.iw5x5_43);
+        iw5x5_44 = (ImageView) findViewById(R.id.iw5x5_44);
+        iw5x5_45 = (ImageView) findViewById(R.id.iw5x5_45);
+        iw5x5_51 = (ImageView) findViewById(R.id.iw5x5_51);
+        iw5x5_52 = (ImageView) findViewById(R.id.iw5x5_52);
+        iw5x5_53 = (ImageView) findViewById(R.id.iw5x5_53);
+        iw5x5_54 = (ImageView) findViewById(R.id.iw5x5_54);
+        iw5x5_55 = (ImageView) findViewById(R.id.iw5x5_55);
 
+        iw6x6_11 = (ImageView) findViewById(R.id.iw6x6_11);
+        iw6x6_12 = (ImageView) findViewById(R.id.iw6x6_12);
+        iw6x6_13 = (ImageView) findViewById(R.id.iw6x6_13);
+        iw6x6_14 = (ImageView) findViewById(R.id.iw6x6_14);
+        iw6x6_15 = (ImageView) findViewById(R.id.iw6x6_15);
+        iw6x6_16 = (ImageView) findViewById(R.id.iw6x6_16);
+        iw6x6_21 = (ImageView) findViewById(R.id.iw6x6_21);
+        iw6x6_22 = (ImageView) findViewById(R.id.iw6x6_22);
+        iw6x6_23 = (ImageView) findViewById(R.id.iw6x6_23);
+        iw6x6_24 = (ImageView) findViewById(R.id.iw6x6_24);
+        iw6x6_25 = (ImageView) findViewById(R.id.iw6x6_25);
+        iw6x6_26 = (ImageView) findViewById(R.id.iw6x6_26);
+        iw6x6_31 = (ImageView) findViewById(R.id.iw6x6_31);
+        iw6x6_32 = (ImageView) findViewById(R.id.iw6x6_32);
+        iw6x6_33 = (ImageView) findViewById(R.id.iw6x6_33);
+        iw6x6_34 = (ImageView) findViewById(R.id.iw6x6_34);
+        iw6x6_35 = (ImageView) findViewById(R.id.iw6x6_35);
+        iw6x6_36 = (ImageView) findViewById(R.id.iw6x6_36);
+        iw6x6_41 = (ImageView) findViewById(R.id.iw6x6_41);
+        iw6x6_42 = (ImageView) findViewById(R.id.iw6x6_42);
+        iw6x6_43 = (ImageView) findViewById(R.id.iw6x6_43);
+        iw6x6_44 = (ImageView) findViewById(R.id.iw6x6_44);
+        iw6x6_45 = (ImageView) findViewById(R.id.iw6x6_45);
+        iw6x6_46 = (ImageView) findViewById(R.id.iw6x6_46);
+        iw6x6_51 = (ImageView) findViewById(R.id.iw6x6_51);
+        iw6x6_52 = (ImageView) findViewById(R.id.iw6x6_52);
+        iw6x6_53 = (ImageView) findViewById(R.id.iw6x6_53);
+        iw6x6_54 = (ImageView) findViewById(R.id.iw6x6_54);
+        iw6x6_55 = (ImageView) findViewById(R.id.iw6x6_55);
+        iw6x6_56 = (ImageView) findViewById(R.id.iw6x6_56);
+        iw6x6_61 = (ImageView) findViewById(R.id.iw6x6_61);
+        iw6x6_62 = (ImageView) findViewById(R.id.iw6x6_62);
+        iw6x6_63 = (ImageView) findViewById(R.id.iw6x6_63);
+        iw6x6_64 = (ImageView) findViewById(R.id.iw6x6_64);
+        iw6x6_65 = (ImageView) findViewById(R.id.iw6x6_65);
+        iw6x6_66 = (ImageView) findViewById(R.id.iw6x6_66);
 
+        iw7x7_11 = (ImageView) findViewById(R.id.iw7x7_11);
+        iw7x7_12 = (ImageView) findViewById(R.id.iw7x7_12);
+        iw7x7_13 = (ImageView) findViewById(R.id.iw7x7_13);
+        iw7x7_14 = (ImageView) findViewById(R.id.iw7x7_14);
+        iw7x7_15 = (ImageView) findViewById(R.id.iw7x7_15);
+        iw7x7_16 = (ImageView) findViewById(R.id.iw7x7_16);
+        iw7x7_17 = (ImageView) findViewById(R.id.iw7x7_17);
+        iw7x7_21 = (ImageView) findViewById(R.id.iw7x7_21);
+        iw7x7_22 = (ImageView) findViewById(R.id.iw7x7_22);
+        iw7x7_23 = (ImageView) findViewById(R.id.iw7x7_23);
+        iw7x7_24 = (ImageView) findViewById(R.id.iw7x7_24);
+        iw7x7_25 = (ImageView) findViewById(R.id.iw7x7_25);
+        iw7x7_26 = (ImageView) findViewById(R.id.iw7x7_26);
+        iw7x7_27 = (ImageView) findViewById(R.id.iw7x7_27);
+        iw7x7_31 = (ImageView) findViewById(R.id.iw7x7_31);
+        iw7x7_32 = (ImageView) findViewById(R.id.iw7x7_32);
+        iw7x7_33 = (ImageView) findViewById(R.id.iw7x7_33);
+        iw7x7_34 = (ImageView) findViewById(R.id.iw7x7_34);
+        iw7x7_35 = (ImageView) findViewById(R.id.iw7x7_35);
+        iw7x7_36 = (ImageView) findViewById(R.id.iw7x7_36);
+        iw7x7_37 = (ImageView) findViewById(R.id.iw7x7_37);
+        iw7x7_41 = (ImageView) findViewById(R.id.iw7x7_41);
+        iw7x7_42 = (ImageView) findViewById(R.id.iw7x7_42);
+        iw7x7_43 = (ImageView) findViewById(R.id.iw7x7_43);
+        iw7x7_44 = (ImageView) findViewById(R.id.iw7x7_44);
+        iw7x7_45 = (ImageView) findViewById(R.id.iw7x7_45);
+        iw7x7_46 = (ImageView) findViewById(R.id.iw7x7_46);
+        iw7x7_47 = (ImageView) findViewById(R.id.iw7x7_47);
+        iw7x7_51 = (ImageView) findViewById(R.id.iw7x7_51);
+        iw7x7_52 = (ImageView) findViewById(R.id.iw7x7_52);
+        iw7x7_53 = (ImageView) findViewById(R.id.iw7x7_53);
+        iw7x7_54 = (ImageView) findViewById(R.id.iw7x7_54);
+        iw7x7_55 = (ImageView) findViewById(R.id.iw7x7_55);
+        iw7x7_56 = (ImageView) findViewById(R.id.iw7x7_56);
+        iw7x7_57 = (ImageView) findViewById(R.id.iw7x7_57);
+        iw7x7_61 = (ImageView) findViewById(R.id.iw7x7_61);
+        iw7x7_62 = (ImageView) findViewById(R.id.iw7x7_62);
+        iw7x7_63 = (ImageView) findViewById(R.id.iw7x7_63);
+        iw7x7_64 = (ImageView) findViewById(R.id.iw7x7_64);
+        iw7x7_65 = (ImageView) findViewById(R.id.iw7x7_65);
+        iw7x7_66 = (ImageView) findViewById(R.id.iw7x7_66);
+        iw7x7_67 = (ImageView) findViewById(R.id.iw7x7_67);
+        iw7x7_71 = (ImageView) findViewById(R.id.iw7x7_71);
+        iw7x7_72 = (ImageView) findViewById(R.id.iw7x7_72);
+        iw7x7_73 = (ImageView) findViewById(R.id.iw7x7_73);
+        iw7x7_74 = (ImageView) findViewById(R.id.iw7x7_74);
+        iw7x7_75 = (ImageView) findViewById(R.id.iw7x7_75);
+        iw7x7_76 = (ImageView) findViewById(R.id.iw7x7_76);
+        iw7x7_77 = (ImageView) findViewById(R.id.iw7x7_77);
+
+        iw8x8_11 = (ImageView) findViewById(R.id.iw8x8_11);
+        iw8x8_12 = (ImageView) findViewById(R.id.iw8x8_12);
+        iw8x8_13 = (ImageView) findViewById(R.id.iw8x8_13);
+        iw8x8_14 = (ImageView) findViewById(R.id.iw8x8_14);
+        iw8x8_15 = (ImageView) findViewById(R.id.iw8x8_15);
+        iw8x8_16 = (ImageView) findViewById(R.id.iw8x8_16);
+        iw8x8_17 = (ImageView) findViewById(R.id.iw8x8_17);
+        iw8x8_18 = (ImageView) findViewById(R.id.iw8x8_18);
+        iw8x8_21 = (ImageView) findViewById(R.id.iw8x8_21);
+        iw8x8_22 = (ImageView) findViewById(R.id.iw8x8_22);
+        iw8x8_23 = (ImageView) findViewById(R.id.iw8x8_23);
+        iw8x8_24 = (ImageView) findViewById(R.id.iw8x8_24);
+        iw8x8_25 = (ImageView) findViewById(R.id.iw8x8_25);
+        iw8x8_26 = (ImageView) findViewById(R.id.iw8x8_26);
+        iw8x8_27 = (ImageView) findViewById(R.id.iw8x8_27);
+        iw8x8_28 = (ImageView) findViewById(R.id.iw8x8_28);
+        iw8x8_31 = (ImageView) findViewById(R.id.iw8x8_31);
+        iw8x8_32 = (ImageView) findViewById(R.id.iw8x8_32);
+        iw8x8_33 = (ImageView) findViewById(R.id.iw8x8_33);
+        iw8x8_34 = (ImageView) findViewById(R.id.iw8x8_34);
+        iw8x8_35 = (ImageView) findViewById(R.id.iw8x8_35);
+        iw8x8_36 = (ImageView) findViewById(R.id.iw8x8_36);
+        iw8x8_37 = (ImageView) findViewById(R.id.iw8x8_37);
+        iw8x8_38 = (ImageView) findViewById(R.id.iw8x8_38);
+        iw8x8_41 = (ImageView) findViewById(R.id.iw8x8_41);
+        iw8x8_42 = (ImageView) findViewById(R.id.iw8x8_42);
+        iw8x8_43 = (ImageView) findViewById(R.id.iw8x8_43);
+        iw8x8_44 = (ImageView) findViewById(R.id.iw8x8_44);
+        iw8x8_45 = (ImageView) findViewById(R.id.iw8x8_45);
+        iw8x8_46 = (ImageView) findViewById(R.id.iw8x8_46);
+        iw8x8_47 = (ImageView) findViewById(R.id.iw8x8_47);
+        iw8x8_48 = (ImageView) findViewById(R.id.iw8x8_48);
+        iw8x8_51 = (ImageView) findViewById(R.id.iw8x8_51);
+        iw8x8_52 = (ImageView) findViewById(R.id.iw8x8_52);
+        iw8x8_53 = (ImageView) findViewById(R.id.iw8x8_53);
+        iw8x8_54 = (ImageView) findViewById(R.id.iw8x8_54);
+        iw8x8_55 = (ImageView) findViewById(R.id.iw8x8_55);
+        iw8x8_56 = (ImageView) findViewById(R.id.iw8x8_56);
+        iw8x8_57 = (ImageView) findViewById(R.id.iw8x8_57);
+        iw8x8_58 = (ImageView) findViewById(R.id.iw8x8_58);
+        iw8x8_61 = (ImageView) findViewById(R.id.iw8x8_61);
+        iw8x8_62 = (ImageView) findViewById(R.id.iw8x8_62);
+        iw8x8_63 = (ImageView) findViewById(R.id.iw8x8_63);
+        iw8x8_64 = (ImageView) findViewById(R.id.iw8x8_64);
+        iw8x8_65 = (ImageView) findViewById(R.id.iw8x8_65);
+        iw8x8_66 = (ImageView) findViewById(R.id.iw8x8_66);
+        iw8x8_67 = (ImageView) findViewById(R.id.iw8x8_67);
+        iw8x8_68 = (ImageView) findViewById(R.id.iw8x8_68);
+        iw8x8_71 = (ImageView) findViewById(R.id.iw8x8_71);
+        iw8x8_72 = (ImageView) findViewById(R.id.iw8x8_72);
+        iw8x8_73 = (ImageView) findViewById(R.id.iw8x8_73);
+        iw8x8_74 = (ImageView) findViewById(R.id.iw8x8_74);
+        iw8x8_75 = (ImageView) findViewById(R.id.iw8x8_75);
+        iw8x8_76 = (ImageView) findViewById(R.id.iw8x8_76);
+        iw8x8_77 = (ImageView) findViewById(R.id.iw8x8_77);
+        iw8x8_78 = (ImageView) findViewById(R.id.iw8x8_78);
+        iw8x8_81 = (ImageView) findViewById(R.id.iw8x8_81);
+        iw8x8_82 = (ImageView) findViewById(R.id.iw8x8_82);
+        iw8x8_83 = (ImageView) findViewById(R.id.iw8x8_83);
+        iw8x8_84 = (ImageView) findViewById(R.id.iw8x8_84);
+        iw8x8_85 = (ImageView) findViewById(R.id.iw8x8_85);
+        iw8x8_86 = (ImageView) findViewById(R.id.iw8x8_86);
+        iw8x8_87 = (ImageView) findViewById(R.id.iw8x8_87);
+        iw8x8_88 = (ImageView) findViewById(R.id.iw8x8_88);
+    }
+
+    public void CountTime(String instruction)
+    {
+        //txtTime = (TextView) findViewById( R.id.txtTime );
+        switch (instruction) {
+            case "new":
+                globalTimer = new CountDownTimer(15000, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        txtTime.setText(new SimpleDateFormat("ss").format(new Date( millisUntilFinished)));
+                        timeLeft = millisUntilFinished;
+                    }
+
+                    public void onFinish() {
+                        StartResultActivity();
+                    }
+                }.start();
+                break;
+            case "continue":
+                try {
+                    globalTimer.cancel();
+                }
+                catch(Exception ex)
+                {}
+                globalTimer = new CountDownTimer(timeLeft, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        txtTime.setText(new SimpleDateFormat("ss").format(new Date( millisUntilFinished)));
+                        timeLeft = millisUntilFinished;
+                    }
+
+                    public void onFinish() {
+                       StartResultActivity();
+                    }
+                }.start();
+                break;
+        }
+    }
+
+    private void StartResultActivity()
+    {
+        Globals.Score = score;
+        Globals.RestartingIntent = getIntent();
+        Intent i = new Intent(GameActivity.this, ResultActivity.class);
+        startActivity(i);
 
     }
+
+    @Override
+    public void onBackPressed()
+    {
+        globalTimer.cancel();
+        finish();
+    }
+
+
 
 }

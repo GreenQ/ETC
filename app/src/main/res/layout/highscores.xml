@@ -76,7 +76,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_1"
-                    android:background="@drawable/jinka"/>
+                    android:background="@drawable/animal_0"/>
 
             </RelativeLayout>
 
@@ -144,7 +144,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_2"
-                    android:background="@drawable/jinka"/>
+                    android:background="@drawable/animal_0"/>
 
                 </RelativeLayout>
 
@@ -212,7 +212,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_3"
-                    android:background="@drawable/jinka"/>
+                    android:background="@drawable/animal_0"/>
 
             </RelativeLayout>
 
@@ -281,7 +281,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_4"
-                    android:background="@drawable/predator"/>
+                    android:background="@drawable/animal_1"/>
 
             </RelativeLayout>
 
@@ -348,7 +348,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_5"
-                    android:background="@drawable/predator"/>
+                    android:background="@drawable/animal_1"/>
 
             </RelativeLayout>
 
@@ -418,7 +418,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_6"
-                    android:background="@drawable/orel"/>
+                    android:background="@drawable/animal_2"/>
 
             </RelativeLayout>
 
@@ -486,7 +486,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_7"
-                    android:background="@drawable/orel"/>
+                    android:background="@drawable/animal_2"/>
 
             </RelativeLayout>
 
@@ -556,7 +556,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_8"
-                    android:background="@drawable/orel"/>
+                    android:background="@drawable/animal_2"/>
 
             </RelativeLayout>
 
@@ -625,7 +625,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_9"
-                    android:background="@drawable/pantera"/>
+                    android:background="@drawable/animal_3"/>
 
             </RelativeLayout>
 
@@ -694,7 +694,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_10"
-                    android:background="@drawable/pantera"/>
+                    android:background="@drawable/animal_4"/>
 
             </RelativeLayout>
 

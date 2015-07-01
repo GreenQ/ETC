@@ -22,6 +22,6 @@ public class RandomGenerator {
         //} while(row < 0 && row > 3);
 
         //int row = rand.nextInt(size-1) + 1;
-        return "iw2x2_" + String.valueOf(column) + String.valueOf(row);
+        return "iw" + size + "x" + size + "_" + String.valueOf(column) + String.valueOf(row);
     }
 }

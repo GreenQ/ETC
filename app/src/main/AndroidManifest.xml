@@ -37,6 +37,9 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"></activity>
 
+        <activity android:name=".ResultActivity"
+            android:theme="@style/AppThemeDialog"></activity>
+
     </application>
 
 </manifest>
