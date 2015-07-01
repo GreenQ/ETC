@@ -151,7 +151,7 @@
             android:id="@+id/img_animal"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/krot"/>
+            android:background="@drawable/animal_7"/>
 
 
 
