@@ -2,15 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff43aa67">
+    android:background="#FFFEFFF0">
 
     <TextView
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Обращение к пользователям"
+        android:text="@string/top_obr"
         android:id="@+id/textView"
-        android:textColor="#ffffff"
+        android:textColor="#ff12ac32"
         android:layout_marginTop="10dp"
         android:background="#00FFFFFF"
         android:gravity="center"
@@ -29,10 +29,10 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:background="#00FFFFFF"
-        android:textColor="#FFFFFF"
+        android:textColor="#ff12ac32"
         android:autoLink="email"
         android:textColorLink="#ff0010b6"
-        android:text="      Команда разработчиков DailyAppsLab благодарит вас за установку игры. С любыми пожеланиями или предложениями вы можете обратиться к нам по электронному адресу dailyappslab@gmail.com \n     Если вам понравилась игра - пожалуйста, поддержите нас отзывами и оценками! \n    Желаем удачи и приятного времяпровождения!"
+        android:text="@string/obr"
         android:textStyle="italic"/>
 
 
@@ -43,7 +43,7 @@
         android:id="@+id/exit"
         android:layout_width="140dp"
         android:layout_height="40dp"
-        android:background="@drawable/active_rec">
+        android:background="@drawable/active_prh">
 
         <TextView
             android:layout_centerInParent="true"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
             android:textSize="20sp"
-            android:text="НАЗАД"/>
+            android:text="@string/nazad"/>
     </RelativeLayout>
 
 </RelativeLayout>

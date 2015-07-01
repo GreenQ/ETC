@@ -6,12 +6,6 @@
     <string name="action_settings">Settings</string>
 
 
-    <string name="font1">AGCenturyOldStyle.ttf</string>
-    <string name="font2">aCityNova.ttf</string>
-
-
-    <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
-
     <string name="a1">Вы различаете цвета как крот.</string>
     <string name="a2">Вы различаете цвета как муравей.</string>
     <string name="a3">Вы различаете цвета как одноглазый пират.</string>
@@ -36,32 +30,32 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">ИГРАТЬ</string>
-    <string name="recordu">РЕКОРДЫ</string>
-    <string name="o_nas">О НАС</string>
+    <string name="igrat">JUGAR</string>
+    <string name="recordu">REGISTROS</string>
+    <string name="o_nas">INFO</string>
 
 
 
-    <string name="pravila">ПРАВИЛА ИГРЫ</string>
-    <string name="pravila_text">Ваша задача - найти квадрат, отличающийся от остальных по цвету. На его поиски у вас есть всего 15 секунд.</string>
-    <string name="zakrit">ЗАКРЫТЬ</string>
-    <string name="bolshe_ne_pokazivat">БОЛЬШЕ НЕ ПОКАЗЫВАТЬ</string>
+    <string name="pravila">REGLAS DEL JUEGO</string>
+    <string name="pravila_text">правила гри, перед першим запуском, або як кнопка меню. нажати ок або непоказувати більше</string>
+    <string name="zakrit">CERCA</string>
+    <string name="bolshe_ne_pokazivat">NO MOSTRAR</string>
 
 
-    <string name="s4et">СЧЕТ:</string>
+    <string name="s4et">PUNTUACIÓN:</string>
 
 
-    <string name="igra_okon4ena">ИГРА ОКОНЧЕНА</string>
-    <string name="vash_resultat">Ваш результат:&#160;</string>
-    <string name="novaya_igra">НОВАЯ ИГРА</string>
+    <string name="igra_okon4ena">FIN DEL JUEGO</string>
+    <string name="vash_resultat">Sus resultados:&#160;</string>
+    <string name="novaya_igra">NUEVO JUEGO</string>
 
 
-    <string name="table_rec">ТАБЛИЦА РЕКОРДОВ</string>
+    <string name="table_rec">PUNTAJES ALTOS</string>
 
 
     <string name="top_obr">Обращение к пользователям</string>
     <string name="obr">      Команда разработчиков DailyAppsLab благодарит вас за установку игры. С любыми пожеланиями или предложениями вы можете обратиться к нам по электронному адресу dailyappslab@gmail.com \n     Если вам понравилась игра - пожалуйста, поддержите нас отзывами и оценками! \n    Желаем удачи и приятного времяпровождения!</string>
-    <string name="nazad">НАЗАД</string>
+    <string name="nazad">ESPALDA</string>
 
 
 </resources>

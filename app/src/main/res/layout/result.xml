@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff43aa67"
+    android:background="#FFFEFFF0"
     android:gravity="center|top">
 
 
@@ -21,7 +21,7 @@
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ИГРА ОКОНЧЕНА"
+            android:text="@string/igra_okon4ena"
             android:id="@+id/game_over"
             android:textColor="#ff12ac32"
             android:textSize="28sp"/>
@@ -34,7 +34,7 @@
             android:layout_below="@+id/game_over"
             android:layout_marginTop="5dp"
             android:layout_height="wrap_content"
-            android:text="Ваш результат: "
+            android:text="@string/vash_resultat"
             android:textColor="#ff0d6b1f"
             android:textSize="18sp"/>
 
@@ -151,7 +151,7 @@
             android:id="@+id/img_animal"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/animal_7"/>
+            android:background="@drawable/krot"/>
 
 
 
@@ -164,8 +164,7 @@
         android:id="@+id/new_game"
         android:layout_width="140dp"
         android:layout_height="40dp"
-        android:background="@drawable/active_rec"
-        android:onClick="PressRestart">
+        android:background="@drawable/active_prh">
 
         <TextView
             android:layout_centerInParent="true"
@@ -173,7 +172,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
             android:textSize="20sp"
-            android:text="НОВАЯ ИГРА"/>
+            android:text="@string/novaya_igra"/>
         </RelativeLayout>
 
 
@@ -184,8 +183,7 @@
         android:id="@+id/exit"
         android:layout_width="140dp"
         android:layout_height="40dp"
-        android:background="@drawable/active_rec"
-        android:onClick="PressClose">
+        android:background="@drawable/active_prh">
 
         <TextView
             android:layout_centerInParent="true"
@@ -193,7 +191,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
             android:textSize="20sp"
-            android:text="ВЫХОД"/>
+            android:text="@string/nazad"/>
     </RelativeLayout>
 
     </RelativeLayout>

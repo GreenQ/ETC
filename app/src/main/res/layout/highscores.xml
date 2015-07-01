@@ -2,27 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff43aa67"
+    android:background="#FFFEFFF0"
     android:gravity="center|top">
 
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ТАБЛИЦА РЕКОРДОВ"
+        android:text="@string/table_rec"
         android:id="@+id/table_high_score"
         android:textSize="24sp"
         android:padding="5dp"
 
-        android:textColor="#c9d7ffec"
+        android:textColor="#FF68D199"
         />
     
     <RelativeLayout
         android:id="@+id/table"
-        android:layout_width="250dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="260dp"
+        android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/table_high_score"
+        android:background="@drawable/table_rama"
         android:gravity="center">
 
 
@@ -31,30 +32,32 @@
 
         <RelativeLayout
             android:id="@+id/p_1"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
                 android:id="@+id/num_1"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:layout_centerVertical="true"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+
                 android:text="1"/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_1"
                 android:gravity="center_vertical"
+                android:layout_centerVertical="true"
                 android:layout_width="130dp"
                 android:id="@+id/place_1"
                 android:paddingLeft="3dp"
                 android:text="Анна"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -63,20 +66,22 @@
 
                 android:layout_toRightOf="@+id/place_1"
                 android:gravity="center_vertical"
+                android:layout_centerVertical="true"
                 android:layout_width="40dp"
                 android:id="@+id/animal_1"
                 android:paddingLeft="3dp"
 
-                android:background="@drawable/high"
+
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
                 <ImageView
+
                     android:layout_centerInParent="true"
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_1"
-                    android:background="@drawable/animal_0"/>
+                    android:background="@drawable/jinka"/>
 
             </RelativeLayout>
 
@@ -84,7 +89,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_1"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_1"
                 android:text="153"
@@ -98,20 +104,20 @@
         <RelativeLayout
             android:id="@+id/p_2"
             android:layout_below="@+id/p_1"
-            android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
                 android:id="@+id/num_2"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:layout_centerVertical="true"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+
                 android:text="2"/>
 
             <TextView
@@ -122,7 +128,7 @@
                 android:paddingLeft="3dp"
                 android:text="Светлана"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -134,8 +140,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_2"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -144,7 +149,8 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_2"
-                    android:background="@drawable/animal_0"/>
+
+                    android:background="@drawable/jinka"/>
 
                 </RelativeLayout>
 
@@ -152,9 +158,10 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_2"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_2"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:text="119"
                 android:textSize="18sp"
                 android:textColor="#ff12ac32"
@@ -167,19 +174,19 @@
             android:id="@+id/p_3"
             android:layout_below="@+id/p_2"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
                 android:id="@+id/num_3"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:layout_centerVertical="true"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
-                android:background="@drawable/high"
                 android:text="3"/>
 
             <TextView
@@ -189,8 +196,8 @@
                 android:id="@+id/place_3"
                 android:paddingLeft="3dp"
                 android:text="Мария"
+                android:layout_centerVertical="true"
                 android:textSize="18sp"
-                android:background="@drawable/high"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -202,8 +209,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_3"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -212,7 +218,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_3"
-                    android:background="@drawable/animal_0"/>
+                    android:background="@drawable/jinka"/>
 
             </RelativeLayout>
 
@@ -220,9 +226,11 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_3"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+
                 android:layout_width="match_parent"
                 android:id="@+id/sc_3"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:text="97"
                 android:textSize="18sp"
                 android:textColor="#ff12ac32"
@@ -236,8 +244,8 @@
             android:id="@+id/p_4"
             android:layout_below="@+id/p_3"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
@@ -248,7 +256,8 @@
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+                android:layout_marginLeft="5dp"
+
                 android:text="4"/>
 
             <TextView
@@ -258,8 +267,8 @@
                 android:id="@+id/place_4"
                 android:paddingLeft="3dp"
                 android:text="Борис"
+                android:layout_centerVertical="true"
                 android:textSize="18sp"
-                android:background="@drawable/high"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -271,8 +280,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_4"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -281,7 +289,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_4"
-                    android:background="@drawable/animal_1"/>
+                    android:background="@drawable/predator"/>
 
             </RelativeLayout>
 
@@ -289,7 +297,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_4"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_4"
                 android:text="86"
@@ -303,8 +312,8 @@
             android:id="@+id/p_5"
             android:layout_below="@+id/p_4"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
@@ -315,7 +324,7 @@
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+                android:layout_marginLeft="5dp"
                 android:text="5"/>
 
             <TextView
@@ -326,7 +335,7 @@
                 android:paddingLeft="3dp"
                 android:text="Андрей"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -338,8 +347,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_5"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -348,7 +356,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_5"
-                    android:background="@drawable/animal_1"/>
+                    android:background="@drawable/predator"/>
 
             </RelativeLayout>
 
@@ -356,7 +364,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_5"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_5"
                 android:text="77"
@@ -373,8 +382,8 @@
             android:id="@+id/p_6"
             android:layout_below="@+id/p_5"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
@@ -385,7 +394,7 @@
                 android:layout_height="30dp"
                 android:textSize="18sp"
                 android:textColor="#ff12ac32"
-                android:background="@drawable/high"
+                android:layout_marginLeft="5dp"
                 android:text="6"/>
 
             <TextView
@@ -395,7 +404,7 @@
                 android:id="@+id/place_6"
                 android:paddingLeft="3dp"
                 android:text="Лилия"
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
                 android:layout_height="30dp" />
@@ -408,8 +417,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_6"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -418,7 +426,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_6"
-                    android:background="@drawable/animal_2"/>
+                    android:background="@drawable/orel"/>
 
             </RelativeLayout>
 
@@ -426,7 +434,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_6"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_6"
                 android:text="73"
@@ -441,8 +450,8 @@
             android:id="@+id/p_7"
             android:layout_below="@+id/p_6"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
@@ -453,7 +462,7 @@
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+                android:layout_marginLeft="5dp"
                 android:text="7"/>
 
             <TextView
@@ -464,7 +473,7 @@
                 android:paddingLeft="3dp"
                 android:text="Дмитрий"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -476,8 +485,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_7"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -486,7 +494,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_7"
-                    android:background="@drawable/animal_2"/>
+                    android:background="@drawable/orel"/>
 
             </RelativeLayout>
 
@@ -494,7 +502,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_7"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_7"
                 android:text="65"
@@ -511,8 +520,8 @@
             android:id="@+id/p_8"
             android:layout_below="@+id/p_7"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
@@ -522,7 +531,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
-                android:background="@drawable/high"
+                android:layout_marginLeft="5dp"
                 android:textSize="18sp"
                 android:text="8"/>
 
@@ -534,7 +543,7 @@
                 android:id="@+id/place_8"
                 android:paddingLeft="3dp"
                 android:text="Борис"
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -546,8 +555,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_8"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -556,7 +564,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_8"
-                    android:background="@drawable/animal_2"/>
+                    android:background="@drawable/orel"/>
 
             </RelativeLayout>
 
@@ -564,7 +572,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_8"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_8"
                 android:text="57"
@@ -580,8 +589,8 @@
             android:id="@+id/p_9"
             android:layout_below="@+id/p_8"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
-            android:layout_height="30dp"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
             android:background="@drawable/rec">
 
             <TextView
@@ -592,7 +601,7 @@
                 android:layout_height="30dp"
                 android:textColor="#ff12ac32"
                 android:textSize="18sp"
-                android:background="@drawable/high"
+                android:layout_marginLeft="5dp"
                 android:text="9"/>
 
             <TextView
@@ -603,7 +612,7 @@
                 android:id="@+id/place_9"
                 android:paddingLeft="3dp"
                 android:text="Надежда"
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -615,8 +624,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_9"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -625,7 +633,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_9"
-                    android:background="@drawable/animal_3"/>
+                    android:background="@drawable/pantera"/>
 
             </RelativeLayout>
 
@@ -633,7 +641,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_9"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_9"
                 android:text="51"
@@ -649,18 +658,18 @@
             android:id="@+id/p_10"
             android:layout_below="@+id/p_9"
             android:layout_marginTop="2dp"
-            android:layout_width="240dp"
+            android:layout_width="260dp"
             android:layout_height="30dp"
-            android:background="@drawable/rec">
+            android:background="@drawable/rec2">
 
             <TextView
                 android:id="@+id/num_10"
                 android:gravity="center"
                 android:layout_centerVertical="true"
                 android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_height="32dp"
                 android:textColor="#ff12ac32"
-                android:background="@drawable/high"
+                android:layout_marginLeft="5dp"
                 android:textSize="18sp"
                 android:text="10"/>
 
@@ -672,7 +681,7 @@
                 android:id="@+id/place_10"
                 android:paddingLeft="3dp"
                 android:text="Василий"
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
@@ -684,8 +693,7 @@
                 android:layout_width="40dp"
                 android:id="@+id/animal_10"
                 android:paddingLeft="3dp"
-
-                android:background="@drawable/high"
+                android:layout_centerVertical="true"
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp">
 
@@ -694,7 +702,7 @@
                     android:layout_width="23dp"
                     android:layout_height="23dp"
                     android:id="@+id/img_high_10"
-                    android:background="@drawable/animal_4"/>
+                    android:background="@drawable/pantera"/>
 
             </RelativeLayout>
 
@@ -702,7 +710,8 @@
             <TextView
                 android:layout_toRightOf="@+id/animal_10"
                 android:gravity="right|center"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
                 android:id="@+id/sc_10"
                 android:text="48"
@@ -732,7 +741,7 @@
         android:id="@+id/exit"
         android:layout_width="140dp"
         android:layout_height="40dp"
-        android:background="@drawable/active_rec">
+        android:background="@drawable/active_prh">
 
         <TextView
             android:layout_centerInParent="true"
@@ -740,7 +749,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
             android:textSize="20sp"
-            android:text="ВЫХОД"/>
+            android:text="@string/nazad"/>
     </RelativeLayout>
 
     </RelativeLayout>

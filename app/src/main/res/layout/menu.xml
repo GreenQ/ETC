@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffc74f4f">
+    android:background="#FFFEFFF0">
 
 
     <!--<ImageView-->
@@ -29,9 +29,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="ИГРАТЬ"
+                    android:text="@string/igrat"
                     android:textSize="35sp"
-                    android:textColor="#ff952d32"/>
+                    android:textColor="#ff12ac32"/>
             </RelativeLayout>
 
         <RelativeLayout
@@ -46,9 +46,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="РЕКОРДЫ"
+                android:text="@string/recordu"
                 android:textSize="35sp"
-                android:textColor="#ff952d32"/>
+                android:textColor="#ff12ac32"/>
         </RelativeLayout>
 
 
@@ -63,12 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="О НАС"
+                android:text="@string/o_nas"
                 android:textSize="35sp"
-                android:textColor="#ff952d32"/>
+                android:textColor="#ff12ac32"/>
         </RelativeLayout>
 
 
         </RelativeLayout>
+
+
 
 </RelativeLayout>

@@ -7,10 +7,9 @@
             <item android:bottom="0dp" android:right="0dp">
                 <shape>
                     <gradient android:angle="270"
-                        android:endColor="#FF68D199" android:startColor="#FF68D199" />
-                    <stroke android:width="0dp" android:color="#ff12ac32" />
-                    <corners android:bottomRightRadius="20dp"
-                        android:bottomLeftRadius="20dp"/>
+                        android:endColor="#c9d7ffec" android:startColor="#c9d7ffec" />
+                    <stroke android:width="2dp" android:color="#ff12ac32" />
+                    <corners android:radius="10dp" />
 
                 </shape>
             </item>

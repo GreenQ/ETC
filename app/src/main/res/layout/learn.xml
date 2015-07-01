@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
-        android:text="ПРАВИЛА ИГРЫ"
+        android:text="@string/pravila"
         android:textSize="20sp"
         android:textColor="#ff12ac32"
         android:layout_marginTop="10dp"
@@ -23,7 +23,7 @@
         android:textColor="#ff12ac32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="правила гри, перед першим запуском, або як кнопка меню. нажати ок або непоказувати більше"
+        android:text="@string/pravila_text"
         android:textSize="20sp"/>
 
 
@@ -35,7 +35,7 @@
         android:layout_marginLeft="10dp"
         android:layout_width="130dp"
         android:layout_height="60dp"
-        android:background="@drawable/active_rec">
+        android:background="@drawable/active_prh">
 
         <TextView
             android:layout_centerInParent="true"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
             android:textSize="17sp"
-            android:text="ЗАКРЫТЬ"/>
+            android:text="@string/zakrit"/>
     </RelativeLayout>
 
 
@@ -56,7 +56,7 @@
         android:id="@+id/never"
         android:layout_width="130dp"
         android:layout_height="60dp"
-        android:background="@drawable/active_rec">
+        android:background="@drawable/active_prh">
 
         <TextView
             android:gravity="center"
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
             android:textSize="17sp"
-            android:text="БОЛЬШЕ НЕ ПОКАЗЫВАТЬ"/>
+            android:text="@string/bolshe_ne_pokazivat"/>
     </RelativeLayout>
     
 

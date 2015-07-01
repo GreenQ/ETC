@@ -6,12 +6,6 @@
     <string name="action_settings">Settings</string>
 
 
-    <string name="font1">AGCenturyOldStyle.ttf</string>
-    <string name="font2">aCityNova.ttf</string>
-
-
-    <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
-
     <string name="a1">Вы различаете цвета как крот.</string>
     <string name="a2">Вы различаете цвета как муравей.</string>
     <string name="a3">Вы различаете цвета как одноглазый пират.</string>
