@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFEFFF0"
+
+    android:background="@color/dialogbg"
     android:gravity="center|top">
 
 
@@ -197,5 +198,14 @@
     </RelativeLayout>
 
     </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/admob"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+    <!--</RelativeLayout>-->
 
 </RelativeLayout>
