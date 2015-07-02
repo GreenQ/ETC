@@ -4,6 +4,10 @@
     <string name="app_name">ETC</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="base64cod">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhkW6Fe8dNdTGw9U88naEgQCjXQcWC3hbDN+Wbu7Y4K7nHU1GrVkHFy5bWU4TqFfLY796v3+BUaFwpxgC9wQSDUGjtqpLa5pgfjzFMIxDGT/h802uebJX1daixhaaDroeVkcvt2mcIk/wjOhw/tR8IIKnpG5T74UCLjWQ/Mr9M9r/CI7sSb0Y5MZGmCrJUy8Ll/0W771XEldAhjYEOqnIKaoirJHxx3Y/zoG7hDibRzTCAfEMSMX0tLJsB6oNHTLVQUbcyB+cUMh0tiSVqRJTOnpsEdWqB/dwQXsz7AFoROCHB2NmaWEMbgM3dHHe45xiTEpOs60Mw4U+0s6pQYQIPQIDAQAB</string>
+    <string name="admobMiniBannerId">ca-app-pub-3376890691318599/7935168463</string>
+    <string name="admobInterstitialBannerId">ca-app-pub-3376890691318599/1888634865</string>
+    <string name="sadViewMiniBanner">559587f59e7bc34500000000</string>
 
 
     <string name="a1">Você distinguir as cores como uma toupeira.</string>
