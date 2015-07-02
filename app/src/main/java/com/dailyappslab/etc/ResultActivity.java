@@ -2,12 +2,18 @@ package com.dailyappslab.etc;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import com.startad.lib.SADView;
 
 /**
  * Created by GreenQ on 01.07.2015.
@@ -19,6 +25,9 @@ public class ResultActivity extends Activity {
     String[] scoresArray;
     String[] namesArray;
     Preferences preferences;
+    SADView sadView;
+    RelativeLayout okLayout;
+
 
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
@@ -31,12 +40,47 @@ public class ResultActivity extends Activity {
         namesArray = preferences.GetNames();
         optional = (RelativeLayout) findViewById(R.id.optional);
         etName = (EditText) findViewById(R.id.input_name);
+        okLayout = (RelativeLayout) findViewById(R.id.ok);
         DisplayPicture();
         setFinishOnTouchOutside(false);
 
         if(IsInsertPossible())
             optional.setVisibility(View.VISIBLE);
 
+        if(Globals.interstitialAd.isLoaded())
+            Globals.interstitialAd.show();
+
+        ShowAd();
+
+        etName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    if (etName.getText().toString().trim().length() < 5) {
+                        etName.setError("Failed");
+                    } else {
+                        // your code here
+                        etName.setError(null);
+                    }
+                } else {
+                    if (etName.getText().toString().trim().length() < 5) {
+                        etName.setError("Failed");
+                    } else {
+                        // your code here
+                        etName.setError(null);
+                    }
+                }
+
+            }
+        });
+    }
+
+    public void ClickOk(View view)
+    {
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.record_enter);
+        anim.setDuration(200);
+        okLayout.setAnimation(anim);
+        okLayout.startAnimation(anim);
     }
 
     public void DisplayPicture()
@@ -110,4 +154,19 @@ public class ResultActivity extends Activity {
 //        }
 //        return super.onTouchEvent( event);
 //    }
+
+    public void ShowAd()
+    {
+        try
+        {
+            sadView = new SADView(this, getResources().getString(R.string.sadViewMiniBanner));
+            RelativeLayout layout = (RelativeLayout)findViewById(R.id.admob);
+
+            // Add the adView to it
+            layout.addView(this.sadView);
+            sadView.loadAd(SADView.LANGUAGE_RU);
+        }
+        catch (Exception ex) {
+        }
+    }
 }

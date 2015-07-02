@@ -15,13 +15,17 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.startad.lib.SADView;
 
 
 public class MainActivity extends Activity {
 
     int differColor;
     int mainColor;
+    SADView sadView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +37,7 @@ public class MainActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.menu);
-
-
+        ShowAd();
       //        ImageView vw = (ImageView) findViewById(R.id.imageView);
 //        vw.setBackgroundColor(14717843);
 //        ImageView vw1 = (ImageView) findViewById(R.id.imageView1);
@@ -104,5 +107,20 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void ShowAd()
+    {
+        try
+        {
+            sadView = new SADView(this, getResources().getString(R.string.sadViewMiniBanner));
+            RelativeLayout layout = (RelativeLayout)findViewById(R.id.admob);
+
+            // Add the adView to it
+            layout.addView(this.sadView);
+            sadView.loadAd(SADView.LANGUAGE_RU);
+        }
+        catch (Exception ex) {
+        }
     }
 }

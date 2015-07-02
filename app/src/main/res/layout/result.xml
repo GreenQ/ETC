@@ -84,7 +84,11 @@
                     android:paddingLeft="5dp"
                     android:text="Player"
                     android:layout_toRightOf="@+id/vashe_ima"
-                    android:layout_centerHorizontal="true" />
+                    android:layout_centerHorizontal="true"
+                    android:lines="1"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
 
 
                 <RelativeLayout
@@ -92,7 +96,8 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:id="@+id/ok"
-                    android:background="@drawable/btn">
+                    android:background="@drawable/btn"
+                    android:onClick="ClickOk">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -204,13 +209,13 @@
 
     </RelativeLayout>
 
-    <!--<RelativeLayout-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/admob"-->
-        <!--android:layout_alignParentBottom="true">-->
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admob"
+        android:layout_alignParentBottom="true">
 
-    <!--</RelativeLayout>-->
+    </RelativeLayout>
 
 </RelativeLayout>

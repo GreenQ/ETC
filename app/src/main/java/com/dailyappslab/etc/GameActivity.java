@@ -1,6 +1,8 @@
 package com.dailyappslab.etc;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.GradientDrawable;
@@ -17,9 +19,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.startad.lib.SADView;
 
 /**
  * Created by GreenQ on 27.06.2015.
@@ -33,6 +42,8 @@ public class GameActivity extends Activity {
     long timeLeft;
     public static CountDownTimer globalTimer;
 
+    Animation animOut;
+    Animation animIn;
     Animation animWrong;
     Animation anim;
     Animation anim2;
@@ -287,6 +298,8 @@ public class GameActivity extends Activity {
         Globals.GameAct = this;
         CountTime("new");
 
+        animIn = AnimationUtils.loadAnimation(this, R.anim.layout_on);
+        animOut = AnimationUtils.loadAnimation(this, R.anim.layout_off);
         animWrong = AnimationUtils.loadAnimation(this, R.anim.wrong_cube);
         anim = AnimationUtils.loadAnimation(this, R.anim.rote);
         anim2 = AnimationUtils.loadAnimation(this, R.anim.scale);
@@ -320,6 +333,37 @@ public class GameActivity extends Activity {
         final ImageView i38 = (ImageView) findViewById(R.id.iw3x3_32);
         final ImageView i39 = (ImageView) findViewById(R.id.iw3x3_33);
 
+        AdView adView = (AdView)this.findViewById(R.id.adView);
+        try
+        {
+
+            AdRequest adRequest = new AdRequest.Builder().build();
+//
+
+            adView.loadAd(adRequest);
+
+
+
+            Globals.interstitialAd = new InterstitialAd(this);
+            Globals.interstitialAd.setAdUnitId(getResources().getString(R.string.admobInterstitialBannerId));
+            AdRequest adRequesti = new AdRequest.Builder().build();
+            Globals.interstitialAd.loadAd(adRequesti);
+
+            //ShowRateUs();
+        }
+        catch (Exception ex)
+        {
+            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+            dlgAlert.setMessage(ex.getMessage());
+            dlgAlert.setTitle("error");
+            dlgAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            dlgAlert.setCancelable(true);
+            dlgAlert.create().show();
+           // Toast.makeText(this, ex.getMessage(), Toast.LENGTH_LONG).show();
+        }
 
 
 //        i1.setOnClickListener(new View.OnClickListener() {
@@ -537,28 +581,76 @@ public class GameActivity extends Activity {
         switch (score)
         {
             case 5:
-                rl2x2.setVisibility(View.INVISIBLE);
-                rl3x3.setVisibility(View.VISIBLE);
+                RelativeLayout2x2Out();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+
+                        rl2x2.setVisibility(View.INVISIBLE);
+                        rl3x3.setVisibility(View.VISIBLE);
+                        RelativeLayout3x3In();
+                    }
+                }, 175);
                 break;
             case 12:
-                rl3x3.setVisibility(View.INVISIBLE);
-                rl4x4.setVisibility(View.VISIBLE);
+                RelativeLayout3x3Out();
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+
+                        rl3x3.setVisibility(View.INVISIBLE);
+                        rl4x4.setVisibility(View.VISIBLE);
+                        RelativeLayout4x4In();
+                    }
+                }, 175);
                 break;
             case 22:
-                rl4x4.setVisibility(View.INVISIBLE);
-                rl5x5.setVisibility(View.VISIBLE);
+                RelativeLayout4x4Out();
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+
+                        rl4x4.setVisibility(View.INVISIBLE);
+                        rl5x5.setVisibility(View.VISIBLE);
+                        RelativeLayout5x5In();
+                    }
+                }, 175);
                 break;
             case 37:
-                rl5x5.setVisibility(View.INVISIBLE);
-                rl6x6.setVisibility(View.VISIBLE);
+                RelativeLayout5x5Out();
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+
+                        rl5x5.setVisibility(View.INVISIBLE);
+                        rl6x6.setVisibility(View.VISIBLE);
+                        RelativeLayout6x6In();
+                    }
+                }, 175);
                 break;
             case 55:
-                rl6x6.setVisibility(View.INVISIBLE);
-                rl7x7.setVisibility(View.VISIBLE);
+                RelativeLayout6x6Out();
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+
+                        rl6x6.setVisibility(View.INVISIBLE);
+                        rl7x7.setVisibility(View.VISIBLE);
+                        RelativeLayout7x7In();
+                    }
+                }, 175);
                 break;
             case 75:
-                rl7x7.setVisibility(View.INVISIBLE);
-                rl8x8.setVisibility(View.VISIBLE);
+                RelativeLayout7x7Out();
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+
+                        rl7x7.setVisibility(View.INVISIBLE);
+                        rl8x8.setVisibility(View.VISIBLE);
+                        RelativeLayout8x8In();
+                    }
+                }, 175);
                 break;
             case 95:
                 break;
@@ -648,6 +740,78 @@ public class GameActivity extends Activity {
         view.setBackgroundDrawable(gdDefault);
     }
 
+
+    public void RelativeLayout2x2Out()
+    {
+        rl2x2.startAnimation(animOut);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout3x3In()
+    {
+        rl3x3.startAnimation(animIn);
+        animIn.setDuration(175);
+    }
+
+    public void RelativeLayout3x3Out()
+    {
+        rl3x3.startAnimation(animOut);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout4x4In()
+    {
+        rl4x4.startAnimation(animIn);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout4x4Out()
+    {
+        rl4x4.startAnimation(animOut);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout5x5In()
+    {
+        rl4x4.startAnimation(animIn);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout5x5Out()
+    {
+        rl5x5.startAnimation(animOut);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout6x6In()
+    {
+        rl6x6.startAnimation(animIn);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout6x6Out()
+    {
+        rl6x6.startAnimation(animOut);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout7x7In()
+    {
+        rl7x7.startAnimation(animIn);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout7x7Out()
+    {
+        rl7x7.startAnimation(animOut);
+        animOut.setDuration(175);
+    }
+
+    public void RelativeLayout8x8In()
+    {
+        rl8x8.startAnimation(animIn);
+        animOut.setDuration(175);
+    }
 
     // правильний метод
     public void Animate2x2()
