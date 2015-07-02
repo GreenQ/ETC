@@ -35,11 +35,11 @@ public class ColorsHandler {
     {
         Random rand = new Random();
 //
-        int a = rand.nextInt(56);
-        int r = rand.nextInt(256);
-        int g = rand.nextInt(256);
-        int b = rand.nextInt(256);
+        //int a = rand.nextInt(56);
+        int r = rand.nextInt(155);
+        int g = rand.nextInt(155);
+        int b = rand.nextInt(155);
 
-        return Color.argb(a + 200, r, g, b);
+        return Color.argb(255, r + 55, g + 55, b + 55);
     }
 }
