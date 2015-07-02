@@ -36,7 +36,8 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">ИГРАТЬ</string>
+    <string name="igrat">КЛАССИКА</string>
+    <string name="igrat2">НА ВРЕМЯ</string>
     <string name="recordu">РЕКОРДЫ</string>
     <string name="o_nas">О НАС</string>
 
@@ -54,6 +55,8 @@
     <string name="igra_okon4ena">ИГРА ОКОНЧЕНА</string>
     <string name="vash_resultat">Ваш результат:&#160;</string>
     <string name="novaya_igra">НОВАЯ ИГРА</string>
+
+    <string name="ok">OK</string>
 
 
     <string name="table_rec">ТАБЛИЦА РЕКОРДОВ</string>

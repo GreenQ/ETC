@@ -106,6 +106,12 @@
         android:gravity="center"
         android:layout_height="320dp">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anim_2x2">
+
+
         <ImageView
             android:background="@drawable/ramka1"
             android:id="@+id/iw2x2_11"
@@ -147,6 +153,8 @@
 
         </RelativeLayout>
 
+    </RelativeLayout>
+
     <!--тут починається лейаут 3х3-->
 
     <RelativeLayout
@@ -158,6 +166,10 @@
         android:gravity="center"
         android:layout_height="320dp">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anim_3x3">
         <ImageView
             android:background="@drawable/ramka1"
             android:id="@+id/iw3x3_11"
@@ -248,7 +260,7 @@
             android:layout_height="100dp"
             android:onClick="ClickCube"/>
 
-
+        </RelativeLayout>
 
 
         </RelativeLayout>
@@ -263,6 +275,11 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_height="320dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anim_4x4">
 
         <ImageView
             android:background="@drawable/ramka1"
@@ -433,6 +450,8 @@
 
         </RelativeLayout>
 
+        </RelativeLayout>
+
 
 
     <!--тут починається лейаут 5х5-->
@@ -445,6 +464,11 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_height="320dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anim_5x5">
 
         <ImageView
             android:background="@drawable/ramka1"
@@ -714,6 +738,9 @@
             android:layout_width="58dp"
             android:layout_height="58dp"
             android:onClick="ClickCube" />
+
+        </RelativeLayout>
+
         </RelativeLayout>
 
 
@@ -728,6 +755,10 @@
         android:gravity="center"
         android:layout_height="320dp">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anim_6x6">
 
         <ImageView
             android:background="@drawable/ramka2"
@@ -1125,6 +1156,8 @@
             android:layout_height="50dp"
             android:onClick="ClickCube" />
 
+        </RelativeLayout>
+
 
         </RelativeLayout>
 
@@ -1142,6 +1175,10 @@
         android:gravity="center"
         android:layout_height="320dp">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anim_7x7">
 
         <ImageView
             android:background="@drawable/ramka2"
@@ -1682,6 +1719,7 @@
             android:layout_height="42dp"
             android:onClick="ClickCube" />
 
+        </RelativeLayout>
 
         </RelativeLayout>
 
@@ -1695,6 +1733,13 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_height="320dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anim_8x8">
+
+
 
 
         <ImageView
@@ -2404,7 +2449,7 @@
             android:layout_height="38dp"
             android:onClick="ClickCube" />
 
-
+        </RelativeLayout>
 
         </RelativeLayout>
 

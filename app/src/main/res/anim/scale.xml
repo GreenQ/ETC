@@ -16,4 +16,10 @@
         android:duration="500">
     </scale>
 
+    <alpha
+        android:duration="500"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" >
+    </alpha>
+
 </set>
