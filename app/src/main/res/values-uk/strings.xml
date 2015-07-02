@@ -39,7 +39,7 @@
 
 
     <string name="pravila">ПРАВИЛА ГРИ</string>
-    <string name="pravila_text">Ваша задача - знайти квадрат, який відрізняється від інших кольором. На його пошуки у вас є 15 секунд.</string>
+    <string name="pravila_text">Ваша ціль - знайти квадрат, який відрізняється від інших кольором. На його пошуки у вас є 15 секунд.</string>
     <string name="zakrit">ЗАКРИТИ</string>
     <string name="bolshe_ne_pokazivat">БІЛЬШЕ НЕ ПОКАЗУВАТИ</string>
 
@@ -51,6 +51,7 @@
     <string name="vash_resultat">Ваш результат:&#160;</string>
     <string name="novaya_igra">НОВА ГРА</string>
 
+    <string name="ok">OK</string>
 
     <string name="table_rec">ТАБЛИЦЯ РЕКОРДІВ</string>
 
