@@ -34,7 +34,8 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">ИГРАТЬ</string>
+    <string name="igrat">КЛАССИКА</string>
+    <string name="igrat2">НА ВРЕМЯ</string>
     <string name="recordu">РЕКОРДЫ</string>
     <string name="o_nas">О НАС</string>
 

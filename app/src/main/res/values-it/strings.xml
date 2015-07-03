@@ -10,14 +10,14 @@
     <string name="sadViewMiniBanner">559587f59e7bc34500000000</string>
 
 
-    <string name="a1">Você distinguir as cores como uma toupeira.</string>
-    <string name="a2">Você distinguir as cores como uma formiga.</string>
-    <string name="a3">Você distinguir cores como o pirata de um olho só.</string>
-    <string name="a4">Você distinguir cores como um lobo.</string>
-    <string name="a5">Você distinguir as cores como uma pantera.</string>
-    <string name="a6">Você distinguir as cores como uma águia.</string>
-    <string name="a7">Você distinguir cores como um predador.</string>
-    <string name="a8">Você distinguir as cores como uma mulher.</string>
+    <string name="a1">Voi distinguere i colori come una talpa.</string>
+    <string name="a2">Voi distinguere i colori come una formica.</string>
+    <string name="a3">Voi distinguere i colori come un pirata con un occhio solo.</string>
+    <string name="a4">Voi distinguere i colori come il lupo.</string>
+    <string name="a5">Voi distinguere i colori come una pantera.</string>
+    <string name="a6">Voi distinguere i colori come un'aquila.</string>
+    <string name="a7">Voi distinguere i colori come un predatore.</string>
+    <string name="a8">Voi distinguere i colori come donna.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -34,40 +34,40 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">CLÁSSICOS</string>
-    <string name="igrat2">POR TEMPO</string>
+    <string name="igrat">CLASSICS</string>
+    <string name="igrat2">PER UN PO</string>
     <string name="recordu">RECORDS</string>
-    <string name="o_nas">SOBRE NÓS</string>
+    <string name="o_nas">RIGUARDO A NOI</string>
 
 
 
-    <string name="pravila">REGRAS DO JOGO</string>
-    <string name="pravila_text">Sua tarefa - para encontrar a praça que é diferente dos outros em cores.  Você tem apenas 15 segundos.</string>
-    <string name="zakrit">PERTO</string>
-    <string name="bolshe_ne_pokazivat">NÃO MOSTRE</string>
+    <string name="pravila">REGOLE DEL GIOCO</string>
+    <string name="pravila_text">Il vostro compito - per trovare la piazza che è diverso dagli altri a colori. Sulla sua missione avete solo 15 secondi.</string>
+    <string name="zakrit">CHIUDERE</string>
+    <string name="bolshe_ne_pokazivat">NON MOSTRARE</string>
 
 
-    <string name="s4et">PONTO:</string>
+    <string name="s4et">PUNTO:</string>
 
 
-    <string name="igra_okon4ena">FIN DEL JUEGO</string>
-    <string name="vash_resultat">Sus resultados:&#160;</string>
-    <string name="novaya_igra">NUEVO JUEGO</string>
+    <string name="igra_okon4ena">GAME OVER</string>
+    <string name="vash_resultat">Il risultato:&#160;</string>
+    <string name="novaya_igra">NUOVO GIOCO</string>
 
     <string name="ok">OK</string>
 
-    <string name="table_rec">NOTAS ALTAS</string>
+    <string name="table_rec">MIGLIOR PUNTEGGIO</string>
 
 
-    <string name="top_obr">Uma mensagem para os utilizadores</string>
-    <string name="obr">      Os DailyAppsLab equipe de desenvolvimento obrigado para a instalação do jogo. Para quaisquer pedidos ou sugestões que você pode entrar em contato conosco por e-mail dailyappslab@gmail.com\n Se você gostou do jogo - por favor, ajudem-nos e classificação feedback!\n Boa sorte e agradável passatempo!</string>
-    <string name="nazad">DE VOLTA</string>
+    <string name="top_obr">Un messaggio per gli utenti</string>
+    <string name="obr">      I DailyAppsLab team di sviluppo voi ringrazio per l'installazione del gioco. Per eventuali richieste o suggerimenti potete contattarci via e-mail dailyappslab@gmail.com \n Se ti è piaciuto il gioco - si prega di e valutazione di risposte sostegno! \n Vi auguriamo buona fortuna e un bel soggiorno!</string>
+    <string name="nazad">INDIETRO</string>
 
 
+    <string name="like_it">Mi è piaciuto il gioco??</string>
+    <string name="rate_us">Stima</string>
+    <string name="later">Ricordamelo dopo</string>
+    <string name="never">Non mostrare</string>
 
-    <string name="like_it">Você gostei do jogo?</string>
-    <string name="rate_us">Estimativa</string>
-    <string name="later">Me lembre depois</string>
-    <string name="never">Não mostre</string>
 
 </resources>

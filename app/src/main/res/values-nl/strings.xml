@@ -10,14 +10,20 @@
     <string name="sadViewMiniBanner">559587f59e7bc34500000000</string>
 
 
-    <string name="a1">Você distinguir as cores como uma toupeira.</string>
-    <string name="a2">Você distinguir as cores como uma formiga.</string>
-    <string name="a3">Você distinguir cores como o pirata de um olho só.</string>
-    <string name="a4">Você distinguir cores como um lobo.</string>
-    <string name="a5">Você distinguir as cores como uma pantera.</string>
-    <string name="a6">Você distinguir as cores como uma águia.</string>
-    <string name="a7">Você distinguir cores como um predador.</string>
-    <string name="a8">Você distinguir as cores como uma mulher.</string>
+    <string name="font1">AGCenturyOldStyle.ttf</string>
+    <string name="font2">aCityNova.ttf</string>
+
+
+    <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
+
+    <string name="a1">Je onderscheiden kleuren zoals een mol.</string>
+    <string name="a2">Je onderscheiden kleuren als een mier.</string>
+    <string name="a3">Je onderscheiden kleuren als de eenogige piraat.</string>
+    <string name="a4">Je onderscheiden kleuren als een wolf.</string>
+    <string name="a5">Je onderscheiden kleuren zoals een panter.</string>
+    <string name="a6">Je onderscheiden kleuren als een adelaar.</string>
+    <string name="a7">Je onderscheiden kleuren als een roofdier.</string>
+    <string name="a8">Je onderscheiden kleuren als een vrouw.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -34,40 +40,42 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">CLÁSSICOS</string>
-    <string name="igrat2">POR TEMPO</string>
+    <string name="igrat">CLASSICS</string>
+    <string name="igrat2">VOOR EEN POOSJE</string>
     <string name="recordu">RECORDS</string>
-    <string name="o_nas">SOBRE NÓS</string>
+    <string name="o_nas">OVER ONS</string>
 
 
 
-    <string name="pravila">REGRAS DO JOGO</string>
-    <string name="pravila_text">Sua tarefa - para encontrar a praça que é diferente dos outros em cores.  Você tem apenas 15 segundos.</string>
-    <string name="zakrit">PERTO</string>
-    <string name="bolshe_ne_pokazivat">NÃO MOSTRE</string>
+    <string name="pravila">REGELS VAN HET SPEL</string>
+    <string name="pravila_text">Uw taak - de plein dat verschilt van de andere in kleur te vinden. Op zijn zoektocht heb je slechts 15 seconden.</string>
+    <string name="zakrit">CLOSE</string>
+    <string name="bolshe_ne_pokazivat">NIET LATEN ZIEN</string>
 
 
-    <string name="s4et">PONTO:</string>
+    <string name="s4et">SCORE:</string>
 
 
-    <string name="igra_okon4ena">FIN DEL JUEGO</string>
-    <string name="vash_resultat">Sus resultados:&#160;</string>
-    <string name="novaya_igra">NUEVO JUEGO</string>
+    <string name="igra_okon4ena">GAME OVER</string>
+    <string name="vash_resultat">Uw resultaat:&#160;</string>
+    <string name="novaya_igra">НОВАЯ ИГРА</string>
 
     <string name="ok">OK</string>
 
-    <string name="table_rec">NOTAS ALTAS</string>
+
+    <string name="table_rec">HIGHSCORES</string>
 
 
-    <string name="top_obr">Uma mensagem para os utilizadores</string>
-    <string name="obr">      Os DailyAppsLab equipe de desenvolvimento obrigado para a instalação do jogo. Para quaisquer pedidos ou sugestões que você pode entrar em contato conosco por e-mail dailyappslab@gmail.com\n Se você gostou do jogo - por favor, ajudem-nos e classificação feedback!\n Boa sorte e agradável passatempo!</string>
-    <string name="nazad">DE VOLTA</string>
+    <string name="top_obr">Een mededeling voor gebruikers</string>
+    <string name="obr">      Het ontwikkelteam DailyAppsLab dank u voor de installatie van het spel. Voor eventuele vragen of suggesties kunt u contact met ons opnemen via e-mail dailyappslab@gmail.com \n Als je het spel leuk vond - u ons en feedback cijfer steun! \n Wij wensen u veel succes en een prettig verblijf!</string>
+    <string name="nazad">BACK</string>
 
 
+    <string name="like_it">Vond het spel?</string>
+    <string name="rate_us">Schatting</string>
+    <string name="later">Herinner me later</string>
+    <string name="never">Niet laten zien</string>
 
-    <string name="like_it">Você gostei do jogo?</string>
-    <string name="rate_us">Estimativa</string>
-    <string name="later">Me lembre depois</string>
-    <string name="never">Não mostre</string>
+
 
 </resources>

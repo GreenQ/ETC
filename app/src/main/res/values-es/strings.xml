@@ -34,7 +34,9 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">JUGAR</string>
+
+    <string name="igrat">CLÁSICOS</string>
+    <string name="igrat2">POR UN TIEMPO</string>
     <string name="recordu">REGISTROS</string>
     <string name="o_nas">INFO</string>
 
