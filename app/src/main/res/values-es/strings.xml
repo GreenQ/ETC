@@ -63,4 +63,10 @@
     <string name="nazad">ESPALDA</string>
 
 
+    <string name="like_it">Me gustó el juego?</string>
+    <string name="rate_us">Estimación</string>
+    <string name="later">Recuérdame Mas tarde</string>
+    <string name="never">No mostrar</string>
+
+
 </resources>

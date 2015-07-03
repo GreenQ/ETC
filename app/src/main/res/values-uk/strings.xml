@@ -65,4 +65,10 @@
     <string name="nazad">НАЗАД</string>
 
 
+    <string name="like_it">Сподобалась гра?</string>
+    <string name="rate_us">Оцінити</string>
+    <string name="later">Нагадати пізніше</string>
+    <string name="never">Ніколи не нагадувати</string>
+
+
 </resources>

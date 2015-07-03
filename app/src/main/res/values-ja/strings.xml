@@ -71,4 +71,11 @@
     <string name="nazad">НАЗАД</string>
 
 
+    <string name="like_it">Понравилась игра?</string>
+    <string name="rate_us">Оценить</string>
+    <string name="later">Напомнить позже</string>
+    <string name="never">Никогда не напоминать</string>
+
+
+
 </resources>

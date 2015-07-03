@@ -63,4 +63,10 @@
     <string name="nazad">DE VOLTA</string>
 
 
+
+    <string name="like_it">Você gostei do jogo?</string>
+    <string name="rate_us">Estimativa</string>
+    <string name="later">Me lembre depois</string>
+    <string name="never">Não mostre</string>
+
 </resources>

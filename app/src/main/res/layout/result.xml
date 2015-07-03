@@ -139,20 +139,20 @@
             android:text="Вы различаете цвета как крот."/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/fact"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/img_animal"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="#ff12ac32"
-            android:layout_marginBottom="10dp"
-            android:text="Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи."/>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:id="@+id/fact"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_below="@+id/img_animal"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textColor="#ff12ac32"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:text="Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи."/>-->
 
 
         <ImageView
@@ -162,6 +162,7 @@
             android:id="@+id/img_animal"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/animal_7"/>
 
 

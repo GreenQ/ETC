@@ -64,4 +64,10 @@
     <string name="nazad">RETOUR</string>
 
 
+    <string name="like_it">Vous aimé le jeu?</string>
+    <string name="rate_us">Estimation</string>
+    <string name="later">Rappele moi plus tard</string>
+    <string name="never">Ne pas montrer</string>
+
+
 </resources>
