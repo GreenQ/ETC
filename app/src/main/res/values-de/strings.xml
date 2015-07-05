@@ -16,14 +16,14 @@
 
     <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
 
-    <string name="a1">Вы различаете цвета как крот.</string>
-    <string name="a2">Вы различаете цвета как муравей.</string>
-    <string name="a3">Вы различаете цвета как одноглазый пират.</string>
-    <string name="a4">Вы различаете цвета как волк.</string>
-    <string name="a5">Вы различаете цвета как пантера.</string>
-    <string name="a6">Вы различаете цвета как орел.</string>
-    <string name="a7">Вы различаете цвета как хищник.</string>
-    <string name="a8">Вы различаете цвета как женщина.</string>
+    <string name="a1">Sie unterscheiden die Farben als ein Maulwurf.</string>
+    <string name="a2">Sie unterscheiden die Farben als eine Ameise.</string>
+    <string name="a3">Sie unterscheiden die Farben als einäugiger Pirat.</string>
+    <string name="a4">Sie unterscheiden die Farben als ein Wolf.</string>
+    <string name="a5">Sie unterscheiden die Farben als ein Panther.</string>
+    <string name="a6">Sie unterscheiden die Farben als ein Adler.</string>
+    <string name="a7">Sie unterscheiden die Farben als ein Raubtier.</string>
+    <string name="a8">Sie unterscheiden die Farben als eine Frau.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -40,41 +40,41 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">КЛАССИКА</string>
-    <string name="igrat2">НА ВРЕМЯ</string>
-    <string name="recordu">РЕКОРДЫ</string>
-    <string name="o_nas">О НАС</string>
+    <string name="igrat">CLASSICS</string>
+    <string name="igrat2">ZEIT</string>
+    <string name="recordu">HIGHSCORES</string>
+    <string name="o_nas">ÜBER UNS</string>
 
 
 
-    <string name="pravila">ПРАВИЛА ИГРЫ</string>
-    <string name="pravila_text">Ваша задача - найти квадрат, отличающийся от остальных по цвету. На его поиски у вас есть всего 15 секунд.</string>
-    <string name="zakrit">ЗАКРЫТЬ</string>
-    <string name="bolshe_ne_pokazivat">БОЛЬШЕ НЕ ПОКАЗЫВАТЬ</string>
+    <string name="pravila">SPIELREGELN</string>
+    <string name="pravila_text">Man muss ein Quadrat, das von anderen der Farben sich unterscheidet ist, zu finden. Sie haben 15 Sekunden.</string>
+    <string name="zakrit">SPLIESSEN</string>
+    <string name="bolshe_ne_pokazivat">NICHT MEHR ZU ZEIGEN</string>
 
 
-    <string name="s4et">СЧЕТ:</string>
+    <string name="s4et">ERGEBNISSE:</string>
 
 
-    <string name="igra_okon4ena">ИГРА ОКОНЧЕНА</string>
-    <string name="vash_resultat">Ваш результат:&#160;</string>
-    <string name="novaya_igra">НОВАЯ ИГРА</string>
+    <string name="igra_okon4ena">DAS SPIEL IST BEENDET</string>
+    <string name="vash_resultat">Ihr Ergebnis:&#160;</string>
+    <string name="novaya_igra">DAS NEUE SPIEL</string>
 
     <string name="ok">OK</string>
 
 
-    <string name="table_rec">ТАБЛИЦА РЕКОРДОВ</string>
+    <string name="table_rec">HIGHSCORES</string>
 
 
-    <string name="top_obr">Обращение к пользователям</string>
-    <string name="obr">      Команда разработчиков DailyAppsLab благодарит вас за установку игры. С любыми пожеланиями или предложениями вы можете обратиться к нам по электронному адресу dailyappslab@gmail.com \n     Если вам понравилась игра - пожалуйста, поддержите нас отзывами и оценками! \n    Желаем удачи и приятного времяпровождения!</string>
-    <string name="nazad">НАЗАД</string>
+    <string name="top_obr">Bewerben für Benutzer</string>
+    <string name="obr">Das Entwicklungsteam DailyAppsLab bedankt sich für die Spieleinstellung. Wenn haben Sie irgendwelche Vorschläge, können Sie ab unsere E-Mail dailyappslab@gmail.com  senden. \n  Wenn gefallen Sie dieses Spiel, bitten Sie, die Bewertungen lassen. \n Wollen Ihnen einen Erfolg und angenehme Zeit verbringen.</string>
+    <string name="nazad">ZURÜCK</string>
 
 
-    <string name="like_it">Понравилась игра?</string>
-    <string name="rate_us">Оценить</string>
-    <string name="later">Напомнить позже</string>
-    <string name="never">Никогда не напоминать</string>
+    <string name="like_it">Gefallen Sie dieses Spiel?</string>
+    <string name="rate_us">Bitte, bewerten Sie</string>
+    <string name="later">Erinnern Sie später. </string>
+    <string name="never">Keine Erinnerung. </string>
 
 
 
