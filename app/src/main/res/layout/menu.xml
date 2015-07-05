@@ -19,7 +19,7 @@
 
 
         <RelativeLayout
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="50dp"
             android:background="@drawable/active_btn"
             android:id="@+id/play"
@@ -35,7 +35,7 @@
             </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="50dp"
             android:background="@drawable/active_btn"
             android:id="@+id/play2"
@@ -52,7 +52,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="50dp"
             android:layout_below="@+id/play2"
             android:id="@+id/highscorestable"
@@ -70,7 +70,7 @@
 
 
         <RelativeLayout
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="50dp"
             android:id="@+id/about"
             android:layout_below="@+id/highscorestable"

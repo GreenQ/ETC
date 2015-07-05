@@ -26,7 +26,7 @@
             android:text="@string/igra_okon4ena"
             android:id="@+id/game_over"
             android:textColor="#ff12ac32"
-            android:textSize="28sp"/>
+            android:textSize="25sp"/>
 
 
         <TextView
@@ -41,7 +41,7 @@
             android:textSize="18sp"/>
 
         <RelativeLayout
-
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/optional"
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffac324a"
                 android:textSize="20sp"
-                android:text="Новый рекорд!"/>
+                android:text="@string/new_highscore"/>
 
             <RelativeLayout
                 android:layout_centerHorizontal="true"
@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="Ваше имя: "
+                    android:text="@string/vashe_imya"
                     android:textColor="#ff404a6f"/>
 
                 <EditText
@@ -184,7 +184,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:text="@string/novaya_igra"/>
         </RelativeLayout>
 
@@ -204,7 +204,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:text="@string/nazad"/>
     </RelativeLayout>
 

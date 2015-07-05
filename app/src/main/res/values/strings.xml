@@ -41,7 +41,7 @@
 
 
     <string name="igrat">КЛАССИКА</string>
-    <string name="igrat2">НА ВРЕМЯ</string>
+    <string name="igrat2">МАРАФОН</string>
     <string name="recordu">РЕКОРДЫ</string>
     <string name="o_nas">О НАС</string>
 
@@ -75,6 +75,36 @@
     <string name="rate_us">Оценить</string>
     <string name="later">Напомнить позже</string>
     <string name="never">Никогда не напоминать</string>
+
+
+
+    <string name="new_highscore">Новый рекорд!</string>
+    <string name="vashe_imya">Ваше имя:&#160;</string>
+
+
+    <string name="user_0">Мария</string>
+    <string name="user_1">Ольга</string>
+    <string name="user_2">Борис</string>
+    <string name="user_3">Саша</string>
+    <string name="user_4">Анна</string>
+    <string name="user_5">Даша</string>
+    <string name="user_6">Андрей</string>
+    <string name="user_7">Дмитрий</string>
+    <string name="user_8">Светлана</string>
+    <string name="user_9">Виктория</string>
+
+
+    <string name="score_0">1000</string>
+    <string name="score_1">500</string>
+    <string name="score_2">100</string>
+    <string name="score_3">86</string>
+    <string name="score_4">77</string>
+    <string name="score_5">73</string>
+    <string name="score_6">65</string>
+    <string name="score_7">58</string>
+    <string name="score_8">55</string>
+    <string name="score_9">49</string>
+
 
 
 
