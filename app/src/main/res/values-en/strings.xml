@@ -16,14 +16,14 @@
 
     <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
 
-    <string name="a1">Вы различаете цвета как крот.</string>
-    <string name="a2">Вы различаете цвета как муравей.</string>
-    <string name="a3">Вы различаете цвета как одноглазый пират.</string>
-    <string name="a4">Вы различаете цвета как волк.</string>
-    <string name="a5">Вы различаете цвета как пантера.</string>
-    <string name="a6">Вы различаете цвета как орел.</string>
-    <string name="a7">Вы различаете цвета как хищник.</string>
-    <string name="a8">Вы различаете цвета как женщина.</string>
+    <string name="a1">You have dog's eyesight.</string>
+    <string name="a2">You have ant's eyesight.</string>
+    <string name="a3">You have one-eyed pirate's eyesight.</string>
+    <string name="a4">You have wolf's eyesight.</string>
+    <string name="a5">You have panther's eyesight.</string>
+    <string name="a6">You have eagle's eyesight.</string>
+    <string name="a7">You have predator's eyesight.</string>
+    <string name="a8">You have woman's eyesight.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -40,41 +40,41 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">КЛАССИКА</string>
-    <string name="igrat2">НА ВРЕМЯ</string>
-    <string name="recordu">РЕКОРДЫ</string>
-    <string name="o_nas">О НАС</string>
+    <string name="igrat">CLASSIC</string>
+    <string name="igrat2">MARATHON</string>
+    <string name="recordu">HIGHSCORES</string>
+    <string name="o_nas">ABOUT US</string>
 
 
 
-    <string name="pravila">ПРАВИЛА ИГРЫ</string>
-    <string name="pravila_text">Ваша задача - найти квадрат, отличающийся от остальных по цвету. На его поиски у вас есть всего 15 секунд.</string>
-    <string name="zakrit">ЗАКРЫТЬ</string>
-    <string name="bolshe_ne_pokazivat">БОЛЬШЕ НЕ ПОКАЗЫВАТЬ</string>
+    <string name="pravila">RULES</string>
+    <string name="pravila_text">Your task is to find a cube with a different color. You have only 15 seconds for searching.</string>
+    <string name="zakrit">CLOSE</string>
+    <string name="bolshe_ne_pokazivat">NEVER SHOW</string>
 
 
-    <string name="s4et">СЧЕТ:</string>
+    <string name="s4et">SCORE:</string>
 
 
-    <string name="igra_okon4ena">ИГРА ОКОНЧЕНА</string>
-    <string name="vash_resultat">Ваш результат:&#160;</string>
-    <string name="novaya_igra">НОВАЯ ИГРА</string>
+    <string name="igra_okon4ena">GAME OVER</string>
+    <string name="vash_resultat">Your result:&#160;</string>
+    <string name="novaya_igra">NEW GAME</string>
 
     <string name="ok">OK</string>
 
 
-    <string name="table_rec">ТАБЛИЦА РЕКОРДОВ</string>
+    <string name="table_rec">HIGHSCORES</string>
 
 
-    <string name="top_obr">Обращение к пользователям</string>
-    <string name="obr">      Команда разработчиков DailyAppsLab благодарит вас за установку игры. С любыми пожеланиями или предложениями вы можете обратиться к нам по электронному адресу dailyappslab@gmail.com \n     Если вам понравилась игра - пожалуйста, поддержите нас отзывами и оценками! \n    Желаем удачи и приятного времяпровождения!</string>
+    <string name="top_obr">Dear user!</string>
+    <string name="obr">      The DailyAppsLab developers team thanks you for installation of this game. If you have any issues or suggestions you may contact us by the address dailyappslab@gmail.com \n     If you like this application - please, support us by your reviews and marks. \n    Good luck and have a good time!</string>
     <string name="nazad">НАЗАД</string>
 
 
-    <string name="like_it">Понравилась игра?</string>
-    <string name="rate_us">Оценить</string>
-    <string name="later">Напомнить позже</string>
-    <string name="never">Никогда не напоминать</string>
+    <string name="like_it">Like this game?</string>
+    <string name="rate_us">Rate now</string>
+    <string name="later">Remember later</string>
+    <string name="never">Never ask</string>
 
 
 
