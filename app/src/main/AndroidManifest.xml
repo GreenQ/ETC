@@ -57,8 +57,19 @@
         <activity android:name=".ResultActivity"
             android:theme="@style/AppThemeDialog"></activity>
 
+        <activity android:name="com.dailyappslab.etc.RateUsActivity"
+            android:theme="@style/AppThemeDialog"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name="com.dailyappslab.etc.TutorialActivity"
+            android:theme="@style/AppThemeDialog"
+            android:screenOrientation="portrait"></activity>
+
         <activity android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+
+
 
     </application>
 

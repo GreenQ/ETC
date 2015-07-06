@@ -3,18 +3,13 @@ package com.dailyappslab.etc;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.PaintDrawable;
 import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,6 +21,13 @@ public class MainActivity extends Activity {
     int differColor;
     int mainColor;
     SADView sadView;
+    TextView tvClassic;
+    TextView tvTimed;
+    TextView tvHighscores;
+    TextView tvAbout;
+    TextView tv1, tv2, tv3, tv4, tv5, tv6;
+    Preferences preferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,11 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.menu);
         ShowAd();
-      //        ImageView vw = (ImageView) findViewById(R.id.imageView);
+        SetTypefaces();
+
+        preferences = new Preferences(this);
+
+        //        ImageView vw = (ImageView) findViewById(R.id.imageView);
 //        vw.setBackgroundColor(14717843);
 //        ImageView vw1 = (ImageView) findViewById(R.id.imageView1);
 //       // ColorsHandler.ReduceColorOpacity(vw1.get)
@@ -47,6 +53,18 @@ public class MainActivity extends Activity {
 //        //vw1.setBackgroundColor(((ColorDrawable)vw.getBackground()).getColor() + 50);
     }
 
+    public void SetTypefaces()
+    {
+        tvClassic = (TextView) findViewById(R.id.tvClassic);
+        tvTimed = (TextView) findViewById(R.id.tvTimed);
+        tvHighscores = (TextView) findViewById(R.id.tvHighscores);
+        tvAbout = (TextView) findViewById(R.id.tvAbout);
+
+        tvClassic.setTypeface(Globals.DefaultTypeface);
+        tvTimed.setTypeface(Globals.DefaultTypeface);
+        tvHighscores.setTypeface(Globals.DefaultTypeface);
+        tvAbout.setTypeface(Globals.DefaultTypeface);
+    }
     public void PressAboutUsButton(View v)
     {
         Intent i = new Intent (MainActivity.this, AboutUsActivity.class);
@@ -73,12 +91,31 @@ public class MainActivity extends Activity {
         }, 0);
     }
 
-    public void PressPlayButton(View v)
+    public void PressPlayTimedButton(View v)
+    {
+//        if(preferences.AskForTutorial())
+//    {
+//        StartTutorialActivity();
+//    }
+        Intent i = new Intent (MainActivity.this, GameActivity.class);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Globals.mode = Mode.TIMED;
+                Intent i = new Intent(MainActivity.this, GameActivity.class);
+                startActivityForResult(i, 1);
+                //finish();
+            }
+        }, 0);
+    }
+
+    public void PressPlayClassicButton(View v)
     {
         Intent i = new Intent (MainActivity.this, GameActivity.class);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                Globals.mode = Mode.CLASSIC;
                 Intent i = new Intent(MainActivity.this, GameActivity.class);
                 startActivityForResult(i, 1);
                 //finish();
@@ -122,5 +159,13 @@ public class MainActivity extends Activity {
         }
         catch (Exception ex) {
         }
+    }
+
+    private void StartTutorialActivity()
+    {
+
+        Intent i = new Intent(MainActivity.this, TutorialActivity.class);
+        startActivity(i);
+
     }
 }

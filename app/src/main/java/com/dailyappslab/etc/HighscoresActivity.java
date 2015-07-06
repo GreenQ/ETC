@@ -2,10 +2,12 @@ package com.dailyappslab.etc;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -17,7 +19,7 @@ public class HighscoresActivity extends Activity {
     Preferences preferences;
     String[] scores;
     String[] names;
-    Button exit;
+    RelativeLayout exit;
 
     TextView num_1;
     TextView num_2;
@@ -71,6 +73,9 @@ public class HighscoresActivity extends Activity {
         //InsertNewResult();
         DisplayScores();
         DisplayNames();
+
+        RelativeLayout rootLayout = (RelativeLayout)findViewById(R.id.rlHighscoreRoot);
+        AndroidTypefaceUtility.SetTypefaceOfViewGroup(rootLayout, Globals.DefaultTypeface);
     }
 
     public void InsertNewResult()
@@ -165,5 +170,10 @@ public class HighscoresActivity extends Activity {
         animal_8 = (ImageView) findViewById(R.id.img_high_8);
         animal_9 = (ImageView) findViewById(R.id.img_high_9);
         animal_10 = (ImageView) findViewById(R.id.img_high_10);
+    }
+
+    public void PressBack(View view)
+    {
+        finish();
     }
 }

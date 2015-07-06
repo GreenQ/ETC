@@ -9,6 +9,8 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -16,7 +18,10 @@ import android.view.WindowManager;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,8 +42,10 @@ public class GameActivity extends Activity {
 
     int score;
     int size;
+    int colorDifference;
     TextView txtScore;
     TextView txtTime;
+    TextView txtScoreWord;
     long timeLeft;
     public static CountDownTimer globalTimer;
 
@@ -292,11 +299,21 @@ public class GameActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.game);
+        Preferences preferences = new Preferences(this);
 
         InstantiateViews();
 
+        colorDifference = 50;
+
         Globals.GameAct = this;
-        CountTime("new");
+
+//        else {
+            if (Globals.mode == Mode.CLASSIC)
+                CountTime("new", 15000);
+
+            if (Globals.mode == Mode.TIMED)
+                CountTime("new", 60000);
+        //}
 
         animIn = AnimationUtils.loadAnimation(this, R.anim.layout_on);
         animOut = AnimationUtils.loadAnimation(this, R.anim.layout_off);
@@ -313,25 +330,7 @@ public class GameActivity extends Activity {
         anim4_r = AnimationUtils.loadAnimation(this, R.anim.alpha_reverse);
         anim5_r = AnimationUtils.loadAnimation(this, R.anim.translate2_reverse);
 
-
-        final ImageView i1 = (ImageView) findViewById(R.id.iw2x2_11);
-        final ImageView i2 = (ImageView) findViewById(R.id.iw2x2_12);
-        final ImageView i3 = (ImageView) findViewById(R.id.iw2x2_21);
-        final ImageView i4 = (ImageView) findViewById(R.id.iw2x2_22);
-
-
-
-        final ImageView i31 = (ImageView) findViewById(R.id.iw3x3_11);
-        final ImageView i32 = (ImageView) findViewById(R.id.iw3x3_12);
-        final ImageView i33 = (ImageView) findViewById(R.id.iw3x3_13);
-
-        final ImageView i34 = (ImageView) findViewById(R.id.iw3x3_21);
-        final ImageView i35 = (ImageView) findViewById(R.id.iw3x3_22);
-        final ImageView i36 = (ImageView) findViewById(R.id.iw3x3_23);
-
-        final ImageView i37 = (ImageView) findViewById(R.id.iw3x3_31);
-        final ImageView i38 = (ImageView) findViewById(R.id.iw3x3_32);
-        final ImageView i39 = (ImageView) findViewById(R.id.iw3x3_33);
+        SetAnimationsDuration(350);
 
         AdView adView = (AdView)this.findViewById(R.id.adView);
         try
@@ -454,6 +453,14 @@ public class GameActivity extends Activity {
 //
 //            }
 //        });
+        txtScore = (TextView) findViewById(R.id.tvScoreAmount);
+        txtScore.setTypeface(Globals.DefaultTypeface);
+
+        txtScoreWord = (TextView) findViewById(R.id.tvScore);
+        txtScoreWord.setTypeface(Globals.DefaultTypeface);
+
+        txtTime = (TextView) findViewById(R.id.tvTimer);
+        txtTime.setTypeface(Globals.DefaultTypeface);
 
         DrawLevel();
     }
@@ -544,8 +551,9 @@ public class GameActivity extends Activity {
             score++;
             txtScore.setText(String.valueOf(score));
             SwitchLayouts(score);
-            timeLeft = 15000;
-            CountTime("continue");
+            if(Globals.mode == Mode.CLASSIC)
+                timeLeft = 15000;
+            CountTime("continue", 0);
         }
         else
         {
@@ -564,7 +572,7 @@ public class GameActivity extends Activity {
             view.startAnimation(animWrong);
             anim.setDuration(350);
             timeLeft = timeLeft-4000;
-            CountTime("continue");
+            CountTime("continue", 0);
         }
 //        bgColor.getAlpha();
         //Toast.makeText(this, String.valueOf(bgColor.getAlpha()), Toast.LENGTH_LONG).show();
@@ -711,7 +719,30 @@ public class GameActivity extends Activity {
                         }
         }
 
-        differColor = ColorsHandler.ReduceColorOpacity(mainColor, 50);
+        switch(size){
+            case 2:
+                colorDifference = 30;
+                break;
+            case 3:
+                colorDifference = 25;
+                break;
+            case 4:
+                colorDifference = 20;
+                break;
+            case 5:
+                colorDifference = 15;
+                break;
+            case 6:
+                colorDifference = 10;
+                break;
+            case 7:
+                colorDifference = 5;
+                break;
+            case 8:
+                colorDifference = 2;
+                break;
+        }
+        differColor = ColorsHandler.ReduceColorOpacity(mainColor, colorDifference);
         ImageView tmp = (ImageView) findViewById(getResources().getIdentifier(RandomGenerator.GetRandSquareName(size), "id", this.getPackageName()));
         ApplyColorToImgView(tmp, differColor, 1);
     }
@@ -822,17 +853,17 @@ public class GameActivity extends Activity {
         iw2x2_22.startAnimation(anim4);
 
 
-        //anim.setFillAfter(true);
-        anim.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4.setDuration(350);
 
 
     }
@@ -846,17 +877,17 @@ public class GameActivity extends Activity {
         iw2x2_22.startAnimation(anim4_r);
 
 
-        //anim.setFillAfter(true);
-        anim_r.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2_r.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3_r.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4_r.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim_r.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2_r.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3_r.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4_r.setDuration(350);
 
     }
 
@@ -876,20 +907,20 @@ public class GameActivity extends Activity {
         iw3x3_33.startAnimation(anim4);
 
 
-        //anim.setFillAfter(true);
-        anim.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5.setDuration(350);
 
 
     }
@@ -909,20 +940,20 @@ public class GameActivity extends Activity {
         iw3x3_33.startAnimation(anim4_r);
 
 
-        //anim.setFillAfter(true);
-        anim_r.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2_r.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3_r.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4_r.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5_r.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim_r.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2_r.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3_r.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4_r.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5_r.setDuration(350);
 
     }
 
@@ -949,20 +980,20 @@ public class GameActivity extends Activity {
         iw4x4_44.startAnimation(anim);
 
 
-        //anim.setFillAfter(true);
-        anim.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5.setDuration(350);
 
 
     }
@@ -989,20 +1020,20 @@ public class GameActivity extends Activity {
         iw4x4_44.startAnimation(anim_r);
 
 
-        //anim.setFillAfter(true);
-        anim_r.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2_r.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3_r.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4_r.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5_r.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim_r.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2_r.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3_r.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4_r.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5_r.setDuration(350);
 
     }
 
@@ -1037,21 +1068,21 @@ public class GameActivity extends Activity {
         iw5x5_54.startAnimation(anim4);
         iw5x5_55.startAnimation(anim5);
 
-
-        //anim.setFillAfter(true);
-        anim.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5.setDuration(350);
+//
+//        //anim.setFillAfter(true);
+//        anim.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5.setDuration(350);
 
 
     }
@@ -1086,21 +1117,21 @@ public class GameActivity extends Activity {
         iw5x5_54.startAnimation(anim4_r);
         iw5x5_55.startAnimation(anim5_r);
 
-
-        //anim.setFillAfter(true);
-        anim_r.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2_r.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3_r.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4_r.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5_r.setDuration(350);
+//
+//        //anim.setFillAfter(true);
+//        anim_r.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2_r.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3_r.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4_r.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5_r.setDuration(350);
 
     }
 
@@ -1145,20 +1176,20 @@ public class GameActivity extends Activity {
         iw6x6_65.startAnimation(anim5);
         iw6x6_66.startAnimation(anim);
 
-        //anim.setFillAfter(true);
-        anim.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5.setDuration(350);
 
 
     }
@@ -1205,20 +1236,20 @@ public class GameActivity extends Activity {
         iw6x6_66.startAnimation(anim_r);
 
 
-        //anim.setFillAfter(true);
-        anim_r.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2_r.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3_r.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4_r.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5_r.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim_r.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2_r.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3_r.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4_r.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5_r.setDuration(350);
 
     }
 
@@ -1276,20 +1307,20 @@ public class GameActivity extends Activity {
         iw7x7_76.startAnimation(anim3);
         iw7x7_77.startAnimation(anim4);
 
-        //anim.setFillAfter(true);
-        anim.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5.setDuration(350);
 
 
     }
@@ -1349,20 +1380,20 @@ public class GameActivity extends Activity {
         iw7x7_77.startAnimation(anim4_r);
 
 
-        //anim.setFillAfter(true);
-        anim_r.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2_r.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3_r.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4_r.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5_r.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim_r.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2_r.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3_r.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4_r.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5_r.setDuration(350);
 
     }
 
@@ -1435,20 +1466,20 @@ public class GameActivity extends Activity {
         iw8x8_88.startAnimation(anim4);
 
 
-        //anim.setFillAfter(true);
-        anim.setDuration(350);
-
-        //anim2.setFillAfter(true);
-        anim2.setDuration(350);
-
-        //anim3.setFillAfter(true);
-        anim3.setDuration(350);
-
-        //anim4.setFillAfter(true);
-        anim4.setDuration(350);
-
-        //anim5.setFillAfter(true);
-        anim5.setDuration(350);
+//        //anim.setFillAfter(true);
+//        anim.setDuration(350);
+//
+//        //anim2.setFillAfter(true);
+//        anim2.setDuration(350);
+//
+//        //anim3.setFillAfter(true);
+//        anim3.setDuration(350);
+//
+//        //anim4.setFillAfter(true);
+//        anim4.setDuration(350);
+//
+//        //anim5.setFillAfter(true);
+//        anim5.setDuration(350);
 
 
     }
@@ -1524,19 +1555,19 @@ public class GameActivity extends Activity {
 
 
         //anim.setFillAfter(true);
-        anim_r.setDuration(350);
+        //anim_r.setDuration(350);
 
         //anim2.setFillAfter(true);
-        anim2_r.setDuration(350);
+        //anim2_r.setDuration(350);
 
         //anim3.setFillAfter(true);
-        anim3_r.setDuration(350);
+        //anim3_r.setDuration(350);
 
         //anim4.setFillAfter(true);
-        anim4_r.setDuration(350);
+        //anim4_r.setDuration(350);
 
         //anim5.setFillAfter(true);
-        anim5_r.setDuration(350);
+        //anim5_r.setDuration(350);
 
     }
 
@@ -1545,8 +1576,8 @@ public class GameActivity extends Activity {
 
     public void InstantiateViews()
     {
-        txtScore = (TextView) findViewById(R.id.score);
-        txtTime = (TextView) findViewById(R.id.timer);
+        txtScore = (TextView) findViewById(R.id.tvScoreAmount);
+        txtTime = (TextView) findViewById(R.id.tvTimer);
         rl2x2 = (RelativeLayout) findViewById(R.id.rl_2x2);
         rl3x3 = (RelativeLayout) findViewById(R.id.rl_3x3);
         rl4x4 = (RelativeLayout) findViewById(R.id.rl_4x4);
@@ -1766,12 +1797,12 @@ public class GameActivity extends Activity {
         iw8x8_88 = (ImageView) findViewById(R.id.iw8x8_88);
     }
 
-    public void CountTime(String instruction)
+    public void CountTime(String instruction, long countTime)
     {
         //txtTime = (TextView) findViewById( R.id.txtTime );
         switch (instruction) {
             case "new":
-                globalTimer = new CountDownTimer(15000, 1000) {
+                globalTimer = new CountDownTimer(countTime, 1000) {
 
                     public void onTick(long millisUntilFinished) {
                         txtTime.setText(new SimpleDateFormat("ss").format(new Date( millisUntilFinished)));
@@ -1804,6 +1835,39 @@ public class GameActivity extends Activity {
         }
     }
 
+    public void CountTimedTime() {
+        //txtTime = (TextView) findViewById( R.id.txtTime );
+
+                globalTimer = new CountDownTimer(60000, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        txtTime.setText(new SimpleDateFormat("ss").format(new Date(millisUntilFinished)));
+                        timeLeft = millisUntilFinished;
+                    }
+
+                    public void onFinish() {
+                        StartResultActivity();
+                    }
+                }.start();
+
+
+    }
+
+    private void SetAnimationsDuration(long duration)
+    {
+        anim.setDuration(duration);
+        anim2.setDuration(duration);
+        anim3.setDuration(duration);
+        anim4.setDuration(duration);
+        anim5.setDuration(duration);
+
+
+        anim_r.setDuration(duration);
+        anim2_r.setDuration(duration);
+        anim3_r.setDuration(duration);
+        anim4_r.setDuration(duration);
+        anim5_r.setDuration(duration);
+    }
     private void StartResultActivity()
     {
         Globals.Score = score;
@@ -1813,6 +1877,12 @@ public class GameActivity extends Activity {
 
     }
 
+
+    public void PressBack(View view)
+    {
+       onBackPressed();
+    }
+
     @Override
     public void onBackPressed()
     {
@@ -1820,6 +1890,59 @@ public class GameActivity extends Activity {
         finish();
     }
 
+    private void ShowTutorialPopUp() {
+        final Preferences preferences = new Preferences(getApplicationContext());
+
+        boolean s = preferences.AskForRate();
+        if (preferences.AskForTutorial()) {
+            LayoutInflater layoutInflater
+                    = (LayoutInflater) getBaseContext()
+                    .getSystemService(LAYOUT_INFLATER_SERVICE);
+
+            View popupView = layoutInflater.inflate(R.layout.learn, null);
+            final PopupWindow popupWindowWin = new PopupWindow(
+                    popupView,
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT);
+            try {
+
+            } catch (Exception ex) {
+            }
+
+
+            RelativeLayout btnDismiss = (RelativeLayout) popupView.findViewById(R.id.close);
+            btnDismiss.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    popupWindowWin.dismiss();
+                    if (Globals.mode == Mode.CLASSIC)
+                        CountTime("new", 15000);
+
+                    if (Globals.mode == Mode.TIMED)
+                        CountTime("new", 60000);
+                }
+            });
+
+            RelativeLayout btnCloseForever = (RelativeLayout) popupView.findViewById(R.id.never);
+            btnCloseForever.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    preferences.EditAskForTutorial();
+                    popupWindowWin.dismiss();
+                    if (Globals.mode == Mode.CLASSIC)
+                        CountTime("new", 15000);
+
+                    if (Globals.mode == Mode.TIMED)
+                        CountTime("new", 60000);
+                }
+            });
+
+            popupWindowWin.showAtLocation(findViewById(R.id.rootLayout), 0, 0, -10);
+
+        }
+    }
 
 
 }

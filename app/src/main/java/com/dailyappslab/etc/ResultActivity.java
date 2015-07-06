@@ -1,17 +1,19 @@
 package com.dailyappslab.etc;
 
-import android.app.ActionBar;
 import android.app.Activity;
-import android.graphics.drawable.AnimationDrawable;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
+import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.startad.lib.SADView;
 
@@ -21,6 +23,8 @@ import com.startad.lib.SADView;
 public class ResultActivity extends Activity {
 
     RelativeLayout optional;
+    TextView tvScore;
+    TextView tvDescription;
     EditText etName;
     String[] scoresArray;
     String[] namesArray;
@@ -33,54 +37,97 @@ public class ResultActivity extends Activity {
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate(savedInstanceState);
 
-       // getWindow().setFlags(ActionBar.LayoutParams.FLAG_NOT_TOUCH_);
+        // getWindow().setFlags(ActionBar.LayoutParams.FLAG_NOT_TOUCH_);
         setContentView(R.layout.result);
         preferences = new Preferences(this);
         scoresArray = preferences.GetHighscores();
         namesArray = preferences.GetNames();
         optional = (RelativeLayout) findViewById(R.id.optional);
-        etName = (EditText) findViewById(R.id.input_name);
+        etName = (EditText) findViewById(R.id.etName);
         okLayout = (RelativeLayout) findViewById(R.id.ok);
+        tvScore = (TextView) findViewById(R.id.tvScoresAmount);
+        tvDescription = (TextView) findViewById(R.id.tvDescription);
+
+        SetTypefaces();
+
+        int animalType = AnimalGradation.GetAnimalType(Globals.Score);
+        tvDescription.setText(getResources().getString(getResources().getIdentifier("a" + animalType, "string", getPackageName())));
+        tvScore.setText(String.valueOf(Globals.Score));
         DisplayPicture();
         setFinishOnTouchOutside(false);
 
-        if(IsInsertPossible())
-            optional.setVisibility(View.VISIBLE);
+        //if (Globals.mode == Mode.CLASSIC) {
+            if (IsInsertPossible()) {
+                optional.setVisibility(View.VISIBLE);
+            }
+        //}
+        if(Globals.mode == Mode.TIMED)
+        {
+            optional.setVisibility(View.GONE);
+        }
+        
+        ShowRateUs();
 
         if(Globals.interstitialAd.isLoaded())
             Globals.interstitialAd.show();
 
         ShowAd();
 
-        etName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    if (etName.getText().toString().trim().length() < 5) {
-                        etName.setError("Failed");
-                    } else {
-                        // your code here
-                        etName.setError(null);
-                    }
-                } else {
-                    if (etName.getText().toString().trim().length() < 5) {
-                        etName.setError("Failed");
-                    } else {
-                        // your code here
-                        etName.setError(null);
-                    }
-                }
 
-            }
-        });
+
+
+//        etName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (hasFocus) {
+//                    if (etName.getText().toString().trim().length() < 5) {
+//                        etName.setError("Failed");
+//                    } else {
+//                        // your code here
+//                        etName.setError(null);
+//                    }
+//                } else {
+//                    if (etName.getText().toString().trim().length() < 5) {
+//                        etName.setError("Failed");
+//                    } else {
+//                        // your code here
+//                        etName.setError(null);
+//                    }
+//                }
+//
+//            }
+//        });
     }
 
     public void ClickOk(View view)
     {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.record_enter);
         anim.setDuration(200);
-        okLayout.setAnimation(anim);
-        okLayout.startAnimation(anim);
+//        okLayout.setAnimation(anim);
+//        okLayout.startAnimation(anim);
+        if (etName.getText().toString().trim().length() == 0) {
+            etName.setError("Поле не может быть пустым");
+        }
+        else if(etName.getText().toString().trim().length() > 14)
+        {
+            etName.setError("Длина имени - не более 14 символов");
+        }
+        else
+        {
+            InputMethodManager imm = (InputMethodManager)getSystemService(
+                    Context.INPUT_METHOD_SERVICE);
+//txtName is a reference of an EditText Field
+            imm.hideSoftInputFromWindow(etName.getWindowToken(), 0);
+            Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        optional.setVisibility(View.GONE);
+                    }
+                }, 200);
+            optional.setAnimation(anim);
+            optional.startAnimation(anim);
+            InsertNewScore();
+        }
     }
 
     public void DisplayPicture()
@@ -120,20 +167,20 @@ public class ResultActivity extends Activity {
 
     public void PressClose(View view)
     {
-        if(IsInsertPossible())
-        {
-            InsertNewScore();
-        }
+//        if(optional.getVisibility() == View.VISIBLE)
+//        {
+//            InsertNewScore();
+//        }
         Globals.GameAct.finish();
         finish();
     }
 
     public void PressRestart(View view)
     {
-        if(IsInsertPossible())
-        {
-            InsertNewScore();
-        }
+//        if(IsInsertPossible())
+//        {
+//            InsertNewScore();
+//        }
         Globals.GameAct.finish();
         finish();
         startActivity(Globals.RestartingIntent);
@@ -168,5 +215,44 @@ public class ResultActivity extends Activity {
         }
         catch (Exception ex) {
         }
+    }
+
+    public void ShowRateUs()
+    {
+        Globals.TimesShown++;
+        boolean s = preferences.AskForRate();
+        if(preferences.AskForRate()) {
+
+            if(Globals.TimesShown > 10) {
+                Intent i = new Intent(ResultActivity.this, RateUsActivity.class);
+                startActivity(i);
+            }
+
+        }
+    }
+
+    public void SetTypefaces()
+    {
+        TextView tvHeader = (TextView) findViewById(R.id.tvHeader);
+        TextView tvYourScore = (TextView) findViewById(R.id.tvYourScore);
+        TextView tvScore = (TextView) findViewById(R.id.tvScoresAmount);
+        TextView tvNewHighscore = (TextView) findViewById(R.id.tvNewScore);
+        TextView tvYourName = (TextView) findViewById(R.id.tvYourName);
+        //EditText etName = (EditText) findViewById(R.id.etName);
+        TextView tvOk = (TextView) findViewById(R.id.tvOk);
+        //TextView tvDescription = (TextView) findViewById(R.id.tvDescription);
+        TextView tvNewGame = (TextView) findViewById(R.id.tvNewGame);
+        TextView tvBack = (TextView) findViewById(R.id.tvBack);
+
+        tvHeader.setTypeface(Globals.DefaultTypeface);
+        tvYourScore.setTypeface(Globals.DefaultTypeface);
+        tvScore.setTypeface(Globals.DefaultTypeface);
+        tvNewHighscore.setTypeface(Globals.DefaultTypeface);
+        tvYourName.setTypeface(Globals.DefaultTypeface);
+        etName.setTypeface(Globals.DefaultTypeface);
+        tvOk.setTypeface(Globals.DefaultTypeface);
+        tvDescription.setTypeface(Globals.DefaultTypeface);
+        tvNewGame.setTypeface(Globals.DefaultTypeface);
+        tvBack.setTypeface(Globals.DefaultTypeface);
     }
 }

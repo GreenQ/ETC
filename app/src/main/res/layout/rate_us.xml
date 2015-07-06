@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
 
     android:background="@color/dialogbg"
-    android:gravity="center">
+    android:gravity="center"
+    android:id="@+id/rlRateUsRoot">
 
 
     <RelativeLayout

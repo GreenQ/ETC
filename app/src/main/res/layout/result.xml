@@ -24,16 +24,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/igra_okon4ena"
-            android:id="@+id/game_over"
+            android:id="@+id/tvHeader"
             android:textColor="#ff12ac32"
-            android:textSize="25sp"/>
+            android:textSize="28sp"/>
 
 
         <TextView
             android:layout_centerHorizontal="true"
-            android:id="@+id/your_score"
+            android:id="@+id/tvYourScore"
             android:layout_width="wrap_content"
-            android:layout_below="@+id/game_over"
+            android:layout_below="@+id/tvHeader"
             android:layout_marginTop="5dp"
             android:layout_height="wrap_content"
             android:text="@string/vash_resultat"
@@ -41,49 +41,50 @@
             android:textSize="18sp"/>
 
         <RelativeLayout
+
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/optional"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/your_score">
+            android:layout_below="@+id/tvYourScore">
 
             <TextView
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
 
-                android:id="@+id/new_score"
+                android:id="@+id/tvNewScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#ffac324a"
                 android:textSize="20sp"
-                android:text="@string/new_highscore"/>
+                android:text="Новый рекорд!"/>
 
             <RelativeLayout
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/new_score"
+                android:layout_below="@+id/tvNewScore"
                 android:id="@+id/your_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_centerVertical="true"
-                    android:id="@+id/vashe_ima"
+                    android:id="@+id/tvYourName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="@string/vashe_imya"
+                    android:text="Ваше имя: "
                     android:textColor="#ff404a6f"/>
 
                 <EditText
                     android:layout_width="150dp"
                     android:layout_height="30dp"
-                    android:id="@+id/input_name"
+                    android:id="@+id/etName"
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
                     android:paddingTop="0dp"
                     android:paddingLeft="5dp"
-                    android:layout_toRightOf="@+id/vashe_ima"
+                    android:layout_toRightOf="@+id/tvYourName"
                     android:layout_centerHorizontal="true"
                     android:lines="1"
                     android:maxLength="15"
@@ -92,7 +93,7 @@
 
 
                 <RelativeLayout
-                    android:layout_toRightOf="@+id/input_name"
+                    android:layout_toRightOf="@+id/etName"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:id="@+id/ok"
@@ -105,7 +106,8 @@
                         android:text="@string/ok"
                         android:textSize="16sp"
                         android:textColor="#ff12ac32"
-                        android:layout_centerInParent="true"/>
+                        android:layout_centerInParent="true"
+                        android:id="@+id/tvOk" />
 
                 </RelativeLayout>
 
@@ -117,19 +119,19 @@
 
 
         <TextView
-            android:layout_toRightOf="@+id/your_score"
-            android:layout_below="@+id/game_over"
+            android:layout_toRightOf="@+id/tvYourScore"
+            android:layout_below="@+id/tvHeader"
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5"
-            android:id="@+id/o4ki"
+            android:id="@+id/tvScoresAmount"
             android:textColor="#ffc6313b"
             android:textSize="18sp"/>
 
         <TextView
             android:layout_width="wrap_content"
-            android:id="@+id/animal"
+            android:id="@+id/tvDescription"
             android:layout_marginTop="5dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/optional"
@@ -158,7 +160,7 @@
         <ImageView
             android:layout_marginTop="5dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/animal"
+            android:layout_below="@+id/tvDescription"
             android:id="@+id/img_animal"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -184,8 +186,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="16sp"
-            android:text="@string/novaya_igra"/>
+            android:textSize="20sp"
+            android:text="@string/novaya_igra"
+            android:id="@+id/tvNewGame" />
         </RelativeLayout>
 
 
@@ -204,8 +207,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="16sp"
-            android:text="@string/nazad"/>
+            android:textSize="20sp"
+            android:text="@string/nazad"
+            android:id="@+id/tvBack" />
     </RelativeLayout>
 
     </RelativeLayout>

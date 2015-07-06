@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/top_obr"
-        android:id="@+id/textView"
+        android:id="@+id/tvHeader"
         android:textColor="#ff12ac32"
         android:layout_marginTop="10dp"
         android:background="#00FFFFFF"
@@ -19,9 +19,9 @@
 
     <TextView
 
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/tvHeader"
         android:layout_width="wrap_content"
-        android:id="@+id/text_about"
+        android:id="@+id/tvAbout"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:layout_height="wrap_content"
@@ -39,11 +39,12 @@
     <RelativeLayout
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/text_about"
+        android:layout_below="@+id/tvAbout"
         android:id="@+id/exit"
         android:layout_width="140dp"
         android:layout_height="40dp"
-        android:background="@drawable/active_prh">
+        android:background="@drawable/active_prh"
+        android:onClick="PressBack">
 
         <TextView
             android:layout_centerInParent="true"
@@ -51,7 +52,8 @@
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
             android:textSize="20sp"
-            android:text="@string/nazad"/>
+            android:text="@string/nazad"
+            android:id="@+id/tvBack"/>
     </RelativeLayout>
 
 </RelativeLayout>

@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFEFFF0">
+    android:background="#FFFEFFF0"
+    android:id="@+id/rootLayout">
 
 
     <RelativeLayout
@@ -18,7 +19,8 @@
             android:layout_marginLeft="10dp"
             android:gravity="center"
             android:id="@+id/back"
-            android:background="@drawable/time">
+            android:background="@drawable/time"
+            android:onClick="PressBack">
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="20dp"
@@ -35,7 +37,7 @@
             android:layout_height="30dp"
             android:gravity="center">
             <TextView
-                android:id="@+id/s4et"
+                android:id="@+id/tvScore"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_width="wrap_content"
@@ -47,9 +49,9 @@
 
             <TextView
                 android:layout_centerVertical="true"
-                android:id="@+id/score"
+                android:id="@+id/tvScoreAmount"
                 android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/s4et"
+                android:layout_toRightOf="@+id/tvScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -69,7 +71,7 @@
 
             <TextView
                 android:gravity="center"
-                android:id="@+id/timer"
+                android:id="@+id/tvTimer"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"

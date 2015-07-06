@@ -24,14 +24,15 @@
             android:background="@drawable/active_btn"
             android:id="@+id/play"
             android:layout_marginBottom="10dp"
-            android:onClick="PressPlayButton">
+            android:onClick="PressPlayClassicButton">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="@string/igrat"
                     android:textSize="35sp"
-                    android:textColor="#ff12ac32"/>
+                    android:textColor="#ff12ac32"
+                    android:id="@+id/tvClassic"/>
             </RelativeLayout>
 
         <RelativeLayout
@@ -41,6 +42,7 @@
             android:id="@+id/play2"
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/play"
+            android:onClick="PressPlayTimedButton"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -48,7 +50,8 @@
                 android:layout_centerInParent="true"
                 android:text="@string/igrat2"
                 android:textSize="35sp"
-                android:textColor="#ff12ac32"/>
+                android:textColor="#ff12ac32"
+                android:id="@+id/tvTimed"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -65,7 +68,8 @@
                 android:layout_centerInParent="true"
                 android:text="@string/recordu"
                 android:textSize="35sp"
-                android:textColor="#ff12ac32"/>
+                android:textColor="#ff12ac32"
+                android:id="@+id/tvHighscores"/>
         </RelativeLayout>
 
 
@@ -82,9 +86,9 @@
                 android:layout_centerInParent="true"
                 android:text="@string/o_nas"
                 android:textSize="35sp"
-                android:textColor="#ff12ac32"/>
+                android:textColor="#ff12ac32"
+                android:id="@+id/tvAbout"/>
         </RelativeLayout>
-
 
         </RelativeLayout>
 
