@@ -16,14 +16,14 @@
 
     <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
 
-    <string name="a1">Вы различаете цвета как крот.</string>
-    <string name="a2">Вы различаете цвета как муравей.</string>
-    <string name="a3">Вы различаете цвета как одноглазый пират.</string>
+    <string name="a7">Вы различаете цвета как крот.</string>
+    <string name="a6">Вы различаете цвета как муравей.</string>
+    <string name="a5">Вы различаете цвета как одноглазый пират.</string>
     <string name="a4">Вы различаете цвета как волк.</string>
-    <string name="a5">Вы различаете цвета как пантера.</string>
-    <string name="a6">Вы различаете цвета как орел.</string>
-    <string name="a7">Вы различаете цвета как хищник.</string>
-    <string name="a8">Вы различаете цвета как женщина.</string>
+    <string name="a3">Вы различаете цвета как пантера.</string>
+    <string name="a2">Вы различаете цвета как орел.</string>
+    <string name="a1">Вы различаете цвета как хищник.</string>
+    <string name="a0">Вы различаете цвета как женщина.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -75,6 +75,31 @@
     <string name="rate_us">Оценить</string>
     <string name="later">Напомнить позже</string>
     <string name="never">Никогда не напоминать</string>
+
+
+
+    <string name="user_0">Мария</string>
+    <string name="user_1">Ольга</string>
+    <string name="user_2">Борис</string>
+    <string name="user_3">Саша</string>
+    <string name="user_4">Анна</string>
+    <string name="user_5">Даша</string>
+    <string name="user_6">Андрей</string>
+    <string name="user_7">Дмитрий</string>
+    <string name="user_8">Светлана</string>
+    <string name="user_9">Виктория</string>
+
+
+    <string name="score_0">1000</string>
+    <string name="score_1">500</string>
+    <string name="score_2">100</string>
+    <string name="score_3">86</string>
+    <string name="score_4">77</string>
+    <string name="score_5">73</string>
+    <string name="score_6">65</string>
+    <string name="score_7">58</string>
+    <string name="score_8">55</string>
+    <string name="score_9">49</string>
 
 
 

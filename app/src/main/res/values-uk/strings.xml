@@ -12,14 +12,14 @@
 
     <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
 
-    <string name="a1">Ви розрізняєте кольори як кріт.</string>
-    <string name="a2">Ви розрізняєте кольори як мурашка.</string>
-    <string name="a3">Ви розрізняєте кольори як одноокий пірат.</string>
+    <string name="a7">Ви розрізняєте кольори як кріт.</string>
+    <string name="a6">Ви розрізняєте кольори як мурашка.</string>
+    <string name="a5">Ви розрізняєте кольори як одноокий пірат.</string>
     <string name="a4">Ви розрізняєте кольори як вовк.</string>
-    <string name="a5">Ви розрізняєте кольори як пантера.</string>
-    <string name="a6">Ви розрізняєте кольори як орел.</string>
-    <string name="a7">Ви розрізняєте кольори як хижак.</string>
-    <string name="a8">Ви розрізняєте кольори як жінка.</string>
+    <string name="a3">Ви розрізняєте кольори як пантера.</string>
+    <string name="a2">Ви розрізняєте кольори як орел.</string>
+    <string name="a1">Ви розрізняєте кольори як хижак.</string>
+    <string name="a0">Ви розрізняєте кольори як жінка.</string>
 
 
     <string name="a1_f">Фактична відсутність зору у кротів компенсується відмінним нюхом і слухом, а також вони можуть розрізняти день від ночі.</string>
@@ -70,6 +70,31 @@
     <string name="rate_us">Оцінити</string>
     <string name="later">Нагадати пізніше</string>
     <string name="never">Ніколи не нагадувати</string>
+
+
+
+    <string name="user_0">Марія</string>
+    <string name="user_1">Ольга</string>
+    <string name="user_2">Ігор</string>
+    <string name="user_3">Христина</string>
+    <string name="user_4">Тарас</string>
+    <string name="user_5">Даша</string>
+    <string name="user_6">Андрій</string>
+    <string name="user_7">Дмитро</string>
+    <string name="user_8">Світлана</string>
+    <string name="user_9">Вікторія</string>
+
+
+    <string name="score_0">1000</string>
+    <string name="score_1">500</string>
+    <string name="score_2">100</string>
+    <string name="score_3">86</string>
+    <string name="score_4">77</string>
+    <string name="score_5">73</string>
+    <string name="score_6">65</string>
+    <string name="score_7">58</string>
+    <string name="score_8">55</string>
+    <string name="score_9">49</string>
 
 
 </resources>

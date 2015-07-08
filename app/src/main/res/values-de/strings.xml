@@ -16,14 +16,14 @@
 
     <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
 
-    <string name="a1">Sie unterscheiden die Farben als ein Maulwurf.</string>
-    <string name="a2">Sie unterscheiden die Farben als eine Ameise.</string>
-    <string name="a3">Sie unterscheiden die Farben als einäugiger Pirat.</string>
+    <string name="a7">Sie unterscheiden die Farben als ein Maulwurf.</string>
+    <string name="a6">Sie unterscheiden die Farben als eine Ameise.</string>
+    <string name="a5">Sie unterscheiden die Farben als einäugiger Pirat.</string>
     <string name="a4">Sie unterscheiden die Farben als ein Wolf.</string>
-    <string name="a5">Sie unterscheiden die Farben als ein Panther.</string>
-    <string name="a6">Sie unterscheiden die Farben als ein Adler.</string>
-    <string name="a7">Sie unterscheiden die Farben als ein Raubtier.</string>
-    <string name="a8">Sie unterscheiden die Farben als eine Frau.</string>
+    <string name="a3">Sie unterscheiden die Farben als ein Panther.</string>
+    <string name="a2">Sie unterscheiden die Farben als ein Adler.</string>
+    <string name="a1">Sie unterscheiden die Farben als ein Raubtier.</string>
+    <string name="a0">Sie unterscheiden die Farben als eine Frau.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -75,6 +75,31 @@
     <string name="rate_us">Bitte, bewerten Sie</string>
     <string name="later">Erinnern Sie später. </string>
     <string name="never">Keine Erinnerung. </string>
+
+
+
+    <string name="user_0">Ursula</string>
+    <string name="user_1">Helga</string>
+    <string name="user_2">Gisela</string>
+    <string name="user_3">Klaus</string>
+    <string name="user_4">Frank</string>
+    <string name="user_5">Andreas</string>
+    <string name="user_6">Hans</string>
+    <string name="user_7">Nicole</string>
+    <string name="user_8">Erika</string>
+    <string name="user_9">Maximilian</string>
+
+
+    <string name="score_0">1000</string>
+    <string name="score_1">500</string>
+    <string name="score_2">100</string>
+    <string name="score_3">86</string>
+    <string name="score_4">77</string>
+    <string name="score_5">73</string>
+    <string name="score_6">65</string>
+    <string name="score_7">58</string>
+    <string name="score_8">55</string>
+    <string name="score_9">49</string>
 
 
 

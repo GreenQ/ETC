@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true">
     <RelativeLayout
         android:id="@+id/osnova"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn">
@@ -26,7 +26,7 @@
             android:text="@string/igra_okon4ena"
             android:id="@+id/tvHeader"
             android:textColor="#ff12ac32"
-            android:textSize="28sp"/>
+            android:textSize="25sp"/>
 
 
         <TextView
@@ -97,6 +97,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:id="@+id/ok"
+                    android:gravity="center"
                     android:background="@drawable/btn"
                     android:onClick="ClickOk">
 
@@ -104,7 +105,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/ok"
-                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textSize="14sp"
                         android:textColor="#ff12ac32"
                         android:layout_centerInParent="true"
                         android:id="@+id/tvOk" />
@@ -133,12 +135,15 @@
             android:layout_width="wrap_content"
             android:id="@+id/tvDescription"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/optional"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="#ff12ac32"
-            android:text="Вы различаете цвета как крот."/>
+            android:gravity="center_horizontal"
+            android:text="@string/a3"/>
 
 
         <!--<TextView-->
@@ -186,7 +191,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:text="@string/novaya_igra"
             android:id="@+id/tvNewGame" />
         </RelativeLayout>
@@ -207,7 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#ff12ac32"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:text="@string/nazad"
             android:id="@+id/tvBack" />
     </RelativeLayout>

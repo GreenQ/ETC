@@ -10,14 +10,14 @@
     <string name="sadViewMiniBanner">559587f59e7bc34500000000</string>
 
 
-    <string name="a1">Vous distinguer les couleurs comme une taupe.</string>
-    <string name="a2">Vous distinguer les couleurs comme une fourmi.</string>
-    <string name="a3">Vous distinguer les couleurs comme le pirate borgne.</string>
+    <string name="a7">Vous distinguer les couleurs comme une taupe.</string>
+    <string name="a6">Vous distinguer les couleurs comme une fourmi.</string>
+    <string name="a5">Vous distinguer les couleurs comme le pirate borgne.</string>
     <string name="a4">Vous distinguer les couleurs comme un loup.</string>
-    <string name="a5">Vous distinguer les couleurs comme une panthère.</string>
-    <string name="a6">Vous distinguer les couleurs comme un aigle.</string>
-    <string name="a7">Vous distinguer les couleurs comme un prédateur.</string>
-    <string name="a8">Vous distinguer les couleurs en tant que femme.</string>
+    <string name="a3">Vous distinguer les couleurs comme une panthère.</string>
+    <string name="a2">Vous distinguer les couleurs comme un aigle.</string>
+    <string name="a1">Vous distinguer les couleurs comme un prédateur.</string>
+    <string name="a0">Vous distinguer les couleurs en tant que femme.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -69,6 +69,30 @@
     <string name="rate_us">Estimation</string>
     <string name="later">Rappele moi plus tard</string>
     <string name="never">Ne pas montrer</string>
+
+
+    <string name="user_0">Isabelle</string>
+    <string name="user_1">Martine</string>
+    <string name="user_2">Sophie</string>
+    <string name="user_3">Eric</string>
+    <string name="user_4">Pierre</string>
+    <string name="user_5">Pascal</string>
+    <string name="user_6">Christiane</string>
+    <string name="user_7">Alexandre</string>
+    <string name="user_8">Chantal</string>
+    <string name="user_9">Bernard</string>
+
+
+    <string name="score_0">1000</string>
+    <string name="score_1">500</string>
+    <string name="score_2">100</string>
+    <string name="score_3">86</string>
+    <string name="score_4">77</string>
+    <string name="score_5">73</string>
+    <string name="score_6">65</string>
+    <string name="score_7">58</string>
+    <string name="score_8">55</string>
+    <string name="score_9">49</string>
 
 
 </resources>

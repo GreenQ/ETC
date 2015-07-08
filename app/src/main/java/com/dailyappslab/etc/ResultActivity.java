@@ -102,7 +102,7 @@ public class ResultActivity extends Activity {
     public void ClickOk(View view)
     {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.record_enter);
-        anim.setDuration(200);
+        anim.setDuration(400);
 //        okLayout.setAnimation(anim);
 //        okLayout.startAnimation(anim);
         if (etName.getText().toString().trim().length() == 0) {
