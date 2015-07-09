@@ -43,7 +43,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tvAbout"
         android:id="@+id/exit"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
         android:layout_height="50dp"
         android:background="@drawable/active_prh"
         android:onClick="PressBack">

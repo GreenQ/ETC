@@ -11,140 +11,142 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true">
-    <RelativeLayout
-        android:id="@+id/osnova"
-        android:layout_marginTop="10dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn">
-
-        <TextView
-            android:layout_marginTop="5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/igra_okon4ena"
-            android:id="@+id/tvHeader"
-            android:textColor="#ff12ac32"
-            android:textSize="25sp"/>
-
-
-        <TextView
-            android:layout_centerHorizontal="true"
-            android:id="@+id/tvYourScore"
-            android:layout_width="wrap_content"
-            android:layout_below="@+id/tvHeader"
-            android:layout_marginTop="5dp"
-            android:layout_height="wrap_content"
-            android:text="@string/vash_resultat"
-            android:textColor="#ff0d6b1f"
-            android:textSize="18sp"/>
-
         <RelativeLayout
-
-            android:visibility="gone"
-            android:layout_width="wrap_content"
+            android:id="@+id/osnova"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/optional"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/tvYourScore">
+            android:background="@drawable/btn">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/igra_okon4ena"
+                android:id="@+id/tvHeader"
+                android:textColor="#ff12ac32"
+                android:textSize="25sp"/>
+
 
             <TextView
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-
-                android:id="@+id/tvNewScore"
+                android:id="@+id/tvYourScore"
                 android:layout_width="wrap_content"
+                android:layout_below="@+id/tvHeader"
+                android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
-                android:textColor="#ffac324a"
-                android:textSize="20sp"
-                android:text="Новый рекорд!"/>
+                android:text="@string/vash_resultat"
+                android:textColor="#ff0d6b1f"
+                android:textSize="18sp"/>
 
             <RelativeLayout
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/tvNewScore"
-                android:id="@+id/your_name"
+
+                android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/optional"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tvYourScore">
 
                 <TextView
-                    android:layout_centerVertical="true"
-                    android:id="@+id/tvYourName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+
+                    android:id="@+id/tvNewScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Ваше имя: "
-                    android:textColor="#ff404a6f"/>
-
-                <EditText
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:id="@+id/etName"
-                    android:paddingRight="0dp"
-                    android:paddingBottom="0dp"
-                    android:paddingTop="0dp"
-                    android:paddingLeft="5dp"
-                    android:layout_toRightOf="@+id/tvYourName"
-                    android:layout_centerHorizontal="true"
-                    android:lines="1"
-                    android:maxLength="15"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-
+                    android:textColor="#ffac324a"
+                    android:textSize="20sp"
+                    android:text="@string/new_highscore"/>
 
                 <RelativeLayout
-                    android:layout_toRightOf="@+id/etName"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:id="@+id/ok"
-                    android:background="@drawable/btn"
-                    android:onClick="ClickOk">
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tvNewScore"
+                    android:id="@+id/your_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tvYourName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/ok"
-                        android:textSize="16sp"
-                        android:textColor="#ff12ac32"
-                        android:layout_centerInParent="true"
-                        android:id="@+id/tvOk" />
+                        android:textSize="18sp"
+                        android:text="@string/vashe_imya"
+                        android:textColor="#ff404a6f"/>
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/etName"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingLeft="5dp"
+                        android:layout_toRightOf="@+id/tvYourName"
+                        android:layout_centerHorizontal="true"
+                        android:lines="1"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+
+
+                    <RelativeLayout
+                        android:layout_toRightOf="@+id/etName"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/ok"
+                        android:gravity="center"
+                        android:background="@drawable/btn"
+                        android:onClick="ClickOk">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ok"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:textColor="#ff12ac32"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/tvOk" />
+
+                    </RelativeLayout>
+
+
 
                 </RelativeLayout>
 
-
-
-            </RelativeLayout>
-
             </RelativeLayout>
 
 
-        <TextView
-            android:layout_toRightOf="@+id/tvYourScore"
-            android:layout_below="@+id/tvHeader"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5"
-            android:id="@+id/tvScoresAmount"
-            android:textColor="#ffc6313b"
-            android:textSize="18sp"/>
+            <TextView
+                android:layout_toRightOf="@+id/tvYourScore"
+                android:layout_below="@+id/tvHeader"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/tvScoresAmount"
+                android:textColor="#ffc6313b"
+                android:textSize="18sp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/tvDescription"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/optional"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="#ff12ac32"
-            android:gravity="center_horizontal"
-            android:text="@string/a3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvDescription"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/optional"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#ff12ac32"
+                android:gravity="center_horizontal"
+                android:text="@string/a3"/>
 
 
-        <!--<TextView-->
+            <!--<TextView-->
             <!--android:layout_width="wrap_content"-->
             <!--android:id="@+id/fact"-->
             <!--android:paddingLeft="5dp"-->
@@ -160,70 +162,70 @@
             <!--android:text="Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи."/>-->
 
 
-        <ImageView
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tvDescription"
+                android:id="@+id/img_animal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/animal_7"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_marginTop="5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/tvDescription"
-            android:id="@+id/img_animal"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/animal_7"/>
+            android:layout_below="@+id/osnova"
+            android:id="@+id/new_game"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/active_prh"
+            android:onClick="PressRestart">
 
-
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/osnova"
-        android:id="@+id/new_game"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:background="@drawable/active_prh"
-        android:onClick="PressRestart">
-
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ff12ac32"
-            android:textSize="17sp"
-            android:text="@string/novaya_igra"
-            android:id="@+id/tvNewGame" />
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="17sp"
+                android:text="@string/novaya_igra"
+                android:id="@+id/tvNewGame" />
         </RelativeLayout>
 
 
-    <RelativeLayout
-        android:layout_marginTop="5dp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/osnova"
-        android:id="@+id/exit"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:background="@drawable/active_prh"
-        android:onClick="PressClose">
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/osnova"
+            android:id="@+id/exit"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/active_prh"
+            android:onClick="PressClose">
 
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ff12ac32"
-            android:textSize="17sp"
-            android:text="@string/nazad"
-            android:id="@+id/tvBack" />
-    </RelativeLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/admob"
-        android:layout_alignParentBottom="true">
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="17sp"
+                android:text="@string/nazad"
+                android:id="@+id/tvBack" />
+        </RelativeLayout>
 
     </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/admob"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+    <!--</RelativeLayout>-->
 
 </RelativeLayout>

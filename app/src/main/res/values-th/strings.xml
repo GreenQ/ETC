@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ETC</string>
+    <string name="app_name">แตกต่างของสี - ทดสอบสายตา</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="base64cod">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhkW6Fe8dNdTGw9U88naEgQCjXQcWC3hbDN+Wbu7Y4K7nHU1GrVkHFy5bWU4TqFfLY796v3+BUaFwpxgC9wQSDUGjtqpLa5pgfjzFMIxDGT/h802uebJX1daixhaaDroeVkcvt2mcIk/wjOhw/tR8IIKnpG5T74UCLjWQ/Mr9M9r/CI7sSb0Y5MZGmCrJUy8Ll/0W771XEldAhjYEOqnIKaoirJHxx3Y/zoG7hDibRzTCAfEMSMX0tLJsB6oNHTLVQUbcyB+cUMh0tiSVqRJTOnpsEdWqB/dwQXsz7AFoROCHB2NmaWEMbgM3dHHe45xiTEpOs60Mw4U+0s6pQYQIPQIDAQAB</string>
@@ -16,14 +16,14 @@
 
     <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
 
-    <string name="a7">Вы различаете цвета как крот.</string>
-    <string name="a6">Вы различаете цвета как муравей.</string>
-    <string name="a5">Вы различаете цвета как одноглазый пират.</string>
-    <string name="a4">Вы различаете цвета как волк.</string>
-    <string name="a3">Вы различаете цвета как пантера.</string>
-    <string name="a2">Вы различаете цвета как орел.</string>
-    <string name="a1">Вы различаете цвета как хищник.</string>
-    <string name="a0">Вы различаете цвета как женщина.</string>
+    <string name="a7">คุณเห็นความแตกต่างสีเช่นไฝ</string>
+    <string name="a6">คุณเห็นความแตกต่างสีเช่นมด</string>
+    <string name="a5">คุณเห็นความแตกต่างสีโจรสลัดตาเดียว</string>
+    <string name="a4">คุณเห็นความแตกต่างสีเช่นหมาป่า</string>
+    <string name="a3">คุณเห็นความแตกต่างสีเช่นเสือดำ</string>
+    <string name="a2">คุณเห็นความแตกต่างสีเหมือนนกอินทรี</string>
+    <string name="a1">คุณเห็นความแตกต่างสีที่เป็นนักล่า</string>
+    <string name="a0">คุณเห็นความแตกต่างสีที่เป็นผู้หญิง</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -40,10 +40,10 @@
     <string name="movu">англійська, французька, іспанська, російська, китайська, тайванська, німецька, португальска, українська</string>
 
 
-    <string name="igrat">КЛАССИКА</string>
-    <string name="igrat2">МАРАФОН</string>
-    <string name="recordu">РЕКОРДЫ</string>
-    <string name="o_nas">О НАС</string>
+    <string name="igrat">คลาสสิก</string>
+    <string name="igrat2">การวิ่งมาราธอน</string>
+    <string name="recordu">คะแนนสูง</string>
+    <string name="o_nas">เกี่ยวกับเรา</string>
 
 
 
@@ -53,41 +53,45 @@
     <string name="bolshe_ne_pokazivat">БОЛЬШЕ НЕ ПОКАЗЫВАТЬ</string>
 
 
-    <string name="s4et">СЧЕТ:</string>
+    <string name="s4et">คะแนน:</string>
 
 
-    <string name="igra_okon4ena">ИГРА ОКОНЧЕНА</string>
-    <string name="vash_resultat">Ваш результат:&#160;</string>
-    <string name="novaya_igra">НОВАЯ ИГРА</string>
+    <string name="igra_okon4ena">เกมจะจบ</string>
+    <string name="vash_resultat">ผลของคุณ&#160;</string>
+    <string name="novaya_igra">เกมส์ใหม่</string>
 
     <string name="ok">OK</string>
 
 
-    <string name="table_rec">ТАБЛИЦА РЕКОРДОВ</string>
+    <string name="table_rec">คะแนนสูง</string>
 
 
-    <string name="top_obr">Обращение к пользователям</string>
-    <string name="obr">      Команда разработчиков DailyAppsLab благодарит вас за установку игры. С любыми пожеланиями или предложениями вы можете обратиться к нам по электронному адресу dailyappslab@gmail.com \n     Если вам понравилась игра - пожалуйста, поддержите нас отзывами и оценками! \n    Желаем удачи и приятного времяпровождения!</string>
-    <string name="nazad">НАЗАД</string>
+    <string name="top_obr">ข้อความไปยังผู้ใช้</string>
+    <string name="obr">      ทีมพัฒนา DailyAppsLab ขอขอบคุณสำหรับการติดตั้งเกม สำหรับการร้องขอหรือข้อเสนอแนะใด ๆ คุณสามารถติดต่อเราผ่านทาง e-mail dailyappslab@gmail.com หากคุณชอบเกม - โปรดสนับสนุนเราและให้คะแนนข้อเสนอแนะ! ขอให้โชคดีและงานอดิเรกที่น่าพอใจ!</string>
+    <string name="nazad">กลับ</string>
 
 
-    <string name="like_it">Понравилась игра?</string>
-    <string name="rate_us">Оценить</string>
-    <string name="later">Напомнить позже</string>
-    <string name="never">Никогда не напоминать</string>
+    <string name="like_it">ผมชอบเกม?</string>
+    <string name="rate_us">การประเมินผล</string>
+    <string name="later">เตือนฉันภายหลัง</string>
+    <string name="never">ไม่เคยเตือน</string>
 
 
 
-    <string name="user_0">Мария</string>
-    <string name="user_1">Ольга</string>
-    <string name="user_2">Борис</string>
-    <string name="user_3">Саша</string>
-    <string name="user_4">Анна</string>
-    <string name="user_5">Даша</string>
-    <string name="user_6">Андрей</string>
-    <string name="user_7">Дмитрий</string>
-    <string name="user_8">Светлана</string>
-    <string name="user_9">Виктория</string>
+    <string name="new_highscore">คะแนนสูง!</string>
+    <string name="vashe_imya">ชื่อของคุณ:&#160;</string>
+
+
+    <string name="user_0">อนงค์</string>
+    <string name="user_1">อาทิตย์</string>
+    <string name="user_2">กมล</string>
+    <string name="user_3">กานดา</string>
+    <string name="user_4">กลัาหาญ</string>
+    <string name="user_5">กุหลาบ</string>
+    <string name="user_6">มาลัย</string>
+    <string name="user_7">มาลี</string>
+    <string name="user_8">ปรีชา</string>
+    <string name="user_9">ราตรี</string>
 
 
     <string name="score_0">1000</string>

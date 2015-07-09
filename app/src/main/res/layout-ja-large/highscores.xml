@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFEFFF0"
-    android:gravity="center|top"
+    android:gravity="top"
     android:id="@+id/rlHighscoreRoot">
 
     <TextView
@@ -14,13 +14,15 @@
         android:id="@+id/table_high_score"
         android:textSize="30sp"
         android:padding="5dp"
+        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:textColor="#FF68D199"
         />
 
     <RelativeLayout
         android:id="@+id/table"
-        android:layout_width="320dp"
+        android:layout_width="280dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/table_high_score"
@@ -53,7 +55,7 @@
                 android:layout_toRightOf="@+id/num_1"
                 android:gravity="center_vertical"
                 android:layout_centerVertical="true"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_1"
                 android:paddingLeft="3dp"
                 android:text="@string/user_0"
@@ -124,7 +126,7 @@
             <TextView
                 android:layout_toRightOf="@+id/num_2"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_2"
                 android:paddingLeft="3dp"
                 android:text="@string/user_1"
@@ -193,7 +195,7 @@
             <TextView
                 android:layout_toRightOf="@+id/num_3"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_3"
                 android:paddingLeft="3dp"
                 android:text="@string/user_2"
@@ -264,7 +266,7 @@
             <TextView
                 android:layout_toRightOf="@+id/num_4"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_4"
                 android:paddingLeft="3dp"
                 android:text="@string/user_3"
@@ -331,7 +333,7 @@
             <TextView
                 android:layout_toRightOf="@+id/num_5"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_5"
                 android:paddingLeft="3dp"
                 android:text="@string/user_4"
@@ -401,7 +403,7 @@
             <TextView
                 android:layout_toRightOf="@+id/num_6"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_6"
                 android:paddingLeft="3dp"
                 android:text="@string/user_5"
@@ -469,7 +471,7 @@
             <TextView
                 android:layout_toRightOf="@+id/num_7"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_7"
                 android:paddingLeft="3dp"
                 android:text="@string/user_6"
@@ -540,7 +542,7 @@
                 android:layout_toRightOf="@+id/num_8"
                 android:textSize="28sp"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_8"
                 android:paddingLeft="3dp"
                 android:text="@string/user_7"
@@ -609,7 +611,7 @@
                 android:layout_toRightOf="@+id/num_9"
                 android:gravity="center_vertical"
                 android:textSize="28sp"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_9"
                 android:paddingLeft="3dp"
                 android:text="@string/user_8"
@@ -678,7 +680,7 @@
                 android:layout_toRightOf="@+id/num_10"
                 android:textSize="28sp"
                 android:gravity="center_vertical"
-                android:layout_width="150dp"
+                android:layout_width="100dp"
                 android:id="@+id/place_10"
                 android:paddingLeft="3dp"
                 android:text="@string/user_9"
@@ -731,6 +733,7 @@
     <RelativeLayout
         android:layout_width="320dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/table">
 
 
@@ -740,7 +743,8 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/exit"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
+        android:padding="4dp"
         android:layout_height="60dp"
         android:background="@drawable/active_prh"
         android:onClick="PressBack">

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFEFFF0">
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="@drawable/i500"/>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:background="@drawable/active_btn"
+            android:id="@+id/play"
+            android:layout_marginBottom="10dp"
+            android:onClick="PressPlayClassicButton">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/igrat"
+                android:textSize="35sp"
+                android:textColor="#ff12ac32"
+                android:id="@+id/tvClassic"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:background="@drawable/active_btn"
+            android:id="@+id/play2"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/play"
+            android:onClick="PressPlayTimedButton"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/igrat2"
+                android:textSize="35sp"
+                android:textColor="#ff12ac32"
+                android:id="@+id/tvTimed"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/play2"
+            android:id="@+id/highscorestable"
+            android:background="@drawable/active_btn"
+            android:layout_marginBottom="10dp"
+            android:onClick="PressHighscoresButton">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/recordu"
+                android:textSize="35sp"
+                android:textColor="#ff12ac32"
+                android:id="@+id/tvHighscores"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:id="@+id/about"
+            android:layout_below="@+id/highscorestable"
+            android:background="@drawable/active_btn"
+            android:onClick="PressAboutUsButton">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/o_nas"
+                android:textSize="35sp"
+                android:textColor="#ff12ac32"
+                android:id="@+id/tvAbout"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/admob"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+    <!--</RelativeLayout>-->
+
+
+
+</RelativeLayout>
