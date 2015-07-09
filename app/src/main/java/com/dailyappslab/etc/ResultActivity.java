@@ -63,7 +63,12 @@ public class ResultActivity extends Activity {
         //}
         if(Globals.mode == Mode.TIMED)
         {
-            optional.setVisibility(View.GONE);
+            if(IsInsertMarathonPossible())
+            {
+                optional.setVisibility(View.VISIBLE);
+            }
+            else
+                optional.setVisibility(View.GONE);
         }
         
         ShowRateUs();
@@ -126,7 +131,11 @@ public class ResultActivity extends Activity {
                 }, 200);
             optional.setAnimation(anim);
             optional.startAnimation(anim);
-            InsertNewScore();
+
+            if(Globals.mode == Mode.CLASSIC)
+                InsertNewScore();
+            else if(Globals.mode == Mode.TIMED)
+                InsertNewScoreMarathon();
         }
     }
 
@@ -140,6 +149,17 @@ public class ResultActivity extends Activity {
 
     public boolean IsInsertPossible()
     {
+        if(Integer.valueOf(scoresArray[9]) < Globals.Score)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean IsInsertMarathonPossible()
+    {
+        scoresArray = preferences.GetHighscoresMarathon();
+        namesArray = preferences.GetNamesMarathon();
+
         if(Integer.valueOf(scoresArray[9]) < Globals.Score)
             return true;
         else
@@ -164,6 +184,26 @@ public class ResultActivity extends Activity {
         preferences.SetHighscores(scoresArray);
         preferences.SetNames(namesArray);
     }
+
+    public void InsertNewScoreMarathon()
+    {
+        int i = 0;
+        while(i < scoresArray.length && Integer.valueOf(scoresArray[i]) > Globals.Score){
+            i++;
+        }
+        if(i < scoresArray.length){
+            //you found a place to insert the score
+            for(int j = scoresArray.length-1; j > i; j--){
+                scoresArray[j] = scoresArray[j - 1];
+                namesArray[j] = namesArray[j-1];
+            }
+            scoresArray[i] = String.valueOf(Globals.Score);
+            namesArray[i] = etName.getText().toString();
+        }
+        preferences.SetHighscoresMarathon(scoresArray);
+        preferences.SetNamesMarathon(namesArray);
+    }
+
 
     public void PressClose(View view)
     {

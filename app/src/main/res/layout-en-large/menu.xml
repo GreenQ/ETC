@@ -99,7 +99,16 @@
         <!--android:id="@+id/admob"-->
         <!--android:layout_alignParentBottom="true">-->
 
+        <!--<com.tapfortap.sdk.Banner-->
+            <!--android:id="@+id/banner"-->
+            <!--android:layout_width="320dip"-->
+            <!--android:layout_height="50dip"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--/>-->
     <!--</RelativeLayout>-->
+
+
 
 
 

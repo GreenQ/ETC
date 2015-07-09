@@ -24,9 +24,14 @@
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
 
+        <meta-data
+            android:name="com.tapfortap.API_KEY"
+            android:value="c0b616d201e1d00d940daebb3f831374"/>
+
         <activity
             android:name=".LoadActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

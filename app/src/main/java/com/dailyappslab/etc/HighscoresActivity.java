@@ -71,8 +71,7 @@ public class HighscoresActivity extends Activity {
         names = preferences.GetNames();
 
         //InsertNewResult();
-        DisplayScores();
-        DisplayNames();
+       PressClassic(null);
 
         RelativeLayout rootLayout = (RelativeLayout)findViewById(R.id.rlHighscoreRoot);
         AndroidTypefaceUtility.SetTypefaceOfViewGroup(rootLayout, Globals.DefaultTypeface);
@@ -106,6 +105,24 @@ public class HighscoresActivity extends Activity {
         preferences.SetNames(names);
     }
 
+    public void PressClassic(View view)
+    {
+        scores = preferences.GetHighscores();
+        names = preferences.GetNames();
+
+        DisplayScores();
+        DisplayNames();
+    }
+
+    public void PressMarathon(View view)
+    {
+        scores = preferences.GetHighscoresMarathon();
+        names = preferences.GetNamesMarathon();
+
+        DisplayScores();
+        DisplayNames();
+    }
+
     public void DisplayScores()
     {
         TextView tempTextView;
@@ -128,6 +145,8 @@ public class HighscoresActivity extends Activity {
             tempTextView.setText(names[i]);
         }
     }
+
+
 
     public void DisplayPictures(int animalId, int viewId)
     {

@@ -731,7 +731,8 @@
     <RelativeLayout
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/table">
+        android:layout_below="@+id/table"
+        android:id="@+id/relativeLayout">
 
 
 
@@ -754,6 +755,46 @@
             android:text="@string/nazad"/>
     </RelativeLayout>
 
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/rlClassic"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/active_prh"
+        android:onClick="PressClassic"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignRight="@+id/table"
+        android:layout_alignEnd="@+id/table">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff12ac32"
+            android:textSize="30sp"
+            android:text="@string/igrat"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/rlMarathon"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/active_prh"
+        android:onClick="PressMarathon"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_toLeftOf="@+id/rlClassic"
+        android:layout_toStartOf="@+id/rlClassic">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff12ac32"
+            android:textSize="30sp"
+            android:text="@string/igrat2"/>
     </RelativeLayout>
 
 </RelativeLayout>
