@@ -3,9 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
-        applicationId "com.dailyappslab.etc"
+        applicationId 'com.dailyappslab.kuku_kube_eye_test'
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
@@ -16,6 +15,8 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 
@@ -29,4 +30,5 @@ dependencies {
     //    compile files('libs/google-play-services.jar')
     //    compile files('libs/libGoogleAnalyticsServices.jar')
     compile files('libs/TapForTap.jar')
+    compile files('libs/chartboost.jar')
 }

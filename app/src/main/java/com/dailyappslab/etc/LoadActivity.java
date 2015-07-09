@@ -31,6 +31,7 @@ public class LoadActivity extends Activity {
             public void run() {
                 Intent i = new Intent(LoadActivity.this, MainActivity.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
 
           //      overridePendingTransition(R.anim.alpha_in, R.anim.alpha_out);
                 finish();

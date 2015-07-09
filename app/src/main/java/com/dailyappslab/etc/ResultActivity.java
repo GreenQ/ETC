@@ -113,7 +113,7 @@ public class ResultActivity extends Activity {
         if (etName.getText().toString().trim().length() == 0) {
             etName.setError("Поле не может быть пустым");
         }
-        else if(etName.getText().toString().trim().length() > 14)
+        else if(etName.getText().toString().trim().length() > 9)
         {
             etName.setError("Длина имени - не более 14 символов");
         }
@@ -213,6 +213,8 @@ public class ResultActivity extends Activity {
 //        }
         Globals.GameAct.finish();
         finish();
+
+        overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
     }
 
     public void PressRestart(View view)
@@ -224,6 +226,8 @@ public class ResultActivity extends Activity {
         Globals.GameAct.finish();
         finish();
         startActivity(Globals.RestartingIntent);
+        overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
+
     }
 
     @Override
@@ -231,6 +235,7 @@ public class ResultActivity extends Activity {
     {
         Globals.GameAct.finish();
         finish();
+        overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
     }
 //    @Override
 //    public boolean onTouchEvent(MotionEvent event) {
@@ -266,6 +271,7 @@ public class ResultActivity extends Activity {
             if(Globals.TimesShown > 10) {
                 Intent i = new Intent(ResultActivity.this, RateUsActivity.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
             }
 
         }

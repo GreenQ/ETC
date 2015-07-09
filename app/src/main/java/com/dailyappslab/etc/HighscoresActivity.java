@@ -194,5 +194,13 @@ public class HighscoresActivity extends Activity {
     public void PressBack(View view)
     {
         finish();
+        overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        finish();
+        overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
     }
 }

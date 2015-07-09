@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.startad.lib.SADView;
 //import com.tapfortap.TapForTap;
+//import com.chartboost.sdk.*;
 
 
 public class MainActivity extends Activity {
@@ -75,6 +76,7 @@ public class MainActivity extends Activity {
             public void run() {
                 Intent i = new Intent(MainActivity.this, AboutUsActivity.class);
                 startActivityForResult(i, 1);
+                overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
                 //finish();
             }
         }, 0);
@@ -88,6 +90,7 @@ public class MainActivity extends Activity {
             public void run() {
                 Intent i = new Intent(MainActivity.this, HighscoresActivity.class);
                 startActivityForResult(i, 1);
+                overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
                 //finish();
             }
         }, 0);
@@ -106,6 +109,7 @@ public class MainActivity extends Activity {
                 Globals.mode = Mode.TIMED;
                 Intent i = new Intent(MainActivity.this, GameActivity.class);
                 startActivityForResult(i, 1);
+                overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
                 //finish();
             }
         }, 0);
@@ -120,6 +124,7 @@ public class MainActivity extends Activity {
                 Globals.mode = Mode.CLASSIC;
                 Intent i = new Intent(MainActivity.this, GameActivity.class);
                 startActivityForResult(i, 1);
+                overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
                 //finish();
             }
         }, 0);
@@ -148,11 +153,11 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-//    public void ShowTap4Tap()
-//    {
+    public void ShowTap4Tap()
+    {
 //        TapForTap.enableTapForTap();
 //        TapForTap.initialize(this, "c0b616d201e1d00d940daebb3f831374");
-//    }
+    }
 
     public void ShowAd()
     {

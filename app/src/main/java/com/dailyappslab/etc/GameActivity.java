@@ -730,16 +730,16 @@ public class GameActivity extends Activity {
                 colorDifference = 20;
                 break;
             case 5:
-                colorDifference = 15;
+                colorDifference = 18;
                 break;
             case 6:
-                colorDifference = 10;
+                colorDifference = 15;
                 break;
             case 7:
-                colorDifference = 5;
+                colorDifference = 10;
                 break;
             case 8:
-                colorDifference = 2;
+                colorDifference = 5;
                 break;
         }
         differColor = ColorsHandler.ReduceColorOpacity(mainColor, colorDifference);
@@ -1874,6 +1874,7 @@ public class GameActivity extends Activity {
         Globals.RestartingIntent = getIntent();
         Intent i = new Intent(GameActivity.this, ResultActivity.class);
         startActivity(i);
+        overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
 
     }
 
@@ -1888,6 +1889,7 @@ public class GameActivity extends Activity {
     {
         globalTimer.cancel();
         finish();
+        overridePendingTransition(R.anim.layout_on, R.anim.layout_off);
     }
 
     private void ShowTutorialPopUp() {
