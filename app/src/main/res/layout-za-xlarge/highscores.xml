@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFEFFF0"
-    android:gravity="top"
+    android:gravity="center|top"
     android:id="@+id/rlHighscoreRoot">
 
     <TextView
@@ -14,19 +14,70 @@
         android:id="@+id/table_high_score"
         android:textSize="35sp"
         android:padding="5dp"
-        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:textColor="#FF68D199"
         />
 
     <RelativeLayout
-        android:id="@+id/table"
-        android:layout_width="320dp"
-        android:layout_marginTop="5dp"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:id="@+id/chose"
         android:layout_below="@+id/table_high_score"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:id="@+id/rlClassic"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/active_prh"
+            android:onClick="PressClassic"
+            android:gravity="center"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/igrat"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:id="@+id/rlMarathon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/active_prh"
+            android:onClick="PressMarathon"
+            android:gravity="center"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/igrat2"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/table"
+        android:layout_width="400dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chose"
         android:background="@drawable/table_rama"
-        android:layout_centerHorizontal="true"
         android:gravity="center">
 
 
@@ -49,13 +100,13 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
 
-                android:text="1"/>
+                android:text="1."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_1"
                 android:gravity="center_vertical"
                 android:layout_centerVertical="true"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_1"
                 android:paddingLeft="3dp"
                 android:text="@string/user_0"
@@ -97,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/sc_1"
                 android:text="@string/score_0"
-                android:textSize="35sp"
+                android:textSize="28sp"
                 android:textColor="#ff12ac32"
                 android:layout_height="50dp" />
 
@@ -121,12 +172,12 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
 
-                android:text="2"/>
+                android:text="2."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_2"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_2"
                 android:paddingLeft="3dp"
                 android:text="@string/user_1"
@@ -190,12 +241,12 @@
                 android:layout_height="50dp"
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
-                android:text="3"/>
+                android:text="3."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_3"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_3"
                 android:paddingLeft="3dp"
                 android:text="@string/user_2"
@@ -261,12 +312,12 @@
                 android:textSize="35sp"
                 android:layout_marginLeft="5dp"
 
-                android:text="4"/>
+                android:text="4."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_4"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_4"
                 android:paddingLeft="3dp"
                 android:text="@string/user_3"
@@ -328,12 +379,12 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
                 android:layout_marginLeft="5dp"
-                android:text="5"/>
+                android:text="5."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_5"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_5"
                 android:paddingLeft="3dp"
                 android:text="@string/user_4"
@@ -398,12 +449,12 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
                 android:layout_marginLeft="5dp"
-                android:text="6"/>
+                android:text="6."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_6"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_6"
                 android:paddingLeft="3dp"
                 android:text="@string/user_5"
@@ -466,12 +517,12 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
                 android:layout_marginLeft="5dp"
-                android:text="7"/>
+                android:text="7."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_7"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_7"
                 android:paddingLeft="3dp"
                 android:text="@string/user_6"
@@ -536,13 +587,13 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
                 android:layout_marginLeft="5dp"
-                android:text="8"/>
+                android:text="8."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_8"
                 android:textSize="35sp"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_8"
                 android:paddingLeft="3dp"
                 android:text="@string/user_7"
@@ -605,13 +656,13 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
                 android:layout_marginLeft="5dp"
-                android:text="9"/>
+                android:text="9."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_9"
                 android:gravity="center_vertical"
                 android:textSize="35sp"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_9"
                 android:paddingLeft="3dp"
                 android:text="@string/user_8"
@@ -674,13 +725,13 @@
                 android:textColor="#ff12ac32"
                 android:textSize="35sp"
                 android:layout_marginLeft="5dp"
-                android:text="10"/>
+                android:text="10."/>
 
             <TextView
                 android:layout_toRightOf="@+id/num_10"
                 android:textSize="35sp"
                 android:gravity="center_vertical"
-                android:layout_width="120dp"
+                android:layout_width="200dp"
                 android:id="@+id/place_10"
                 android:paddingLeft="3dp"
                 android:text="@string/user_9"
@@ -732,7 +783,6 @@
 
     <RelativeLayout
         android:layout_width="380dp"
-        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_below="@+id/table">
 
@@ -743,8 +793,7 @@
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/exit"
-            android:layout_width="wrap_content"
-            android:padding="5dp"
+            android:layout_width="190dp"
             android:layout_height="80dp"
             android:background="@drawable/active_prh"
             android:onClick="PressBack">

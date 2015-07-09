@@ -18,31 +18,65 @@
         android:textColor="#FF68D199"
         />
 
-    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@android:id/tabhost"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"/>
-        </LinearLayout>
-    </TabHost>
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:id="@+id/chose"
+        android:layout_below="@+id/table_high_score"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:id="@+id/rlClassic"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/active_prh"
+            android:onClick="PressClassic"
+            android:gravity="center"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/igrat"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:id="@+id/rlMarathon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/active_prh"
+            android:onClick="PressMarathon"
+            android:gravity="center"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/igrat2"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/table"
         android:layout_width="260dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/table_high_score"
+        android:layout_below="@+id/chose"
         android:background="@drawable/table_rama"
         android:gravity="center">
 
@@ -118,7 +152,7 @@
                 android:textColor="#ff12ac32"
                 android:layout_height="30dp" />
 
-            </RelativeLayout>
+        </RelativeLayout>
 
 
         <RelativeLayout
@@ -172,7 +206,7 @@
 
                     android:background="@drawable/animal_0"/>
 
-                </RelativeLayout>
+            </RelativeLayout>
 
 
             <TextView
@@ -745,7 +779,7 @@
 
 
 
-        </RelativeLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="260dp"
@@ -754,24 +788,24 @@
 
 
 
-    <RelativeLayout
+        <RelativeLayout
 
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/exit"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:background="@drawable/active_prh"
-        android:onClick="PressBack">
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/exit"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/active_prh"
+            android:onClick="PressBack">
 
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ff12ac32"
-            android:textSize="20sp"
-            android:text="@string/nazad"/>
-    </RelativeLayout>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="20sp"
+                android:text="@string/nazad"/>
+        </RelativeLayout>
 
     </RelativeLayout>
 

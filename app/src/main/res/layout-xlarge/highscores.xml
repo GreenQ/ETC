@@ -19,11 +19,64 @@
         />
 
     <RelativeLayout
+        android:layout_width="400dp"
+        android:id="@+id/chose"
+        android:layout_below="@+id/table_high_score"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:id="@+id/rlClassic"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/active_prh"
+            android:onClick="PressClassic"
+            android:gravity="center"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/igrat"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:id="@+id/rlMarathon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/active_prh"
+            android:onClick="PressMarathon"
+            android:gravity="center"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ff12ac32"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/igrat2"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/table"
         android:layout_width="400dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/table_high_score"
+        android:layout_below="@+id/chose"
         android:background="@drawable/table_rama"
         android:gravity="center">
 
@@ -95,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/sc_1"
                 android:text="@string/score_0"
-                android:textSize="35sp"
+                android:textSize="28sp"
                 android:textColor="#ff12ac32"
                 android:layout_height="50dp" />
 
