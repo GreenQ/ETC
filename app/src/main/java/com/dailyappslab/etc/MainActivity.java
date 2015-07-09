@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.startad.lib.SADView;
-import com.tapfortap.TapForTap;
+//import com.tapfortap.TapForTap;
 
 
 public class MainActivity extends Activity {
@@ -148,11 +148,11 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void ShowTap4Tap()
-    {
-        TapForTap.enableTapForTap();
-        TapForTap.initialize(this, "c0b616d201e1d00d940daebb3f831374");
-    }
+//    public void ShowTap4Tap()
+//    {
+//        TapForTap.enableTapForTap();
+//        TapForTap.initialize(this, "c0b616d201e1d00d940daebb3f831374");
+//    }
 
     public void ShowAd()
     {
