@@ -99,6 +99,8 @@
     <!--тут починається лейаут 2х2-->
 
     <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/rl_2x2"
         android:background="@drawable/ramabase"
         android:layout_width="500dp"
         android:layout_centerHorizontal="true"

@@ -16,14 +16,14 @@
 
     <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
 
-    <string name="a1">You have dog's eyesight.</string>
-    <string name="a2">You have ant's eyesight.</string>
-    <string name="a3">You have one-eyed pirate's eyesight.</string>
-    <string name="a4">You have wolf's eyesight.</string>
-    <string name="a5">You have panther's eyesight.</string>
-    <string name="a6">You have eagle's eyesight.</string>
-    <string name="a7">You have predator's eyesight.</string>
-    <string name="a8">You have woman's eyesight.</string>
+    <string name="a7">You have dog\'s eyesight.</string>
+    <string name="a6">You have ant\'s eyesight.</string>
+    <string name="a5">You have one-eyed pirate\'s eyesight.</string>
+    <string name="a4">You have wolf\'s eyesight.</string>
+    <string name="a3">You have panther\'s eyesight.</string>
+    <string name="a2">You have eagle\'s eyesight.</string>
+    <string name="a1">You have predator\'s eyesight.</string>
+    <string name="a0">You have woman\'s eyesight.</string>
 
 
     <string name="a1_f">Фактическое отсутствие зрения у кротов компенсируется отличным обонянием и слухом, а также они могут различать день от ночи.</string>
@@ -68,7 +68,7 @@
 
     <string name="top_obr">Dear user!</string>
     <string name="obr">      The DailyAppsLab developers team thanks you for installation of this game. If you have any issues or suggestions you may contact us by the address dailyappslab@gmail.com \n     If you like this application - please, support us by your reviews and marks. \n    Good luck and have a good time!</string>
-    <string name="nazad">НАЗАД</string>
+    <string name="nazad">BACK</string>
 
 
     <string name="like_it">Like this game?</string>
@@ -78,16 +78,21 @@
 
 
 
-    <string name="user_0">Мария</string>
-    <string name="user_1">Ольга</string>
-    <string name="user_2">Борис</string>
-    <string name="user_3">Саша</string>
-    <string name="user_4">Анна</string>
-    <string name="user_5">Даша</string>
-    <string name="user_6">Андрей</string>
-    <string name="user_7">Дмитрий</string>
-    <string name="user_8">Светлана</string>
-    <string name="user_9">Виктория</string>
+
+    <string name="new_highscore">New HIGHSCORES!</string>
+    <string name="vashe_imya">Your name:&#160;</string>
+
+
+    <string name="user_0">Olivia</string>
+    <string name="user_1">Sophie</string>
+    <string name="user_2">Emma</string>
+    <string name="user_3">Jacob</string>
+    <string name="user_4">Ethan</string>
+    <string name="user_5">Emily</string>
+    <string name="user_6">Thomas</string>
+    <string name="user_7">Abigail</string>
+    <string name="user_8">Harry</string>
+    <string name="user_9">Chloe</string>
 
 
     <string name="score_0">1000</string>
