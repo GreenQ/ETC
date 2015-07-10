@@ -10,13 +10,8 @@
     <string name="sadViewMiniBanner">559587f59e7bc34500000000</string>
 
 
-    <string name="font1">AGCenturyOldStyle.ttf</string>
-    <string name="font2">aCityNova.ttf</string>
 
-
-    <string name="eu">Стандартна мова буде англыйська, думаю може на украънську перекласти ще?</string>
-
-    <string name="a7">You have dog\'s eyesight.</string>
+    <string name="a7">You have mole\'s eyesight.</string>
     <string name="a6">You have ant\'s eyesight.</string>
     <string name="a5">You have one-eyed pirate\'s eyesight.</string>
     <string name="a4">You have wolf\'s eyesight.</string>
